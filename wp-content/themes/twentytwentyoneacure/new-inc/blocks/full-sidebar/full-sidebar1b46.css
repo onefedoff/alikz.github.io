@@ -1,0 +1,54 @@
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .acure-container__sidebar-columns > .widget_block {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+/*    .acure-container__sidebar-column > .acure-blue-form {
+        height: calc(100% - 50px);
+        display: flex;
+        flex-direction: column;
+    }*/
+/*    .acure-container__sidebar-column > .acure-blue-form .acure-blue-form__item {
+        margin-top: auto;
+        margin-bottom: auto;
+    }*/
+}
+
+.acure-subscribe-form .legal-consent-container {
+    color: #E5E5E5 !important;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif !important;
+    font-size: 16px !important;
+    letter-spacing: .15px;
+}
+.acure-subscribe-form .legal-consent-container a {
+    text-decoration: underline;
+    color: inherit;
+}
+.color-light-gray  *{
+    color: #E5E5E5 !important;
+}
+.acure-start-for-free--new {
+    padding: 0;
+    overflow: hidden;
+}
+.acure-start-for-free__img {
+    width: 100%;
+    padding-bottom: 83%;
+}
+.acure-start-for-free__desc {
+    padding: 30px;
+    font-weight: 900;
+    letter-spacing: .15px;
+}
+.acure-start-for-free--new > .acure-button {
+    margin: 20px 30px 30px;
+}
+.acure-start-for-free__title {
+    font-size: 36px;
+}
+.acure-start-for-free__sub {
+    font-size: 24px;
+    line-height: 27.6px;
+    margin-top: 10px;
+}

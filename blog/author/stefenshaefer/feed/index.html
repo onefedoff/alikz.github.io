@@ -1,0 +1,1634 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Stefen Shaefer, Автор в Acure AIOps Platform</title>
+	<atom:link href="https://acure.io/blog/author/stefenshaefer/feed/" rel="self" type="application/rss+xml" />
+	<link>https://acure.io/blog/author/stefenshaefer/</link>
+	<description></description>
+	<lastBuildDate>Sun, 09 Apr 2023 14:00:41 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.4</generator>
+
+<image>
+	<url>https://acure.io/wp-content/uploads/2022/07/cropped-favicon@512-1-32x32.png</url>
+	<title>Stefen Shaefer, Автор в Acure AIOps Platform</title>
+	<link>https://acure.io/blog/author/stefenshaefer/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>The Complete Guide to 5xx Server Errors: Causes, Solutions, and Prevention</title>
+		<link>https://acure.io/blog/5xx-server-errors/</link>
+					<comments>https://acure.io/blog/5xx-server-errors/#respond</comments>
+		
+		<dc:creator><![CDATA[Stefen Shaefer]]></dc:creator>
+		<pubDate>Tue, 21 Mar 2023 11:46:09 +0000</pubDate>
+				<guid isPermaLink="false">https://acure.io/?p=5937</guid>
+
+					<description><![CDATA[<p>What are 5xx Server Errors? 5xx server errors are HTTP status codes that indicate that the server was unable to fulfill a request made by the client. The &#8220;5&#8221; in 5xx indicates that the error is caused by a server-side problem. The specific code in the 5xx range indicates the type of error that occurred.&#8230; <a class="more-link" href="https://acure.io/blog/5xx-server-errors/">Continue reading <span class="screen-reader-text">The Complete Guide to 5xx Server Errors: Causes, Solutions, and Prevention</span></a></p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/5xx-server-errors/">The Complete Guide to 5xx Server Errors: Causes, Solutions, and Prevention</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading"><strong>What are 5xx Server Errors?</strong></h2>
+
+
+
+<p>5xx server errors are HTTP status codes that indicate that the server was unable to fulfill a request made by the client. The &#8220;5&#8221; in 5xx indicates that the error is caused by a server-side problem. The specific code in the 5xx range indicates the type of error that occurred. For example, a 500 error means there was a generic server error, while a 503 error means the server is temporarily unavailable.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>What Does 5xx Server Error Mean?</strong></h2>
+
+
+
+<p>A 5xx server error means that the server was unable to complete the request due to an error on its end. These errors can occur for a variety of reasons, including server overload, software bugs, network issues, and more. Some common types of 5xx errors include:</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/03/504-server-error-1024x576.webp" alt="504 Error" class="wp-image-5955" srcset="https://acure.io/wp-content/uploads/2023/03/504-server-error-1024x576.webp 1024w, https://acure.io/wp-content/uploads/2023/03/504-server-error-500x281.webp 500w, https://acure.io/wp-content/uploads/2023/03/504-server-error-320x180.webp 320w, https://acure.io/wp-content/uploads/2023/03/504-server-error-768x432.webp 768w, https://acure.io/wp-content/uploads/2023/03/504-server-error.webp 1056w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<ul>
+<li><strong>500 Internal Server Error:</strong> A generic error message indicating that something has gone wrong on the server-side.</li>
+
+
+
+<li><strong>502 Bad Gateway:</strong> A server-side error indicating that a server acting as a gateway or proxy has received an invalid response from an upstream server.</li>
+
+
+
+<li><strong>503 Service Unavailable</strong>: A server-side error indicating that the server is temporarily unable to handle the request due to overload or maintenance.</li>
+
+
+
+<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504" target="_blank" rel="noreferrer noopener">504 Gateway Timeout</a></strong>: A server-side error indicating that a gateway or proxy server did not receive a timely response from an upstream server.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><strong>Causes of 5xx Server Errors:</strong></h2>
+
+
+
+<p>There are many possible causes of 5xx server errors, including:</p>
+
+
+
+<ul>
+<li>Server overload due to high traffic or resource-intensive requests.</li>
+
+
+
+<li>Software bugs or errors in code.</li>
+
+
+
+<li>Network issues such as DNS problems or connectivity issues.</li>
+
+
+
+<li>Server misconfiguration or incorrect settings.</li>
+
+
+
+<li>Hardware failures or issues.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Server Overload</h3>
+
+
+
+<p>One of the most common causes of 5xx server errors is server overload. This occurs when a server is unable to handle the volume of requests it is receiving, either because of high traffic or resource-intensive requests. To prevent server overload, it&#8217;s important to optimize your website or application to reduce the load on your servers. This can include:</p>
+
+
+
+<ul>
+<li>Using caching to reduce the number of requests your server needs to handle.</li>
+
+
+
+<li>Reducing the size of your website or application by compressing files and images.</li>
+
+
+
+<li>Implementing load balancing to distribute traffic across multiple servers.</li>
+
+
+
+<li>Scaling up or down your infrastructure as needed to handle fluctuating traffic.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Software Bugs or Errors in Code</h3>
+
+
+
+<p>Another common cause of 5xx server errors is software bugs or errors in code. These can occur for a variety of reasons, including coding mistakes, compatibility issues, or unexpected interactions between different parts of your website or application. To prevent software bugs and errors, it&#8217;s important to:</p>
+
+
+
+<ul>
+<li>Use a consistent coding style and follow best practices for coding.</li>
+
+
+
+<li>Use automated testing tools to detect and fix bugs and errors.</li>
+
+
+
+<li>Implement version control to track changes to your code and easily roll back to previous versions if necessary.</li>
+
+
+
+<li>Use error tracking and monitoring tools to detect errors and issues as soon as they occur.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Network Issues</h3>
+
+
+
+<p>Network issues can also cause 5xx server errors, such as DNS problems or connectivity issues. To prevent network issues, it&#8217;s important to:</p>
+
+
+
+<ul>
+<li>Use reliable DNS providers and services to ensure your website or application can be accessed from anywhere in the world.</li>
+
+
+
+<li>Monitor network connectivity and latency to detect and resolve any issues before they affect your users.</li>
+
+
+
+<li>Use a content delivery network (CDN) to distribute your content across multiple servers and reduce the load on your main server.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Server Misconfiguration or Incorrect Settings</h3>
+
+
+
+<p>Server misconfiguration or incorrect settings can also cause 5xx server errors. To prevent server misconfiguration, it&#8217;s important to:</p>
+
+
+
+<ul>
+<li>Use a configuration management tool to automate and manage your server configuration.</li>
+
+
+
+<li>Keep your software and systems up to date with the latest security patches and updates.</li>
+
+
+
+<li>Follow best practices for server configuration and security, such as using strong passwords and disabling unnecessary services.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Hardware Failures or Issues</h3>
+
+
+
+<p>Hardware failures or issues can also cause 5xx server errors. To prevent hardware failures, it&#8217;s important to:</p>
+
+
+
+<ul>
+<li>Use high-quality hardware and regularly perform maintenance and updates.</li>
+
+
+
+<li>Monitor server health and performance to detect and resolve any hardware issues before they affect your users.</li>
+
+
+
+<li>Use redundant hardware or backup systems to ensure your website or application remains available in the event of a hardware failure.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><strong>Solutions and Prevention of 5xx Server Errors:</strong></h2>
+
+
+
+<p>If you encounter a 5xx server error, there are a few steps you can take to troubleshoot and resolve the issue:</p>
+
+
+
+<ol>
+<li>Check your server logs: Check your server logs for any error messages or other indications of what might have caused the error.</li>
+
+
+
+<li>Verify your server configuration: Make sure that your server is configured correctly and that all settings are properly set up.</li>
+
+
+
+<li>Check your network: Verify that there are no network issues, such as connectivity problems or DNS issues, that could be causing the error.</li>
+
+
+
+<li>Optimize your website or application: Optimize your website or application to reduce server load and improve performance.</li>
+
+
+
+<li>Implement monitoring and alerting: Implement a monitoring and alerting system to quickly detect and resolve any 5xx errors that occur.</li>
+</ol>
+
+
+
+<p>By taking these steps, you can prevent and resolve 5xx server errors and ensure that your website or application remains available and performs well for your users.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="680" height="349" src="https://acure.io/wp-content/uploads/2023/03/Kubernetes-Nodes-The-Complete-Guide-2023-03-21-13-05-19.png" alt="" class="wp-image-5968" srcset="https://acure.io/wp-content/uploads/2023/03/Kubernetes-Nodes-The-Complete-Guide-2023-03-21-13-05-19.png 680w, https://acure.io/wp-content/uploads/2023/03/Kubernetes-Nodes-The-Complete-Guide-2023-03-21-13-05-19-500x257.png 500w, https://acure.io/wp-content/uploads/2023/03/Kubernetes-Nodes-The-Complete-Guide-2023-03-21-13-05-19-320x164.png 320w" sizes="(max-width: 680px) 100vw, 680px" /></figure>
+
+
+
+<p><strong>Read:</strong> <a href="https://komodor.com/learn/5xx-server-errors-the-complete-guide/" target="_blank" rel="noreferrer noopener nofollow">Debugging 5xx Errors in Kubernetes Nodes</a></p>
+
+
+
+<h4 class="wp-block-heading">***</h4>
+
+
+
+<p>5xx server errors can be frustrating for both you and your users, but with the right knowledge and tools, you can prevent and resolve them quickly and effectively. Use the information and tips provided in this guide to identify the causes of 5xx errors, troubleshoot and resolve them, and implement best practices to prevent them from happening in the future.<strong> By taking these steps, you can ensure that your website or application remains available and performs well for your users</strong>. Remember, staying proactive and vigilant when it comes to 5xx errors can make all the difference in keeping your users happy and your business successful.</p>
+
+
+
+<p>If you found this guide helpful, be sure to subscribe to our blog for more tips and insights on website and application development, server management, and more. Our team of experts is dedicated to providing you with the latest information and best practices to help you succeed in your online endeavors. Stay up to date with the latest news and trends by subscribing to our blog today.</p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/5xx-server-errors/">The Complete Guide to 5xx Server Errors: Causes, Solutions, and Prevention</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://acure.io/blog/5xx-server-errors/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>What Is SRE? A Deep Dive into Principles and Best Practices</title>
+		<link>https://acure.io/blog/sre/</link>
+					<comments>https://acure.io/blog/sre/#respond</comments>
+		
+		<dc:creator><![CDATA[Stefen Shaefer]]></dc:creator>
+		<pubDate>Wed, 01 Feb 2023 11:56:00 +0000</pubDate>
+				<category><![CDATA[Glossary]]></category>
+		<guid isPermaLink="false">https://acure.io/?p=5545</guid>
+
+					<description><![CDATA[<p>SRE picture</p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/sre/">What Is SRE? A Deep Dive into Principles and Best Practices</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>Site reliability engineering (SRE) provides a revolutionary approach to IT infrastructure processes, eliminating common issues with system functionality and streamlining product quality. By allowing improved operations and greater system oversight, SRE has geared companies toward a future of cloud-based development. In this article, we examine the foundations of SRE and how its principles have effectively shaped the field of modern software engineering.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">SRE Meaning: What Is SRE?</h2>
+
+
+
+<p>After noticing industry-wide conflicts in operations, an engineer from Google named Ben Treynor Sloss created a system that allows software developers and operations teams to work more efficiently together. SRE practices incorporate software engineering tools to automate IT infrastructure tasks and continuously monitor application data.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/02/127-1024x576.png" alt="SRE picture" class="wp-image-5551" srcset="https://acure.io/wp-content/uploads/2023/02/127-1024x576.png 1024w, https://acure.io/wp-content/uploads/2023/02/127-500x281.png 500w, https://acure.io/wp-content/uploads/2023/02/127-320x180.png 320w, https://acure.io/wp-content/uploads/2023/02/127-768x432.png 768w, https://acure.io/wp-content/uploads/2023/02/127-1536x864.png 1536w, https://acure.io/wp-content/uploads/2023/02/127-1200x675.png 1200w, https://acure.io/wp-content/uploads/2023/02/127-1568x882.png 1568w, https://acure.io/wp-content/uploads/2023/02/127.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Since its inception in 2003, many organizations continue to adopt SRE principles to maintain performance for major scaling systems and leverage balance between dev and ops teams.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">SRE Principles</h2>
+
+
+
+<p>As the pioneering company behind site reliability engineering, Google released a book outlining the best practices for executing SRE. This free guide offers a comprehensive insight into the function of SRE and its core disciplines. According to Google’s publication, some of the defining principles of SRE include:</p>
+
+
+
+<h3 class="wp-block-heading">1. Meeting Uptime Requirements</h3>
+
+
+
+<p>Developers must meet <a href="https://www.cio.com/article/274740/outsourcing-sla-definitions-and-solutions.html" target="_blank" rel="noreferrer noopener nofollow">a service-level agreement</a> (SLA) that measures the reliability of a product for end-users before its release. If an application has no budget errors, it can launch immediately. Conversely, an SRE team will halt product release until it achieves 100% uptime.</p>
+
+
+
+<p>In this way, SRE provides incentives for developers and SRE teams to work together in order to minimize the number of product errors.</p>
+
+
+
+<h3 class="wp-block-heading">2. Defining Service Level Objectives</h3>
+
+
+
+<p>Managing a service correctly involves a thorough understanding of its behaviors and how end users will perceive its level of quality. To ensure a standard level of service, site reliability engineers define measurements for <a href="https://www.sumologic.com/glossary/sli-service-level-indicator/#:~:text=A%20service%20level%20indicator%20(SLI,that%20impact%20overall%20service%20reliability." target="_blank" rel="noreferrer noopener nofollow">service level indicators</a> (SLIs), <a href="https://www.gartner.com/en/information-technology/glossary/slo-service-level-objective" target="_blank" rel="noreferrer noopener nofollow">objectives</a> (SLOs) and agreements (SLAs). Choosing the appropriate metric defined by these measurements helps direct developers with troubleshooting and allows SRE teams to have confidence in the health of that particular service.&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">3. Eliminating Toil</h3>
+
+
+
+<p>Google defines operational work with the specific term “toil.” Site reliability engineers should spend only 50% of their time on maintaining service uptime. The rest of the time should go to developing new software and features for applications.&nbsp;</p>
+
+
+
+<p>By eliminating toil from infrastructure, SRE allows more time for long-term engineering projects instead of repetitive administration work.</p>
+
+
+
+<h3 class="wp-block-heading">4. Monitoring Distributed Systems</h3>
+
+
+
+<p>Automated monitoring displays quantified data in real time and sends out an alert if something breaks within the system. Monitoring distributed systems provide useful input for business analytics and facilitate analysis of security breaches. The system only requires human interaction when it encounters errors it can’t automatically.</p>
+
+
+
+<p>Acure&#8217;s topology-based AIOps observability platform offers automation solutions for businesses to process and collect big data. This cloud-based system lets system administrators and dev ops teams monitor the entire ecosystem, prevent failures, and perform root cause analysis after outages.</p>
+
+
+
+<h3 class="wp-block-heading">5. Release Engineering</h3>
+
+
+
+<p>Release engineering describes a growing field that helps build and deliver software. Release engineers must have experience with source code management, automated build tools and embody a deep knowledge of configuration management and test integration. Engineers must ensure consistency with releases so that they won’t contribute to system outages.</p>
+
+
+
+<h3 class="wp-block-heading">6. Embracing Simplicity</h3>
+
+
+
+<p>Software systems remain inherently unstable as they undergo frequent updates and changes to their codebase. Site reliability engineers create tools and procedures to increase system reliability and scale back complexity. When a bug appears during changes in production rollouts, simplicity makes it easier to identify and manage them.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">What Does an SRE Do?</h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/02/129-1024x576.png" alt="" class="wp-image-5555" srcset="https://acure.io/wp-content/uploads/2023/02/129-1024x576.png 1024w, https://acure.io/wp-content/uploads/2023/02/129-500x281.png 500w, https://acure.io/wp-content/uploads/2023/02/129-320x180.png 320w, https://acure.io/wp-content/uploads/2023/02/129-768x432.png 768w, https://acure.io/wp-content/uploads/2023/02/129-1536x864.png 1536w, https://acure.io/wp-content/uploads/2023/02/129-1200x675.png 1200w, https://acure.io/wp-content/uploads/2023/02/129-1568x882.png 1568w, https://acure.io/wp-content/uploads/2023/02/129.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h3 class="wp-block-heading">Experience and Background</h3>
+
+
+
+<p>Qualifying for a role as a site reliability engineer requires a background in software development, IT operations or previous experience as a system administrator. Site reliability engineers must have proven system management skills as they continually look for ways to balance workloads between devs and ops teams. They also have the ability to write code, which allows them to work with software development teams.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">Motivations for an SRE</h3>
+
+
+
+<p>As a discipline, site reliability engineering advocates motivation and dedication, giving site reliability engineers a unique role within an organization. According to Google’s recommended best practices for SRE, site reliability engineers should be able to transition between projects as necessary, spending time monitoring automation systems to ensure the health of the service but also working with development teams to design and deploy new features.</p>
+
+
+
+<p>Doing the best practices for motivation and well-being benefits IT departments by routinely welcoming new engineers that share refreshed insights and problem-solving skills within their network.</p>
+
+
+
+<h3 class="wp-block-heading">SRE Roles and Responsibilities</h3>
+
+
+
+<p>With less time spent on operations, site reliability engineers prioritize development tasks such as creating new features and scaling the system. They offer automated solutions for recurring problems and create emergency responses for services in production. SRE teams also configure and deploy code, monitor latency and availability issues that may arise and manage changes to the system as well as capacity.&nbsp;&nbsp;</p>
+
+
+
+<p>One of the key roles of site reliability engineers involves launching products based on current performance. SRE teams determine a product’s quality for end-users by creating SLAs that software developers must adhere to prior to release.</p>
+
+
+
+<p>Other common roles for site reliability engineers include:</p>
+
+
+
+<ul>
+<li>Building software for dev and ops teams</li>
+
+
+
+<li>Optimizing processes</li>
+
+
+
+<li>Resolving escalation issues</li>
+
+
+
+<li>Documenting team knowledge</li>
+</ul>
+
+
+
+<p>Each of these roles and responsibilities make site reliability engineers a vital component of IT sustainability. Their ability to automate solutions and deter time-consuming tasks enables more efficiency with less manual work and has set new standards within the software industry.&nbsp;&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">Summing Up</h2>
+
+
+
+<p>Site reliability engineering practices bridge gaps between dev and ops team, fostering team culture, service uptime, and agile development. Faster application life cycles improve both the quality and reliability of services.&nbsp;</p>
+
+
+
+<p>With backgrounds in both operations and development, SRE teams effectively enhance communication between the two departments, reducing workflow problems and monitoring the entire IT ecosystem to ensure uptime. By combining the skills of both teams, SRE eliminates overlapping responsibilities.</p>
+
+
+
+<p>SREs focus on balance to maintain site reliability and create new features while reducing menial tasks.</p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/sre/">What Is SRE? A Deep Dive into Principles and Best Practices</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://acure.io/blog/sre/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>What Is Observability? How Can You Improve IT Operations?</title>
+		<link>https://acure.io/blog/observability/</link>
+					<comments>https://acure.io/blog/observability/#respond</comments>
+		
+		<dc:creator><![CDATA[Stefen Shaefer]]></dc:creator>
+		<pubDate>Wed, 18 Jan 2023 12:27:42 +0000</pubDate>
+				<category><![CDATA[Glossary]]></category>
+		<guid isPermaLink="false">https://acure.io/?p=5452</guid>
+
+					<description><![CDATA[<p>Defining Observability If your business depends on complex, interconnected computer systems, you might have heard the word &#8220;observability&#8221; in the context of system design. Many business owners understand the basic idea of observability and appreciate that it can be an asset. However, digging deeper into the concept of observability and its specific applications to system&#8230; <a class="more-link" href="https://acure.io/blog/observability/">Continue reading <span class="screen-reader-text">What Is Observability? How Can You Improve IT Operations?</span></a></p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/observability/">What Is Observability? How Can You Improve IT Operations?</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading">Defining Observability</h2>
+
+
+
+<p>If your business depends on complex, interconnected computer systems, you might have heard the word &#8220;observability&#8221; in the context of system design. Many business owners understand the basic idea of observability and appreciate that it can be an asset. However, digging deeper into the concept of observability and its specific applications to system design and maintenance gives insights into its applicability.&nbsp;</p>
+
+
+
+<p>System administrators, support staff, developers, and other IT professionals need to understand observability in theory and practice. Business leaders should understand the state of their computer systems, in terms of daily operations and real-time performance, especially in retrospect, after an attack, system failure, or unexpected service disruption.</p>
+
+
+
+<p>For a 21st-century business to succeed in an increasingly automated, optimized environment, all stakeholders in the computerized aspects of a business must be in sync regarding how the system works and the implications of its performance on essential business processes.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45-1024x576.png" alt="Observability picture" class="wp-image-5460" srcset="https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45-1024x576.png 1024w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45-500x281.png 500w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45-320x180.png 320w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45-768x432.png 768w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45-1536x864.png 1536w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45-1200x675.png 1200w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45-1568x882.png 1568w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-45.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p><strong>Observability</strong>&nbsp;refers to the extent to which you can determine a system&#8217;s internal state based on its outputs, meaning the signals it sends to users, debuggers, or support specialists. Observability is a quality of the system itself, regardless of whether anyone is watching it at any specific time.</p>
+
+
+
+<p><strong>Monitoring&nbsp;</strong>is the active process of obtaining data about an observable system, such as when an IT service technician runs a diagnostic to find out why a network is down, or a computer has crashed.</p>
+
+
+
+<p><strong>Visibility</strong>&nbsp;refers to the extent to which people can perceive what is happening in observable systems.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">The Observability Concept</h3>
+
+
+
+<p>To illustrate the concept, consider an old-fashioned analog pocket watch. Typically, only the face, the hands, and the winding stem are observable. A user can find out that the watch has stopped by looking at its face or holding it to their ear to tell if it is ticking.&nbsp;</p>
+
+
+
+<p>By looking at the watch, a user might be able to determine that it is not operational but lack information about the gears and internal mechanism. The inside is, for practical purposes, a &#8220;black box.&#8221; Imagine, in contrast, if the watch&#8217;s owner could see through the back and observe the gears and springs in operation.</p>
+
+
+
+<p>Software designers who incorporate observability into their processes are like watchmakers who allow users to open the back of the watch and peer inside. Well-crafted, maintainable computer code does more than carry out functions. It generates and directs information about its processes, telling maintenance technicians, engineers, and users:</p>
+
+
+
+<ul>
+<li>Which requests it received and when it received them</li>
+
+
+
+<li>How and when the program executed the request</li>
+
+
+
+<li>Whether&nbsp;the program&#8217;s action was successful</li>
+
+
+
+<li>What errors, if any, occurred during the process</li>
+
+
+
+<li>What action, if any, should happen next</li>
+</ul>
+
+
+
+<p>Incorporating observability into the program from the start of a project makes code maintenance and troubleshooting less error-prone and more efficient.&nbsp;<strong>Having an observable system and effective monitoring capability is vital because the actions you might need to take in response to an incident can be time-sensitive.</strong></p>
+
+
+
+<h2 class="wp-block-heading">Functions of Observability <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2699.png" alt="⚙" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47-1024x576.png" alt="Observability picture" class="wp-image-5467" srcset="https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47-1024x576.png 1024w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47-500x281.png 500w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47-320x180.png 320w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47-768x432.png 768w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47-1536x864.png 1536w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47-1200x675.png 1200w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47-1568x882.png 1568w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-47.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>The quality of observability in computer architecture and software design adds to the information-processing requirements of every observable process, increasing memory requirements and processing time. Invite stakeholders who might be skeptical about the need for observability to consider the many benefits of observability, such as:</p>
+
+
+
+<ul>
+<li><strong>Providing timely information</strong> to customers and employees regarding computer issues</li>
+
+
+
+<li><strong>Protecting information systems</strong> against cyberattacks and user errors</li>
+
+
+
+<li><strong>Reducing hourly costs</strong> for support personnel</li>
+
+
+
+<li><strong>Reducing inefficiencies and downtime</strong> due to computer software problems</li>
+
+
+
+<li><strong>Facilitating compliance</strong> with any governmental standards or regulations</li>
+
+
+
+<li><strong>Identification of the cause</strong> of a system malfunction in the case of litigation</li>
+
+
+
+<li><strong>Supporting automated diagnostic</strong>, repair, and adaptive control processes</li>
+</ul>
+
+
+
+<p>In summary, when your IT department has accurate, comprehensive, and readily interpretable information about the system&#8217;s internal state, you will be more effective at solving IT problems.</p>
+
+
+
+<h2 class="wp-block-heading">The History of Observability in Computational Architecture <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4dc.png" alt="📜" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h2>
+
+
+
+<p>Observability is at the core of computer science and programming development. A central processing system with definable internal states is the essential quality that separates a programmable computer from a simple machine. Moreover, computer programmers and debuggers need access to those internal states to predict and control how the system operates.</p>
+
+
+
+<p>Programmers use their understanding of the computer&#8217;s internal state to predict how computers will behave given specific commands in specific circumstances. Malfunctions and instabilities occur when those assumptions no longer hold. Observability gives troubleshooters the tools they need to determine what went wrong or predict what will go wrong.&nbsp;</p>
+
+
+
+<p>In the early days of computer history, a computer &#8220;bug&#8221; might be a literal moth damaging an internal computer component. However, in modern computers, a bug is usually a programming error or the failure of a program to handle unusual situations. In each case, the underlying question is the same: why is the system not working the way we expect it to?</p>
+
+
+
+<p>Early computer programs could take a step-by-step approach to data processing and problem-solving. For example, when debugging a single program following instructions in sequence, it could be relatively easy to figure out where a program failed and why.</p>
+
+
+
+<p>Modern computer systems involve multiple interconnected computers, each of which can contain multiple processor cores running programs simultaneously. The complexity of modern computer systems gives rise to bottlenecks, communication breakdowns, and other challenges that require attention to interrelated information sources.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">Examples of Observability in Systems</h2>
+
+
+
+<p>You can see observability in action by watching what your computer does when a program crashes or during an ongoing operation like a system update or a virus scan. A window in your system might provide an error code or a description of a process that failed to execute. An antivirus scanner may tell you which file it is scanning, and an updater will tell you which files it is installing and when user action is required.</p>
+
+
+
+<p>Imagine if these processes occurred entirely in the background without any feedback. The user would not know what was happening or what to do about it. Similarly, if you or your support staff can see at a glance how every automated process is doing, you can identify potential bottlenecks, respond to warnings, and address performance issues.</p>
+
+
+
+<h2 class="wp-block-heading">Increasing Observability Through Monitoring</h2>
+
+
+
+<p>Monitoring and observability are closely related but distinct concepts. <strong>Observability</strong> is only useful to the extent that someone is observing, either a human technician or an automated process that can respond to the system it is monitoring. Effective <strong>monitoring</strong> requires a combination of trained human staff and appropriate computer tools.</p>
+
+
+
+<p>Human observers are fallible and can only keep track of so many sources of information at once. A technician that has to keep track of a dozen or more tabs on their computer screen can easily overlook the telltale signs of a bug even if it is observable.&nbsp;</p>
+
+
+
+<p><strong><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4a1.png" alt="💡" class="wp-smiley" style="height: 1em; max-height: 1em;" /> What is the difference between observability and monitoring? Read <a href="https://acure.io/blog/observability-vs-monitoring/">one of our articles</a>.</strong></p>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://acure.io/wp-content/uploads/2022/08/Observability-vs.-Monitoring-Meme-Acure.io_.jpg" alt="Observability vs. Monitoring Meme" class="wp-image-3618" width="610" height="325" srcset="https://acure.io/wp-content/uploads/2022/08/Observability-vs.-Monitoring-Meme-Acure.io_.jpg 750w, https://acure.io/wp-content/uploads/2022/08/Observability-vs.-Monitoring-Meme-Acure.io_-500x267.jpg 500w, https://acure.io/wp-content/uploads/2022/08/Observability-vs.-Monitoring-Meme-Acure.io_-320x171.jpg 320w" sizes="(max-width: 610px) 100vw, 610px" /></figure>
+
+
+
+<h2 class="wp-block-heading">Ensuring Visibility of Data in Observable Systems</h2>
+
+
+
+<p>Making the state of a computer system observable does not necessarily mean the data in that system will be interpretable or actionable. Do system administrators and support staff have to wade through a disorganized muddle of data? If so, they will not be able to identify the critical alerts, errors, and other data they need to keep the system running smoothly.&nbsp;</p>
+
+
+
+<p>A well-designed, observable system should include the following:</p>
+
+
+
+<ul>
+<li><strong>A user-friendly interface </strong>that presents information in an accessible and readable format.</li>
+
+
+
+<li><strong>Robust data visualization</strong> techniques that allow users to easily perceive distinctions between different types of data and cause high-priority data to stand out.</li>
+
+
+
+<li><strong>A responsive system</strong> that allows users to control which information they see and how the system presents it.</li>
+
+
+
+<li><strong>Effective documentation and training materials</strong> that enable staff to monitor, search, and interpret system data.&nbsp;</li>
+</ul>
+
+
+
+<p>Businesses can increase visibility by archiving or deleting data once it is no longer relevant. Support staff should know the data retention policy so they can anticipate what data will be readily available and know how to retrieve archived data when needed.</p>
+
+
+
+<h2 class="wp-block-heading">Data Sources in Observable Systems</h2>
+
+
+
+<p>One of the ways an observability platform can streamline the monitoring process is to present data about the observable aspects of your computer system in an organized way with a user-friendly interface. An observable system should include mechanisms for data collection, automated analysis, and data visualization that enhance human-computer interaction throughout the monitoring and troubleshooting process.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="968" height="528" src="https://acure.io/wp-content/uploads/2023/02/Logs-meme.png" alt="Logging meme" class="wp-image-5465" srcset="https://acure.io/wp-content/uploads/2023/02/Logs-meme.png 968w, https://acure.io/wp-content/uploads/2023/02/Logs-meme-500x273.png 500w, https://acure.io/wp-content/uploads/2023/02/Logs-meme-320x175.png 320w, https://acure.io/wp-content/uploads/2023/02/Logs-meme-768x419.png 768w" sizes="(max-width: 968px) 100vw, 968px" /><figcaption class="wp-element-caption">Logging meme</figcaption></figure>
+
+
+
+<h3 class="wp-block-heading">Logging Events</h3>
+
+
+
+<p>Every time a relevant computer program or module receives a request to carry out a specific request, your system should log the event, so a record persists even if the computer fails or the program crashes. <strong>A log of all system events, complete with warning messages about any unexpected activity, will be a starting point for debugging.</strong></p>
+
+
+
+<h3 class="wp-block-heading">Tracking Requests and Processes</h3>
+
+
+
+<p>Individual processes occur within larger chains of processes that accomplish overarching tasks. Industry professionals call individual processes in a chain &#8220;spans.&#8221;</p>
+
+
+
+<p>You can consider a trace to be like a bridge across a chasm. Each span takes the process one step closer to completion. The trace, in its entirety, crosses the chasm.</p>
+
+
+
+<p>The usefulness of a trace becomes apparent when you consider all the things that can go wrong during a process. Imagine that an accident blocks one lane of traffic on a bridge. <strong>If you know exactly where the accident occurs, perhaps by having a helicopter fly over the bridge, you can direct repair crews to the bridge and diver traffic to alternative bridges.</strong></p>
+
+
+
+<h3 class="wp-block-heading">Measuring System Performance</h3>
+
+
+
+<p>Even if you have a fully observable system, how do you know which events or traces to monitor? A computer system should have software that evaluates system process completion rates, latencies, and error rates. <strong>These metrics are crucial for preventative and retrospective maintenance and determining the effectiveness of any changes made to your automated business process es.&nbsp;</strong></p>
+
+
+
+<h2 class="wp-block-heading">How to Achieve Observability in Your Information Systems</h2>
+
+
+
+<p>The best practice for increasing observability in your system is similar to many other project management challenges:</p>
+
+
+
+<ul>
+<li>Assess the needs of your business.</li>
+
+
+
+<li>Plan a system architecture that meets those needs.</li>
+
+
+
+<li>Identify tools that allow you to implement and maintain the new system.</li>
+
+
+
+<li>Assemble a team with the experience and talent to install and implement the new system.</li>
+
+
+
+<li>Introduce your staff to the new system and train them to use it effectively.</li>
+
+
+
+<li>Monitor the system in operation and make changes as necessary.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46-1024x576.png" alt="" class="wp-image-5463" srcset="https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46-1024x576.png 1024w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46-500x281.png 500w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46-320x180.png 320w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46-768x432.png 768w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46-1536x864.png 1536w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46-1200x675.png 1200w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46-1568x882.png 1568w, https://acure.io/wp-content/uploads/2023/02/Pics-for-Acure-Blog-46.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Experts in system design with practical business activities are indispensable at every step in the process. Implementing a system overhaul requires the ability to relate computer science principles with a real-world business&#8217;s practicalities. An expert in observable architectures could guide system development by finding solutions to problems such as:</p>
+
+
+
+<ul>
+<li><strong>Determining </strong>which data sources the staff needs to monitor and the process for monitoring data</li>
+
+
+
+<li><strong>Identifying </strong>specific threats and maintenance issues that the observable system needs to detect and respond to</li>
+
+
+
+<li><strong>Evaluating</strong> software tools and determining their role within the system</li>
+
+
+
+<li><strong>Fostering</strong> a culture of diligence and compliance among users of the new system</li>
+</ul>
+
+
+
+<p>For example, one decision you will have to make is whether to rely on a small set of observability tools or to integrate and incorporate a wider variety of tools into your system. Will you use the same software toolkit to identify shipping bottlenecks that you use to detect discrepancies in payroll or security?</p>
+
+
+
+<p>Using a small number of programs for creating logs, monitoring operations, curating data, etc., allows for more standardization across your business operations and does not require your employees to cross-train on a multitude of different programs.</p>
+
+
+
+<p>However, each monitoring and data processing tool has features that could be particularly helpful for specific areas of your business. An IT professional can help you evaluate your options and develop ways to integrate software tools into a coherent plan for an observable architecture.</p>
+
+
+
+<p><strong><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4a1.png" alt="💡" class="wp-smiley" style="height: 1em; max-height: 1em;" /></strong> <strong>Check <a href="https://acure.io/blog/top-observability-tools/">Top 10 Observability Tools to Pay Attention to in 2023</a></strong></p>
+
+
+
+<h2 class="wp-block-heading">Make Your Information System Observable, Maintainable, and Reliable with Acure&nbsp;</h2>
+
+
+
+<p>Observability and efficiency are the hallmarks of Acure.io, which sells on a software-as-a-service basis. <strong>In Acure.io one screen contains all your data and conveniently show your IT with all of the connections and health metrics.</strong></p>
+
+
+
+<p>Thanks to automation services <strong>Acure maps all your data and automatically updates and builds connections</strong> if new elements are added. All you have to do is watch the topology tree and let Acure alert you when the system needs some attention.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="468" src="https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel-1024x468.png" alt="Observability in Acure" class="wp-image-4582" srcset="https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel-1024x468.png 1024w, https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel-500x228.png 500w, https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel-320x146.png 320w, https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel-768x351.png 768w, https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel-1536x702.png 1536w, https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel-1200x548.png 1200w, https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel-1568x716.png 1568w, https://acure.io/wp-content/uploads/2022/11/2-3.-Root-cause-with-left-panel.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Observability in Acure</figcaption></figure>
+
+
+
+<p><strong>After any changes in the topology, the health of the system is instantly recalculated</strong>, coloring the entire tree appropriately.&nbsp;If the health of the root configuration item turns red<strong>, you will see in detail which factors most negatively affect the object </strong>and go through the branches to eventually come to the element that affected the health of the entire system.</p>
+
+
+
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f449.png" alt="👉" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <strong>Do you want to improve your obsevability and make your data more clear? Create your <a href="https://id.acure.io/userspaces" target="_blank" rel="noreferrer noopener">Userspace</a> in Acure.</strong></p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/observability/">What Is Observability? How Can You Improve IT Operations?</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://acure.io/blog/observability/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to Build Your Career As an IT Operations Manager?</title>
+		<link>https://acure.io/blog/it-operations-manager/</link>
+					<comments>https://acure.io/blog/it-operations-manager/#respond</comments>
+		
+		<dc:creator><![CDATA[Stefen Shaefer]]></dc:creator>
+		<pubDate>Mon, 09 Jan 2023 08:39:00 +0000</pubDate>
+				<category><![CDATA[Academy]]></category>
+		<guid isPermaLink="false">https://acure.io/?p=5352</guid>
+
+					<description><![CDATA[<p>What Is IT Ops? IT stands for information technology, which describes the use of hardware and software to create, store, process, and obtain data across a network. In today&#8217;s tech-focused world, every organization has an internal information technology department that handles its computer system and all of the related equipment. An IT operations manager oversees&#8230; <a class="more-link" href="https://acure.io/blog/it-operations-manager/">Continue reading <span class="screen-reader-text">How to Build Your Career As an IT Operations Manager?</span></a></p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/it-operations-manager/">How to Build Your Career As an IT Operations Manager?</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading">What Is IT Ops?</h2>
+
+
+
+<p>IT stands for information technology, which describes the use of hardware and software to create, store, process, and obtain data across a network. In today&#8217;s tech-focused world, every organization has an internal information technology department that handles its computer system and all of the related equipment. An IT operations manager oversees the management of technological communication and the hardware and software associated with it.&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="968" height="528" src="https://acure.io/wp-content/uploads/2023/02/IT-Ops-meme-1.png" alt="IT Ops meme" class="wp-image-5373" srcset="https://acure.io/wp-content/uploads/2023/02/IT-Ops-meme-1.png 968w, https://acure.io/wp-content/uploads/2023/02/IT-Ops-meme-1-500x273.png 500w, https://acure.io/wp-content/uploads/2023/02/IT-Ops-meme-1-320x175.png 320w, https://acure.io/wp-content/uploads/2023/02/IT-Ops-meme-1-768x419.png 768w" sizes="(max-width: 968px) 100vw, 968px" /><figcaption class="wp-element-caption">IT Ops Meme</figcaption></figure>
+
+
+
+<p>IT operations is one part of the Information Technology Infrastructure Library (ITIL). This set of practices, tasks, and procedures helps businesses accomplish their goals using information technology. There are four key functions in the ITIL best practices methods when referring to IT service management:</p>
+
+
+
+<ul>
+<li>IT operations</li>
+
+
+
+<li>Technical management</li>
+
+
+
+<li>Application management</li>
+
+
+
+<li>Service desk management</li>
+</ul>
+
+
+
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4a1.png" alt="💡" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <strong>You can find more about IT Ops in <a href="https://acure.io/blog/it-operations/">our blog</a>.</strong></p>
+
+
+
+<p>As IT ops manager, you will be in charge of all of these.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">What Is an IT Operations Manager?</h2>
+
+
+
+<p>An IT Ops manager leads the IT team in designing and maintaining the company&#8217;s IT infrastructure and providing IT support. As IT ops manager, you will ensure that every aspect of the IT division runs smoothly and resolve any problems that may arise.</p>
+
+
+
+<p>Another aspect of the role involves managing the software and hardware needs of a company. You will need to ensure that everyone on the team knows how to use the various computer systems and equipment.</p>
+
+
+
+<p>An IT operations manager handles the daily tasks related to overseeing the business&#8217;s IT infrastructure, including upgrades and maintenance. Many different tasks arise throughout the job, including managing real-time reporting systems and supervising a team of IT professionals.&nbsp;</p>
+
+
+
+<p>As IT operations manager, you will also be responsible for setting up appropriate policies and practices to ensure the company&#8217;s IT services are reliable, accessible, and secure. Managers in this role need to monitor and oversee the entire IT infrastructure to ensure that everything is proceeding efficiently.&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/02/109-1-1024x576.png" alt="IT operations manager picture" class="wp-image-5363" srcset="https://acure.io/wp-content/uploads/2023/02/109-1-1024x576.png 1024w, https://acure.io/wp-content/uploads/2023/02/109-1-500x281.png 500w, https://acure.io/wp-content/uploads/2023/02/109-1-320x180.png 320w, https://acure.io/wp-content/uploads/2023/02/109-1-768x432.png 768w, https://acure.io/wp-content/uploads/2023/02/109-1-1536x864.png 1536w, https://acure.io/wp-content/uploads/2023/02/109-1-1200x675.png 1200w, https://acure.io/wp-content/uploads/2023/02/109-1-1568x882.png 1568w, https://acure.io/wp-content/uploads/2023/02/109-1.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h2 class="wp-block-heading">Career/Salary <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4b0.png" alt="💰" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h2>
+
+
+
+<p>The IT Ops Manager position is a rapidly expanding field with many growth opportunities. This position lands fourth place by U.S. News and World Report as the best technology job worldwide.</p>
+
+
+
+<p>Information technology operations managers make an average of $55 per hour. Annually, IT operations managers earn $114,752. The lower average is under $86k per year, while the top earners can make upwards of $152,000 per year. Keep in mind that your salary will depend partially on where you live and work. An IT ops manager working in the heart of California&#8217;s Silicon Valley will earn more than one working for a small company in Montana.</p>
+
+
+
+<p>Whether you&#8217;ve already graduated with a bachelor&#8217;s degree and are ready to put your skills to the test as an IT ops manager or you just want to see what jobs are out there, explore job postings for the IT operations manager role:</p>
+
+
+
+<p><a href="https://www.indeed.com/viewjob?jk=893db0b9e81c5c4e&amp;tk=1gmlldoafi9iq800&amp;from=serp&amp;vjs=3&amp;advn=3221643616900566&amp;adid=395385291&amp;ad=-6NYlbfkN0AuKz8EBO1xHDEL7V2YF9xF3dC_I9B9i-Zw2Jh8clPMK3KTieKealHQgtz1auP59MyrpVMrrXnrx1NlUZdCOAjhaJb003kL1cpwYYYgYBV3W8nO_P55KP8_-fKmKhhkda97IJJq0O3O6iZp8enkUK2ZIp8vNTdf-9Um3eohn-l0uLBALSaD2ZGmQ-hrJIi3oBuAreZwAM9suVloZ1fkZah-KDZIyDz1qmi1FSXNsu5jtL24DtOyeoa_z9MN2sc_cf1HmE3su3DjsaBjaVxVTbgf41zOvD-m3UuuEg4lXPwnHiVBdg7TUfcJIm1z6DLl8FdhBmaYZOqDXJyqYFaesUbccIBULaYLPbIZXjz0yMFJr7fWEqbluObSgGba41s-S4eUIiXC5JyL25LyO8QHRL4p&amp;sjdu=9nrDNPdV1DghkDNnC2WJlW1nrk21-asFvjSk9jx-s_OMcHUw-5N1XJAxJHo4k_8dDMQ3owL_xVtanEmN-H7Ep8oKTvsSk22gMAz8Ds-4633_Kb7O9nmoDsQBLSporaYPQCNONI3F9McHcUBaQ-HMRZ_oiR-CdCDiHzlAurkQdKIiMAjnxtfYRWpXqKKTsas46UydtQF6g9_MJbOu9LmWrw_0TEZTr4S3_UgfmnGuwDl7GxLRG2o5blgXqafxJzkKij8suooweqDApG5hRKfiAG3f6TO-s58nnD3XnAVOs-zdtLU3dx5hjhdbPHDeGC0QAn9gdBWx9sMKiVomm9wqOqLTC3BuXXLH4vMsw4PjwSc1Sr4-23-0fnbLP6904Y0mVU3sLxfA1gonCJr-MXOiejgiz8_yJ0wp0upBsa6uscIuJ8aFClugOqkfRikQtaDZ_ORMarn5WvaoUuAysdEtgF4VqVj1xqRVmWIOikGdFXo" target="_blank" rel="noreferrer noopener nofollow">IT Infrastructure &amp; Operations Managers</a>&nbsp;at TEKsystems manage the IT division of this prestigious law firm. NPA Worldwide has&nbsp;<a href="https://www.indeed.com/q-IT-Operations-Manager-jobs.html?vjk=2fe68e3ba8328ec3&amp;advn=4097568684071675" target="_blank" rel="noreferrer noopener nofollow">IT Operations Managers</a>&nbsp;on staff to lead and manage their IT division.&nbsp;</p>
+
+
+
+<p>If you want to work in the investment niche, Otis Wealth has&nbsp;<a href="https://www.indeed.com/q-IT-Operations-Manager-l-New-York,-NY-jobs.html?vjk=165295554d204b78" target="_blank" rel="noreferrer noopener nofollow">IT Operations Managers</a>&nbsp;who must manage everyday IT needs as well as keep IT systems secure. Uber&#8217;s&nbsp;<a href="https://www.indeed.com/q-IT-Operations-Manager-l-New-York,-NY-jobs.html?vjk=3da9f3c01061dbec&amp;advn=8589170693800026" target="_blank" rel="noreferrer noopener nofollow">Ad Operations Program Manager</a>&nbsp;supports the advertising revenue team and drives operational improvements.&nbsp;</p>
+
+
+
+<p>If you want to branch out into the Internet of Things, companies like&nbsp;<a href="https://www.indeed.com/viewjob?jk=42060af8bb22de08&amp;tk=1gmdujvhlkp1k800&amp;from=serp&amp;vjs=3" target="_blank" rel="noreferrer noopener nofollow">Impinj</a>&nbsp;hire IT Operations Manager to oversee hybrid cloud infrastructures and plan and execute infrastructure strategy.</p>
+
+
+
+<p>The Information Technology field is rapidly expanding and has an expected growth rate of 11% for the timespan of 2018 to 2028. Statistics also show the projection of 46,800 new jobs across the United States.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">Top 6 Skills for an IT Operations Manager <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4aa.png" alt="💪" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h2>
+
+
+
+<p>When building a career in IT operations management, these are the six skills that you should master.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/02/111-1024x576.png" alt="IT operations manager skills picture" class="wp-image-5361" srcset="https://acure.io/wp-content/uploads/2023/02/111-1024x576.png 1024w, https://acure.io/wp-content/uploads/2023/02/111-500x281.png 500w, https://acure.io/wp-content/uploads/2023/02/111-320x180.png 320w, https://acure.io/wp-content/uploads/2023/02/111-768x432.png 768w, https://acure.io/wp-content/uploads/2023/02/111-1536x864.png 1536w, https://acure.io/wp-content/uploads/2023/02/111-1200x675.png 1200w, https://acure.io/wp-content/uploads/2023/02/111-1568x882.png 1568w, https://acure.io/wp-content/uploads/2023/02/111.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h3 class="wp-block-heading">1. ITIL</h3>
+
+
+
+<p>You need to master ITIL as this is the industry standard for IT technology operations management jobs. The ITIL principles and processes govern every aspect of IT and define the protocol for IT within an organization. Mastering ITIL will put you ahead of the game when it comes to the IT operations manager career path.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">2. Project Management</h3>
+
+
+
+<p>IT managers must have strong project management skills to be efficient. This encompasses managing the scope of various internal and external projects related to the IT department. From handling timelines to overseeing budgets and negotiating with software vendors, project management is one of the less technical skills that a good IT operations manager will need to master.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">3. A Strong Knowledge of the Cloud</h3>
+
+
+
+<p>An IT operations manager must have a strong understanding of the cloud and should know how to manage all aspects of cloud services. A strong skill set in cloud computing will ensure the efficient handling of software and the effective training of staff members. IT operations managers oversee everything cloud-related, from planning the migration of files to designing and implementing cloud-based IT solutions.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">4. Acure</h3>
+
+
+
+<p>IT Ops managers can&#8217;t manually oversee every component of the IT infrastructure. A working knowledge of the most popular monitoring software is crucial as an IT Ops manager. Acure is a popular software tool that IT operations managers use to facilitate automated actions and root cause analysis. Acure is a powerful tool for effective process management, automation, and preparing for and responding to downtime.</p>
+
+
+
+<p><strong><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4a1.png" alt="💡" class="wp-smiley" style="height: 1em; max-height: 1em;" /></strong> <strong>Read more about features of the last Acure update <a href="https://acure.io/blog/metrics-acure-2-2/">in our blog</a>.</strong></p>
+
+
+
+<h3 class="wp-block-heading">5. Excellent Strategizing</h3>
+
+
+
+<p>An IT manager will need to have strategic thinking and a careful approach. Often they are in charge of setting up an entire technology infrastructure, including all of the computer systems. They will need to be able to plan out the software and hardware, deploy software updates throughout the organization, and design scalable processes. One key aspect of IT management is developing a strategy for anticipating the future technology needs of a business.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">6. Communication</h3>
+
+
+
+<p>Whether you are manning the service desk and assisting employees with IT issues or designing a plan to migrate data to the cloud, you&#8217;ll be working with people. Good communication skills are a must as an IT ops manager.</p>
+
+
+
+<h2 class="wp-block-heading">Educational Requirements to Become an IT Ops Manager <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f393.png" alt="🎓" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h2>
+
+
+
+<p>According to statistics, roughly 63% of operations managers have a bachelor&#8217;s degree, and 13% have a master&#8217;s degree. However, the position focuses more on experience than on educational qualifications. It is possible to become an IT ops manager without attending college.&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2023/02/108-1024x576.png" alt="IT operations manager education picture" class="wp-image-5360" srcset="https://acure.io/wp-content/uploads/2023/02/108-1024x576.png 1024w, https://acure.io/wp-content/uploads/2023/02/108-500x281.png 500w, https://acure.io/wp-content/uploads/2023/02/108-320x180.png 320w, https://acure.io/wp-content/uploads/2023/02/108-768x432.png 768w, https://acure.io/wp-content/uploads/2023/02/108-1536x864.png 1536w, https://acure.io/wp-content/uploads/2023/02/108-1200x675.png 1200w, https://acure.io/wp-content/uploads/2023/02/108-1568x882.png 1568w, https://acure.io/wp-content/uploads/2023/02/108.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h3 class="wp-block-heading">ITIL Certification</h3>
+
+
+
+<p>Obtaining an ITIL certificate is a key aspect of the IT ops career path. This certificate will help you earn more and improve your chances of advancing to IT operations manager.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">Bachelor&#8217;s Degree</h3>
+
+
+
+<p>While a bachelor&#8217;s degree is not a firm requirement to succeed in the tech industry, it does put you a step ahead of the competition. The most typical majors for IT operations managers are:</p>
+
+
+
+<ul>
+<li>Computer science</li>
+
+
+
+<li>Business</li>
+
+
+
+<li>Information technology</li>
+</ul>
+
+
+
+<p>Getting a bachelor&#8217;s degree in technology management is also helpful in the career path to becoming an IT operations manager. This degree will help you get jobs in database development, analysis, programming, and other entry-level IT roles.&nbsp;</p>
+
+
+
+<p>Once you have the necessary experience and education, you can move up to a more advanced position as a supervisor or manager. Ultimately the career path can go as far as a Chief Technology Officer or IT Director.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">Master&#8217;s Degree</h3>
+
+
+
+<p>Obtaining a master&#8217;s degree will prove beneficial if your goal is to rise to more advanced roles in the IT division, such as management. Many employers will want to know that you have invested time in becoming educated in the field. However, if you have many years of experience in IT, you won&#8217;t need a master&#8217;s degree to get a position as an IT operations manager.&nbsp;</p>
+
+
+
+<p>If you choose to pursue a master&#8217;s degree, select a course of study that highlights technical, strategic, and management-focused skills.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">The 7 Best IT Operations Management Courses in 2023 <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f469-200d-1f3eb.png" alt="👩‍🏫" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h2>
+
+
+
+<ol>
+<li><a href="https://www.udemy.com/course/servicenow-it-operations-management/" target="_blank" rel="noreferrer noopener nofollow">ServiceNow IT Operations Management</a>: This two-hour on-demand course offers in-depth instruction about The ServiceNow Graphical Interface.&nbsp;</li>
+
+
+
+<li><a href="https://coned.georgebrown.ca/courses-and-programs/it-operations-management-transformation" target="_blank" rel="noreferrer noopener nofollow">IT Operations Management Transformation</a>: This comprehensive course covers IT management processes and approaches.&nbsp;</li>
+
+
+
+<li><a href="https://executive-ed.xpro.mit.edu/chief-operating-officer-program?utm_source=DigDefynd&amp;utm_medium=Affiliate&amp;utm_campaign=B-365D_WW_AF_DigDefynd_MO-COO_ALWON&amp;utm_content=ddoperationsmanagement" target="_blank" rel="noreferrer noopener nofollow">MIT Chief Operating Officer Program</a>: Learn how to use and evaluate IT technologies, processes, and systems in these online classes taught by top professionals and academic faculty.&nbsp;</li>
+
+
+
+<li><a href="https://iimk.emeritus.org/iimk-advanced-operations-management-analytics/index-af.php?utm_source=Digdefynd&amp;utm_medium=Affiliate&amp;utm_campaign=IS_IN_IIMK_AOMA_AF_Digdefynd_Jun_22&amp;utm_term=SubAffID&amp;utm_content=ddopmgmt" target="_blank" rel="noreferrer noopener nofollow">Advanced Operations Management &amp; Analytics by IIM Kozhikode</a>: This is a masterful course that teaches the tenets of advanced concepts in analytics and operations management.&nbsp;</li>
+
+
+
+<li><a href="https://gaqm.org/certifications/management_certifications/citm" target="_blank" rel="noreferrer noopener nofollow">Global Association of Quality Management Certificate</a>: This certificate program offers a comprehensive understanding of corporate frameworks, information systems, software, communication, and management of technology personnel.&nbsp;</li>
+
+
+
+<li><a href="https://www.edx.org/learn/operations-management?utm_source=aw&amp;utm_medium=affiliate_partner&amp;utm_content=text-link&amp;utm_term=427859_Digital+Defynd&amp;awc=6798_1673616066_684c8616937b3062d62879381135ea55" target="_blank" rel="noreferrer noopener nofollow">edX Operations Management</a>: This complete operations management course is your path to understanding tools for productivity and operations management.&nbsp;</li>
+
+
+
+<li><a href="https://itmlinstitute.org/itmlp/" target="_blank" rel="noreferrer noopener nofollow">ITML Instit</a><a href="https://itmlinstitute.org/itmlp/">ute Course</a>: This certification bootcamp workshop helps IT operations managers widen their knowledge and learn new strategies.&nbsp;</li>
+</ol>
+
+
+
+<p><strong>Good luck! Subscribe to learn more and improve your IT operations management skills!<img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /></strong></p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/it-operations-manager/">How to Build Your Career As an IT Operations Manager?</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://acure.io/blog/it-operations-manager/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How To Test a Network Connectivity by Using CMD Ping</title>
+		<link>https://acure.io/blog/ping-test-cmd/</link>
+					<comments>https://acure.io/blog/ping-test-cmd/#respond</comments>
+		
+		<dc:creator><![CDATA[Stefen Shaefer]]></dc:creator>
+		<pubDate>Mon, 24 Oct 2022 10:38:52 +0000</pubDate>
+				<category><![CDATA[Academy]]></category>
+		<guid isPermaLink="false">https://acure.io/?p=4290</guid>
+
+					<description><![CDATA[<p>The latency result is the same as the output of the cmd ping test. Small latency, or low ping, is crucial for more than just online gaming. Significant latency lowers the effectiveness of VoIP (Voice over IP) and video conversations (e.g. Skype).&#160; Large pings have the potential to significantly impact how quickly websites and other&#8230; <a class="more-link" href="https://acure.io/blog/ping-test-cmd/">Continue reading <span class="screen-reader-text">How To Test a Network Connectivity by Using CMD Ping</span></a></p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/ping-test-cmd/">How To Test a Network Connectivity by Using CMD Ping</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p><strong>The latency result</strong> is the same as the output of the cmd ping test. Small latency, or <strong>low ping</strong>, is crucial for more than just online gaming. Significant latency lowers the effectiveness of <a href="https://www.fcc.gov/general/voice-over-internet-protocol-voip" target="_blank" rel="noreferrer noopener nofollow">VoIP</a> (Voice over IP) and video conversations (e.g. Skype).&nbsp;</p>
+
+
+
+<p>Large pings have the potential to significantly impact how quickly websites and other internet services respond.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="750" height="422" src="https://acure.io/wp-content/uploads/2022/10/Ping-meme.png" alt="Cmd Ping Test Meme" class="wp-image-4302" srcset="https://acure.io/wp-content/uploads/2022/10/Ping-meme.png 750w, https://acure.io/wp-content/uploads/2022/10/Ping-meme-500x281.png 500w, https://acure.io/wp-content/uploads/2022/10/Ping-meme-320x180.png 320w" sizes="(max-width: 750px) 100vw, 750px" /><figcaption class="wp-element-caption">Cmd Ping Test Meme</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">The Evolution Of What Is Ping Exactly</h2>
+
+
+
+<p><strong>Ping derives from a term used in sonar technology, which sends out sound pulses and then watches for the return of the echo.</strong></p>
+
+
+
+<p>A Windows, Mac, or Linux computer can be used to deliver ping commands. It&#8217;s a useful tool that has been around since the beginning of the 1980s.</p>
+
+
+
+<h2 class="wp-block-heading">Working Of Ping</h2>
+
+
+
+<p>On a computer network, the majority of operating systems come with a ping utility that functions similarly. You issue the ping command while also providing an IP address or URL.&nbsp;</p>
+
+
+
+<p>Your computer sends the device a&nbsp;several <a href="https://www.cloudflare.com/learning/network-layer/what-is-a-packet/" target="_blank" rel="noreferrer noopener nofollow">packets</a> of data before waiting for a response. <strong>The ping tool notifies you if there was no response or displays the time it takes each packet to complete the round trip when it receives the response.</strong></p>
+
+
+
+<h2 class="wp-block-heading">Using CMD Ping To Test Network Connectivity <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f468-200d-1f4bb.png" alt="👨‍💻" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h2>
+
+
+
+<p>Launch the Terminal or Command Prompt. You can use the command Ping on any operating system&#8217;s command line interface. On all systems, the Ping command behaves essentially the same.</p>
+
+
+
+<ol>
+<li>Launch the<strong> Command Prompt in Windows</strong>. In the Search field, click the Start button and type &#8220;cmd.&#8221; Users of Windows 8 can type &#8220;cmd&#8221; from the Start screen. To open the Command Prompt, press Enter.</li>
+</ol>
+
+
+
+<ol start="2">
+<li>Launch the <strong>Terminal if you&#8217;re using Mac OS X</strong>. The Utility folder can be found in your Applications folder. Choose Terminal.</li>
+</ol>
+
+
+
+<ol start="3">
+<li>Open a <strong>Telnet/Terminal window if you&#8217;re using Linux</strong>. The Accessories folder in your Applications directory is where you&#8217;ll most frequently find it.</li>
+</ol>
+
+
+
+<p>Here, we&#8217;ll use the Windows Command Prompt. Press <strong>Windows + R</strong> in Windows. Type <strong><em>&#8220;cmd&#8221;</em></strong> into the search box in the Run window, then press Enter.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="940" height="529" src="https://acure.io/wp-content/uploads/2022/10/image.png" alt="How to start Command Promt" class="wp-image-4295" srcset="https://acure.io/wp-content/uploads/2022/10/image.png 940w, https://acure.io/wp-content/uploads/2022/10/image-500x281.png 500w, https://acure.io/wp-content/uploads/2022/10/image-320x180.png 320w, https://acure.io/wp-content/uploads/2022/10/image-768x432.png 768w" sizes="(max-width: 940px) 100vw, 940px" /></figure>
+
+
+
+<p>Enter <strong><em>&#8220;ping&#8221;</em></strong> followed by the URL or IP address you want to ping at the prompt. The response we receive when pinging ww.google.com can be seen below.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="940" height="491" src="https://acure.io/wp-content/uploads/2022/10/image-1.png" alt="Cmd Test Ping URL" class="wp-image-4297" srcset="https://acure.io/wp-content/uploads/2022/10/image-1.png 940w, https://acure.io/wp-content/uploads/2022/10/image-1-500x261.png 500w, https://acure.io/wp-content/uploads/2022/10/image-1-320x167.png 320w, https://acure.io/wp-content/uploads/2022/10/image-1-768x401.png 768w" sizes="(max-width: 940px) 100vw, 940px" /></figure>
+
+
+
+<p>On the first line of the response, it lists the URL you are pinging, the IP address connected to it, and the size of the packets being transmitted.&nbsp;</p>
+
+
+
+<p>The responses from each individual packet are displayed throughout the following four lines, together with the time (in milliseconds) required for the answer and the packet&#8217;s time-to-live (TTL), or the length of time required before the packet is deleted.</p>
+
+
+
+<p>You may find a summary at the bottom that displays the total number of packets sent and received as well as the minimum, maximum, and average response times.</p>
+
+
+
+<p>If pinging the router on our local network using its IP address. You’ll also get a normal response from it.</p>
+
+
+
+<p>Additionally, the ping tool notifies you when the machines you are pinging do not respond.</p>
+
+
+
+<h3 class="wp-block-heading">Ping Command Availability</h3>
+
+
+
+<p>Operating systems Windows 11, Windows 10, Windows 8, Windows 7, Windows Vista, and Windows XP all support the ping command from the Command Prompt. Older Windows versions like Windows 98 and 95 also support it.</p>
+
+
+
+<p>Additionally, the Advanced Startup Options and System Recovery Options repair/recovery menus in Command Prompt contain this command.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">Common Addresses To Ping</h3>
+
+
+
+<p>You can just check your internet connectivity when running your cmd ping test. To do this, you must confirm that the IP address you are pinging is operational.</p>
+
+
+
+<p>Even though every address might occasionally experience an outage, here are some reliable options for you to ping:</p>
+
+
+
+<p>Open DNS addresses <strong>208.67.222.222</strong>, <strong>208.67.220.220</strong>, <strong>1.0.0.1</strong> (Cloudflare), <strong>8.8.8.8</strong> and <strong>8.8.4.4</strong> (Google DNS)</p>
+
+
+
+<p>When you ping these IP addresses to check for connectivity, if you don&#8217;t get a response, there is probably an issue on your end.</p>
+
+
+
+<h3 class="wp-block-heading">Understanding Ping Results</h3>
+
+
+
+<p>The number of nodes on the path between your machine and the server has a significant impact on the cmd ping test result. They are known as routers, and their job is to send packets from the source IP address to the target IP address. The router must process each packet, and this process takes time.&nbsp;</p>
+
+
+
+<p>Additionally, the delay caused by the physical link between two routers raises the ping. As a result, when lengthy fiber cables are employed for intercontinental connections, there is a noticeable increase in latency.</p>
+
+
+
+<h3 class="wp-block-heading">Cmd Ping Test Connectivity Errors</h3>
+
+
+
+<ol>
+<li>The Reachable Host at Destination Request has expired.</li>
+
+
+
+<li>Ping Request Failed to Locate Host.</li>
+
+
+
+<li>Request timed out</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading">Applications Of Cmd Test Ping</h3>
+
+
+
+<ol>
+<li>Examining network accessibility.</li>
+</ol>
+
+
+
+<ol start="2">
+<li>Determining how many devices are situated between the device and the server.</li>
+</ol>
+
+
+
+<ol start="3">
+<li>Being aware of the IP address of a specific URL.</li>
+</ol>
+
+
+
+<ol start="4">
+<li>Identifying the source of the issue. Ping your router if you are having trouble accessing a website. If the cmd ping test is successful, the issue is with the server and is beyond your control.</li>
+</ol>
+
+
+
+<ol start="5">
+<li>Relaying additional data, such as average round-trip distance and data loss.</li>
+</ol>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30-1024x576.png" alt="Cmd Test Ping Picture" class="wp-image-4304" srcset="https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30-1024x576.png 1024w, https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30-500x281.png 500w, https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30-320x180.png 320w, https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30-768x432.png 768w, https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30-1536x864.png 1536w, https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30-1200x675.png 1200w, https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30-1568x882.png 1568w, https://acure.io/wp-content/uploads/2022/10/Pics-for-Acure-Blog-30.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h2 class="wp-block-heading">To Wrape It Up</h2>
+
+
+
+<p>Pinging enables you to check whether your computer can connect to other hardware on the local network, such as a router. Your device&#8217;s ability to connect to the internet and other devices is also shown by Ping. If your computer can connect, knowing how long it takes to connect, will help you determine whether a network issue is occurring locally or if it originates from another location.&nbsp;</p>
+
+
+
+<p>The fact that ping functions are mainly the same regardless of the operating system you use, is one of its strongest features. The command terminal you use and the command itself are the only things that differ.</p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/ping-test-cmd/">How To Test a Network Connectivity by Using CMD Ping</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://acure.io/blog/ping-test-cmd/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Top 10 DevOps Trends That Could Become Mainstream</title>
+		<link>https://acure.io/blog/devops-trends-2022/</link>
+					<comments>https://acure.io/blog/devops-trends-2022/#respond</comments>
+		
+		<dc:creator><![CDATA[Stefen Shaefer]]></dc:creator>
+		<pubDate>Fri, 30 Sep 2022 02:53:30 +0000</pubDate>
+				<category><![CDATA[Trends]]></category>
+		<guid isPermaLink="false">https://acure.io/?p=4058</guid>
+
+					<description><![CDATA[<p>What Is DevOps? Before we start talking about current DevOps trends&#8230; DevOps is the combination of software developers (dev) and operations (ops). Its purpose is to improve the efficiency, speed, security of software development, product delivery and IT services in the context of complex applications. 🔥 Read our blog post: Top 15 Skills for DevOps&#8230; <a class="more-link" href="https://acure.io/blog/devops-trends-2022/">Continue reading <span class="screen-reader-text">Top 10 DevOps Trends That Could Become Mainstream</span></a></p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/devops-trends-2022/">Top 10 DevOps Trends That Could Become Mainstream</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading">What Is DevOps?</h2>
+
+
+
+<p>Before we start talking about current DevOps trends&#8230;</p>
+
+
+
+<p>DevOps is the combination of software developers (dev) and operations (ops). Its purpose is to improve the efficiency, speed, security of software development, product delivery and IT services in the context of complex applications.</p>
+
+
+
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f525.png" alt="🔥" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Read our blog post: <a href="https://acure.io/blog/top-15-skills-for-devops-engineer/">Top 15 Skills for DevOps</a></p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2022/09/Group-85145991-1024x576.png" alt="DevOps Trends 2022" class="wp-image-4068" srcset="https://acure.io/wp-content/uploads/2022/09/Group-85145991-1024x576.png 1024w, https://acure.io/wp-content/uploads/2022/09/Group-85145991-500x281.png 500w, https://acure.io/wp-content/uploads/2022/09/Group-85145991-320x180.png 320w, https://acure.io/wp-content/uploads/2022/09/Group-85145991-768x432.png 768w, https://acure.io/wp-content/uploads/2022/09/Group-85145991-1536x864.png 1536w, https://acure.io/wp-content/uploads/2022/09/Group-85145991-1200x675.png 1200w, https://acure.io/wp-content/uploads/2022/09/Group-85145991-1568x882.png 1568w, https://acure.io/wp-content/uploads/2022/09/Group-85145991.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>A common goal of DevOps is to transcend traditional IT operating models. An effective DevOps implementation can improve the customer experience, product quality, and agility of customer interactions.</p>
+
+
+
+<p>DevOps aims at building real-time business value in a continuous-delivery environment through automation and continuous integration tools.&nbsp;</p>
+
+
+
+<p>According to a recent market study DevOps industry will reach $20 billion by 2026, and will expand at a CAGR of 24.7% from 2019 to 2026.</p>
+
+
+
+<p>The holistic approach that DevOps necessitates, which includes system thinking and the building of a positive culture, can change how traditional software development methods are done. Modern DevOps trends emphasize utilizing design systems to speed up value development.</p>
+
+
+
+<h2 class="wp-block-heading">DevOps Trends For 2022</h2>
+
+
+
+<h3 class="wp-block-heading">1. Automation</h3>
+
+
+
+<p>The term refers to the addition of technology that performs tasks with reduced human assistance to processes such as code review, testing, and configuration management.</p>
+
+
+
+<p>Automation is the utmost requirement for DevOps practice, and the guiding philosophy of DevOps is to &#8220;automate everything&#8221;.</p>
+
+
+
+<p>Automation in DevOps begins with the generation of code on the developer&#8217;s machine and continues through pushing the code to the code and, even after that, monitoring the application and system in production.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="582" src="https://acure.io/wp-content/uploads/2022/09/Group-85145992-1024x582.png" alt="DevOps Automation Best Practices" class="wp-image-4069" srcset="https://acure.io/wp-content/uploads/2022/09/Group-85145992-1024x582.png 1024w, https://acure.io/wp-content/uploads/2022/09/Group-85145992-500x284.png 500w, https://acure.io/wp-content/uploads/2022/09/Group-85145992-320x182.png 320w, https://acure.io/wp-content/uploads/2022/09/Group-85145992-768x436.png 768w, https://acure.io/wp-content/uploads/2022/09/Group-85145992.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">DevOps Automation Best Practices</figcaption></figure>
+
+
+
+<p>DevOps automation seeks to simplify the manual effort in the DevOps lifecycle.</p>
+
+
+
+<p>According to the 2021 State of DevOps report, highly evolved companies have implemented extensive automation modes in their processes. </p>
+
+
+
+<h3 class="wp-block-heading">2. Site Reliability Engineering (SRE) And DevOps</h3>
+
+
+
+<p><a href="https://www.ibm.com/topics/site-reliability-engineering" target="_blank" rel="noreferrer noopener nofollow">SRE</a> is a type of DevOps that can be applied. SRE is all about relationships and team dynamics.&nbsp;</p>
+
+
+
+<p>To deliver services more quickly, SRE and DevOps both aim to close the gap between development and operations teams.</p>
+
+
+
+<p>DevOps teams who need someone with more specialized operations expertise and whose developers are overburdened with operations responsibilities can benefit from SRE.</p>
+
+
+
+<h3 class="wp-block-heading">3. DevOps Security</h3>
+
+
+
+<p>DevOps security is the science and art of using strategies, policies, procedures, and technology to protect the entire DevOps ecosystem.</p>
+
+
+
+<p>DevOps security should support an effective DevOps environment while assisting in the early detection and correction of operational and code issues.&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27-1024x576.png" alt="DevOps Security" class="wp-image-4071" srcset="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27-1024x576.png 1024w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27-500x281.png 500w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27-320x180.png 320w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27-768x432.png 768w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27-1536x864.png 1536w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27-1200x675.png 1200w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27-1568x882.png 1568w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-27.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Early adoption of DevOps security guarantees that security is a fundamental component of all application and system development processes. As a result, uptime is improved, the likelihood of data breaches is decreased, and strong technology is developed and made available to suit business objectives.</p>
+
+
+
+<h3 class="wp-block-heading">4. Application Performance Monitoring (APM) Software</h3>
+
+
+
+<p>Monitoring and controlling an application&#8217;s performance and availability are referred to as application performance management.</p>
+
+
+
+<p><a href="https://www.techtarget.com/searchenterprisedesktop/definition/Application-monitoring-app-monitoring" target="_blank" rel="noreferrer noopener nofollow">APM</a> is a method that takes into account every element of a software application to comprehend it and continuously enhance it for a better user experience.</p>
+
+
+
+<p>APM is now more widely available to everyone and is no longer just for the DevOps team and system administrators.</p>
+
+
+
+<h3 class="wp-block-heading">5. The Rise Of DevSecOps</h3>
+
+
+
+<p><a href="https://www.gartner.com/en/information-technology/glossary/devsecops" target="_blank" rel="noreferrer noopener nofollow">DevSecOps</a> (development, security, and operations) is the dynamic approach to software development that integrates security as a crucial step in the delivery of applications from design to production.</p>
+
+
+
+<p>Automating the software delivery process with <strong>integration of security initiatives&nbsp;</strong>is the core of DevSecOps. It necessitates a thorough understanding of the most recent automation, AI, and machine learning techniques, as well as DevOps tools and technologies.&nbsp;</p>
+
+
+
+<p>Businesses can automate the compliance process with the aid of DevSecOps. Replacing manual compliance processes with automated ones helps save time and resources.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="582" src="https://acure.io/wp-content/uploads/2022/09/Frame-9730-1024x582.jpg" alt="DevOps vs. DevSecOps" class="wp-image-4073" srcset="https://acure.io/wp-content/uploads/2022/09/Frame-9730-1024x582.jpg 1024w, https://acure.io/wp-content/uploads/2022/09/Frame-9730-500x284.jpg 500w, https://acure.io/wp-content/uploads/2022/09/Frame-9730-320x182.jpg 320w, https://acure.io/wp-content/uploads/2022/09/Frame-9730-768x436.jpg 768w, https://acure.io/wp-content/uploads/2022/09/Frame-9730.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">DevOps vs. DevSecOps</figcaption></figure>
+
+
+
+<h3 class="wp-block-heading">6. Continued Cloud Adoption </h3>
+
+
+
+<p>Because of the centralized structure of the cloud and the availability of a common, centralized platform for testing, deployment, and production, DevOps and cloud computing work well together. Even while they can coexist, they work best together to deliver significant IT transformation that directly advances corporate objectives.</p>
+
+
+
+<p>As cloud computing providers enable DevOps on their platforms, which is less expensive than on-premises automation technology, DevOps automation continues to become increasingly cloud-centric.</p>
+
+
+
+<p>By utilizing user-based accounting to track resource usage, cloud-based DevOps facilitates the tracking of development resource expenses.</p>
+
+
+
+<h3 class="wp-block-heading">7. Autonomous IT Ops</h3>
+
+
+
+<p>In IT operations, the first pillar is automation. Automation is a process and it takes time to build not only the necessary skills but the necessary confidence in AI/ML technology.&nbsp;</p>
+
+
+
+<p>The second pillar is proactive, where an operator can manually take action, but at any time in the future, automation will allow AI to fix the problem without human intervention.</p>
+
+
+
+<p>Achieving full autonomy of IT operations is the democratization of AI. It&#8217;s about making relevant information available to everyone, when and where they need it, in an easy-to-use and practical way. This democratization can be achieved by simplifying AIOps platforms and making them accessible to everyone, from administrators to users.</p>
+
+
+
+<h3 class="wp-block-heading">8. AI and ML Integration</h3>
+
+
+
+<p>Automation of repetitive work and the elimination of inefficiencies throughout the SDLC are two ways that artificial intelligence (AI) and machine learning (ML) assist DevOps teams perform better.&nbsp;</p>
+
+
+
+<p>A significant change in its evolution will result from the combination of ML and AI with DevOps. It establishes DevOps as a critical pillar for the organization&#8217;s objective of digital transformation.</p>
+
+
+
+<h3 class="wp-block-heading">9. Kubernetes as an Evergreen DevOps Trend</h3>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="555" src="https://acure.io/wp-content/uploads/2022/09/Frame-10415-1024x555.jpg" alt="Kubernetes DevOps Meme" class="wp-image-4074" srcset="https://acure.io/wp-content/uploads/2022/09/Frame-10415-1024x555.jpg 1024w, https://acure.io/wp-content/uploads/2022/09/Frame-10415-500x271.jpg 500w, https://acure.io/wp-content/uploads/2022/09/Frame-10415-320x173.jpg 320w, https://acure.io/wp-content/uploads/2022/09/Frame-10415-768x416.jpg 768w, https://acure.io/wp-content/uploads/2022/09/Frame-10415.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Kubernetes DevOps Meme</figcaption></figure>
+
+
+
+<p><a href="https://kubernetes.io/" target="_blank" rel="noreferrer noopener nofollow">Kubernetes</a> allows organizations to leverage more computing power when running software applications. This allows the engineer to share dependencies with her IT operations.&nbsp;</p>
+
+
+
+<p>One of the main reasons to use Kubernetes for DevOps is to reduce your workload. It also resolves conflicts between different environments. This allows engineers to meet customer demands while relying on the cloud for various work apps.</p>
+
+
+
+<p>Kubernetes simplifies container tasks. It simplifies activities such as canary deployments, rolling updates, and horizontal autoscaling.</p>
+
+
+
+<h3 class="wp-block-heading">10. Observability in Application</h3>
+
+
+
+<p>Not only is observability critical for DevOps, but also the entire organization.</p>
+
+
+
+<p>Replacing the static data of legacy monitoring solutions, observability provides a full-spectrum view of application infrastructure.</p>
+
+
+
+<p>Observability helps companies monitor the performance of the application or system. It helps in speeding up the Mean Time to Detection.</p>
+
+
+
+<p>Also, the management of dependencies is a crucial responsibility for DevOps managers. You may automatically map all application and infrastructure dependencies using dynamic service modeling.</p>
+
+
+
+<h2 class="wp-block-heading">***</h2>
+
+
+
+<p>Significant changes are being made to the key facets of DevOps. The perfect catalyst for accelerating the adoption of these DevOps trends would be the unexpected increase in the requirement for digital transformation. Although security will likely rank among the top concerns.&nbsp;</p>
+
+
+
+<p>DevOps trends will emphasize constant advancements in several fields. No matter what the future of IT organizations holds, DevOps will continue to change and adapt. Businesses should apply these DevOps approaches to spearhead big IT transformations that directly support their goals and ambitions.&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1024" height="576" src="https://acure.io/wp-content/uploads/2022/09/31-1024x576.png" alt="DevOps Notebook" class="wp-image-4075" srcset="https://acure.io/wp-content/uploads/2022/09/31-1024x576.png 1024w, https://acure.io/wp-content/uploads/2022/09/31-500x281.png 500w, https://acure.io/wp-content/uploads/2022/09/31-320x180.png 320w, https://acure.io/wp-content/uploads/2022/09/31-768x432.png 768w, https://acure.io/wp-content/uploads/2022/09/31-1536x864.png 1536w, https://acure.io/wp-content/uploads/2022/09/31-1200x675.png 1200w, https://acure.io/wp-content/uploads/2022/09/31-1568x882.png 1568w, https://acure.io/wp-content/uploads/2022/09/31.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>The aforementioned developments will aid firms in quickly moving past automation whileconcentrating on steadily bettering results. The establishment of a reliable release pipeline and improved communication between the business, IT, and development teams are sparked by these trends.</p>
+<p>Сообщение <a rel="nofollow" href="https://acure.io/blog/devops-trends-2022/">Top 10 DevOps Trends That Could Become Mainstream</a> появились сначала на <a rel="nofollow" href="https://acure.io">Acure AIOps Platform</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://acure.io/blog/devops-trends-2022/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 101/105 objects using Memcached
+Page Caching using Memcached (Page is feed) 
+Lazy Loading (feed)
+
+Served from: acure.io @ 2023-12-26 08:30:20 by W3 Total Cache
+-->

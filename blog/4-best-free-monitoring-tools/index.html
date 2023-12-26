@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en-GB">
+
+<!-- Mirrored from acure.io/blog/4-best-free-monitoring-tools/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 06:32:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><style>img.lazy{min-height:1px}</style><link rel="preload" href="../../wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="facebook-domain-verification" content="vkoslorfnvrfymg37ryjl9qjssg5uj" />
+	<meta name="format-detection" content="telephone=no">
+        <meta name="theme-color" content="#203059">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>4 Best Free Log Monitoring Tools in 2023 (Updated) - Acure AIOps Platform</title>
+	<meta name="description" content="Here you can find out more about log monitoring tools that are available for free: Logstash, Grafana, Acure and Graylog." />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="4 Best Free Log Monitoring Tools in 2023 (Updated) - Acure AIOps Platform" />
+	<meta property="og:description" content="Here you can find out more about log monitoring tools that are available for free: Logstash, Grafana, Acure and Graylog." />
+	<meta property="og:url" content="https://acure.io/blog/4-best-free-monitoring-tools/" />
+	<meta property="og:site_name" content="Acure AIOps Platform" />
+	<meta property="article:published_time" content="2022-07-26T00:34:01+00:00" />
+	<meta property="article:modified_time" content="2023-03-09T19:06:19+00:00" />
+	<meta property="og:image" content="https://acure.io/wp-content/uploads/2022/08/Where-To-Perform-Log-Monitoring-Acure.io_-1024x684.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="684" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Elena Hawk" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Elena Hawk" />
+	<meta name="twitter:label2" content="Estimated reading time" />
+	<meta name="twitter:data2" content="13 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://acure.io/blog/4-best-free-monitoring-tools/","url":"https://acure.io/blog/4-best-free-monitoring-tools/","name":"4 Best Free Log Monitoring Tools in 2023 (Updated) - Acure AIOps Platform","isPartOf":{"@id":"https://acure.io/#website"},"primaryImageOfPage":{"@id":"https://acure.io/blog/4-best-free-monitoring-tools/#primaryimage"},"image":{"@id":"https://acure.io/blog/4-best-free-monitoring-tools/#primaryimage"},"thumbnailUrl":"https://acure.io/wp-content/uploads/2022/08/Where-To-Perform-Log-Monitoring-Acure.io_.png","datePublished":"2022-07-26T00:34:01+00:00","dateModified":"2023-03-09T19:06:19+00:00","author":{"@id":"https://acure.io/#/schema/person/43b400e67986290b8c20e271be8c1ac6"},"description":"Here you can find out more about log monitoring tools that are available for free: Logstash, Grafana, Acure and Graylog.","breadcrumb":{"@id":"https://acure.io/blog/4-best-free-monitoring-tools/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://acure.io/blog/4-best-free-monitoring-tools/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://acure.io/blog/4-best-free-monitoring-tools/#primaryimage","url":"https://acure.io/wp-content/uploads/2022/08/Where-To-Perform-Log-Monitoring-Acure.io_.png","contentUrl":"https://acure.io/wp-content/uploads/2022/08/Where-To-Perform-Log-Monitoring-Acure.io_.png","width":4096,"height":2734,"caption":"Log Monitoring"},{"@type":"BreadcrumbList","@id":"https://acure.io/blog/4-best-free-monitoring-tools/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная страница","item":"https://acure.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://acure.io/blog/"},{"@type":"ListItem","position":3,"name":"4 Best Free Log Monitoring Tools in 2023 (Updated)"}]},{"@type":"WebSite","@id":"https://acure.io/#website","url":"https://acure.io/","name":"Acure AIOps Platform","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://acure.io/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"Person","@id":"https://acure.io/#/schema/person/43b400e67986290b8c20e271be8c1ac6","name":"Elena Hawk","image":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://acure.io/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/b57eb78de6afb80a2fce19085efdc040?s=96&d=identicon&r=g","contentUrl":"https://secure.gravatar.com/avatar/b57eb78de6afb80a2fce19085efdc040?s=96&d=identicon&r=g","caption":"Elena Hawk"},"description":"Content Manager at Acure","url":"https://acure.io/blog/author/kate/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='http://js.hs-scripts.com/' />
+<link rel='dns-prefetch' href='http://code.jquery.com/' />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; 4 Best Free Log Monitoring Tools in 2023 (Updated) Comments Feed" href="feed/index.html" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/acure.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.4"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<style id='safe-svg-svg-icon-style-inline-css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<link rel='stylesheet' id='classic-theme-styles-css' href='../../wp-includes/css/classic-themes.min68b3.css?ver=1' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #28303D;--wp--preset--color--gray: #39414D;--wp--preset--color--green: #D1E4DD;--wp--preset--color--blue: #D1DFE4;--wp--preset--color--purple: #D1D1E4;--wp--preset--color--red: #E4D1D1;--wp--preset--color--orange: #E4DAD1;--wp--preset--color--yellow: #EEEADD;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--purple-to-yellow: linear-gradient(160deg, #D1D1E4 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-purple: linear-gradient(160deg, #EEEADD 0%, #D1D1E4 100%);--wp--preset--gradient--green-to-yellow: linear-gradient(160deg, #D1E4DD 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-green: linear-gradient(160deg, #EEEADD 0%, #D1E4DD 100%);--wp--preset--gradient--red-to-yellow: linear-gradient(160deg, #E4D1D1 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-red: linear-gradient(160deg, #EEEADD 0%, #E4D1D1 100%);--wp--preset--gradient--purple-to-red: linear-gradient(160deg, #D1D1E4 0%, #E4D1D1 100%);--wp--preset--gradient--red-to-purple: linear-gradient(160deg, #E4D1D1 0%, #D1D1E4 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 18px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--extra-small: 16px;--wp--preset--font-size--normal: 20px;--wp--preset--font-size--extra-large: 40px;--wp--preset--font-size--huge: 96px;--wp--preset--font-size--gigantic: 144px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='twenty-twenty-one-style-css' href='../../wp-content/themes/twentytwentyoneacure/style4963.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='twenty-twenty-one-print-style-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/print4963.css?ver=1.1' media='print' />
+<link rel='stylesheet' id='header-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/header1b46.css?ver=6.1.4' media='all' />
+<link rel='stylesheet' id='article-blog-style-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/blog/article1b46.css?ver=6.1.4' media='all' />
+<link rel='stylesheet' id='layout-new-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/layout-new1b46.css?ver=6.1.4' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" type="application/json" href="../../wp-json/wp/v2/posts/3468.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.1.4" />
+<link rel='shortlink' href='../../index01d8.html?p=3468' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embedacd7.json?url=https%3A%2F%2Facure.io%2Fblog%2F4-best-free-monitoring-tools%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed06eb?url=https%3A%2F%2Facure.io%2Fblog%2F4-best-free-monitoring-tools%2F&amp;format=xml" />
+			<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v10.2.17-->
+			<script type="text/javascript" class="hsq-set-content-id" data-content-id="blog-post">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentType", "blog-post"]);
+			</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+			<link rel="pingback" href="../../xmlrpc.php"><link rel="icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://acure.io/wp-content/uploads/2022/07/cropped-favicon@512-1-270x270.png" />
+		<style id="wp-custom-css">
+			#hubspot-messages-iframe-container {
+	transition: visibility 300ms ease-in-out, opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+body.menu-opened #hubspot-messages-iframe-container {
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0.1);
+}		</style>
+			<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WHP5QBX');</script>
+	<!-- End Google Tag Manager -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&amp;family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+</head>
+
+<body class="post-template-default single single-post postid-3468 single-format-standard wp-embed-responsive is-light-theme no-js singular no-widgets">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHP5QBX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","../../../chimpstatic.com/mcjs-connected/js/users/1db403f4f82776842476c3fe3/09ddf2027967f7ac96b29220e.js");</script>
+<!-- Start of HubSpot Embed Code (delayed) -->
+<script>
+	var hsScript=document.createElement("script");hsScript.setAttribute("id","hs-script-loader"),hsScript.setAttribute("type","text/javascript"),hsScript.setAttribute("async",""),hsScript.setAttribute("defer",""),hsScript.setAttribute("src","../../../js.hs-scripts.com/21653852.js"),setTimeout(function(){document.head.appendChild(hsScript)},7e3);
+</script>
+<!-- End of HubSpot Embed Code -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><!-- Start of HubSpot code snippet -->
+<button type="button" id="hs_show_banner_button"
+		style="background-color: #1D1AA7; border: 1px solid #1D1AA7;
+         border-radius: 3px; padding: 10px 16px; text-decoration: none; color: #fff;
+         font-family: inherit; font-size: 16px; font-weight: normal; line-height: inherit;
+         text-align: left; text-shadow: none; position: fixed; bottom: 0; right: 0; z-index: 10;"
+		onClick="(function(){
+    var _hsp = window._hsp = window._hsp || [];
+    _hsp.push(['showBanner']);
+  })()"
+>
+	Cookie Settings
+</button>
+
+<!-- End of HubSpot code snippet -->
+<!-- -------------- HEADER & NAVIGATION -------------- -->
+    <div id="header">
+        <div class="acure-header-desktop acure-mobile-hidden">
+            <div class="acure-header-desktop__container">
+                <a class="acure-header-desktop__logo" href="../../index.html">
+                    <img class="acure-header-desktop__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+                </a>
+                <nav class="acure-header-desktop__navigation">
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">AIOps Platform</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">About Acure</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Interface Tour</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../platform/index.html">Platform Overview</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../features/index.html">Features</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../integrations/index.html">Integrations</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../price/index.html">Prices</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Our Solutions</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Corelation & Noise Reduction</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discoverу</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Ops</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Acure vs. Others</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Dynatrace</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. StackState</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Splunk</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. DataDog</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Moogsoft</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Technologies</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Hybrid Cloud Observability</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Customer Success</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--truck" href="../../customer-stories/supply-company/index.html">
+                                            <span>How Acure reconciled network and VDI engineers in the supply company</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--store" href="../../customer-stories/retail-company/index.html">
+                                            <span>How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--factory" href="../../customer-stories/industrial-holding/index.html">
+                                            <span>How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--credit-card" href="../../customer-stories/digital-bank/index.html">
+                                            <span>How Acure automation services helped reduce IT troubleshooting time in a large digital bank</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--briefcase" href="../../customer-stories/insurance-company/index.html">
+                                            <span>How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Resources</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Content Hub</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Featured Content</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--monitor" href="../../landing/root-cause-analysis/index.html">
+                                            <span>Engineers spend hours trying to investigate why digital services are not working!</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Company</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Acure Company</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../about/index.html">About Us</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Our Mission</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                                Careers
+                                                <span class="acure-header-desktop__navigation-submenu-item-tip">we are hiring</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Contacts</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../contacts/index.html">Contact Us</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.linkedin.com/company/acure-io" target="_blank">Follow Us on LinkedIn</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right"></div>
+                        </div>
+                    </div>
+                                        <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Documentation</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">User Guide</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/data-collect/" target="_blank">Data Collection</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/signals/" target="_blank">Signals</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/service-model-cmdb/" target="_blank">CMDB & Service Model</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/automation/" target="_blank">Actions & Automation</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Solutions</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/plugins/" target="_blank">Notifications (plugins)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/" target="_blank">Integrations (data streams)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/signals-processor/" target="_blank">Signals (event scenarios)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/rsm-autobuild/" target="_blank">Service model (auto-building scenarios)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/scripts/" target="_blank">Scripts</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">References</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/structure/" target="_blank">Structure & Components</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/api/" target="_blank">Public API</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/agent-plugins/" target="_blank">Acure Agent Plugins</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/user-roles/" target="_blank">User Roles</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/data-streams-templates/" target="_blank">Configuration Templates</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/availability/" target="_blank">Availability Calculation</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Releases</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.3/" target="_blank">Acure 2.3.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.2/" target="_blank">Acure 2.2.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.1/" target="_blank">Acure 2.1.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.0/" target="_blank">Acure 2.0.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Integrations</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-standard-integration-with-zabbix" target="_blank">Zabbix</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-scom" target="_blank">SCOM</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-prometheus" target="_blank">Prometheus</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-integration-with-ntopng" target="_blank">Ntopng</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-nagiosxi" target="_blank">NagiosXI</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-nagios-core" target="_blank">Nagios Core</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-fluentd" target="_blank">Fluentd</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-fluent-bit" target="_blank">Fluent Bit</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-logstash" target="_blank">Logstash</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-vmware-vcenter" target="_blank">VMware Center</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="acure-header-desktop__buttons">
+                    <a class="acure-header-desktop__button acure-header-desktop__button--text" href="https://id.acure.io/account/login" target="_blank">Log In</a>
+                    <a class="acure-header-desktop__button acure-button acure-button--yellow-secondary" href="https://id.acure.io/account/sign-up" target="_blank">Sign Up</a>
+                    <a class="acure-header-desktop__button acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+                </div>
+            </div>
+        </div>
+        <div class="acure-header-mobile acure-desktop-hidden">
+            <a class="acure-header-mobile__logo" href="../../index.html">
+                <img class="acure-header-mobile__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+            </a>
+            <div class="acure-header-mobile__menu-button">
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--top"></div>
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--middle"></div>
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--bottom"></div>
+            </div>
+            <div class="acure-header-mobile__menu">
+                <div class="acure-header-mobile__menu-items">
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>AIOps Platform</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>About Acure</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Interface Tour</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../platform/index.html">Platform Overview</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../features/index.html">Features</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../integrations/index.html">Integrations</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../price/index.html">Prices</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Our Solutions</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Correlation & Noise Reduction</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discovery</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Operations</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Acure vs. Others</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Dynatrace</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. StackState</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Splunk</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. DataDog</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Moogsoft</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Technologies</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Hybrid Cloud Observability</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Customer Success</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/supply-company/index.html">How Acure reconciled network and VDI engineers in the supply company</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/retail-company/index.html">How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/industrial-holding/index.html">How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/digital-bank/index.html">How Acure automation services helped reduce IT troubleshooting time in a large digital bank</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/insurance-company/index.html">How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>Resources</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Content Hub</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Featured Content</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../landing/root-cause-analysis/index.html">Engineers spend hours trying to investigate why  digital services are not working!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>Company</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Acure Company</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../about/index.html">About Us</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Our Mission</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                        Careers
+                                        <span class="acure-header-mobile__menu-link-tip">we are hiring</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Contacts</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../contacts/index.html">Contact Us</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.linkedin.com/company/acure-io/" target="_blank">Follow Us on LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-header-mobile__menu-bottom">
+                    <a class="acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+                    <div class="acure-header-mobile__menu-help">Switch to the desktop version to take full advantage of the Acure AIOps platform!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end HEADER -->
+<!-- -------------- end HEADER & NAVIGATION -------------- --><div id="homepage" class="site">
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">    <div class="acure-page article-page background-color-ultra-light-gray">
+        <div class="acure-container acure-container--full">
+            <div class="acure-article-head">
+                <div class="acure-container">
+                    <div class="acure-article-head__content">
+                        <div class="acure-article-head__tags">
+                                                            <div class="acure-tag acure-tag--small acure-tag--active">Reviews</div>
+                                                    </div>
+                        <div class="acure-spacing--10"></div>
+                        <h1 class="acure-article-head__title">4 Best Free Log Monitoring Tools in 2023 (Updated)</h1>
+                        <div class="acure-mobile-spacing--20 acure-desktop-spacing--10"></div>
+                        <div class="acure-blog-date-time">
+                            <div class="acure-blog-date-time__item">17  minutes read</div>
+                            <div class="acure-blog-date-time__item">26 Jul 2022</div>
+                        </div>
+                        <div class="acure-spacing--30"></div>
+                        <div class="acure-article-head__quote">
+                            <div class="acure-article-quote">
+                                <p>The collection and analysis of logs and events is a necessary part of IT infrastructure. Logs are very valuable material for the observability of your systems and services. Events carry information about exceeding threshold values ​​in metrics or traces. Read this article to learn more about log monitoring tools that are available for free: Logstash, Grafana, Acure and Graylog.</p>
+                            </div>
+                        </div>
+                        <div class="acure-spacing--30"></div>
+                        <div class="acure-article-head__bottom">
+                            <div class="acure-blog-author acure-blog-author--small">
+                                <div class="acure-blog-author__photo acure-circle-avatar acure-circle-avatar--small acure-circle-avatar--with-shadow">
+                                                                            <img class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/25e7b8ef4a1be6c36c62d3c56181c41a?s=250&amp;d=identicon&amp;r=g">
+                                                                    </div>
+                                <div class="acure-blog-author__info">
+                                    <div class="acure-blog-author__name">
+                                        Elena Hawk                                    </div>
+
+                                    <div class="acure-blog-author__position">
+                                        Content Manager at Acure                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-mobile-spacing--30"></div>
+                            <div class="acure-share">
+                                <div class="acure-share__title">
+                                    Share:
+                                </div>
+                                <div class="acure-share__items">
+                                    <a class="acure-share__item acure-share__item--facebook" href="javascript:void(0)" onclick="window.open( 'http://www.facebook.com/sharer.php?u=https://acure.io/blog/4-best-free-monitoring-tools/', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Facebook"></a>
+                                    <a class="acure-share__item acure-share__item--linkedin" href="javascript:void(0)" onclick="window.open( 'https://www.linkedin.com/shareArticle?mini=true&amp;url=https://acure.io/blog/4-best-free-monitoring-tools/&amp;title=4%20Best%20Free%20Log%20Monitoring%20Tools%20in%202023%20(Updated)&amp;summary=Some%20Summary&amp;source=acure.io', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Linkedin"></a>
+                                    <a class="acure-share__item acure-share__item--twitter" href="javascript:void(0)" onclick="window.open( 'http://www.twitter.com/share?url=https://acure.io/blog/4-best-free-monitoring-tools/', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Twitter" target="_blank"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="acure-container">
+            <div class="acure-container__columns">
+                <div class="acure-container__column acure-container__column--content">
+                    <div class="acure-breadcrumbs">
+                        <a class="acure-breadcrumbs__item" href="../../blog.html">Blog</a>
+                        <div class="acure-breadcrumbs__delimiter"></div>
+                                                                                    <a class="acure-breadcrumbs__item" href="../category/reviews/index.html">Reviews</a>
+                                                        
+
+                        <div class="acure-breadcrumbs__delimiter"></div>
+                        <span class="acure-breadcrumbs__item acure-breadcrumbs__item--active">4 Best Free Log Monitoring Tools in 2023 (Updated)</span>
+                    </div>
+                    <div class="article-page__share acure-desktop-hidden">
+                        <div class="acure-share">
+                            <div class="acure-share__title">
+                                Share:
+                            </div>
+                            <div class="acure-share__items">
+                                <a class="acure-share__item acure-share__item--facebook" href="https://www.facebook.com/sharer/sharer.php?u=%3CURL%3E" target="_blank"></a>
+                                <a class="acure-share__item acure-share__item--linkedin" href="https://www.linkedin.com/shareArticle?url=%3CURL%3E&amp;title=%3CTITLE%3E&amp;summary=%3CSUMMARY%3E&amp;source=%3CSOURCE_URL%3E" target="_blank"></a>
+                                <a class="acure-share__item acure-share__item--twitter" href="https://twitter.com/share?url=%3CURL%3E&amp;text=%3CTEXT%3E" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-article-content">
+                        <div class="acure-text">
+                            
+<p>To understand the whole picture, you need a view from above, collecting all the important signals in one system and working with big data in it. In the case of AIOps, we <a href="../../features/index.html" target="_blank" rel="noreferrer noopener">collect data on all logs</a>, events, metrics and traces, then we build the service topology and algorithmically determine the health status.</p>
+
+
+
+<h2 class="wp-block-heading">What is Log Monitoring?</h2>
+
+
+
+<p>Collecting logs for future observation is called <strong><a href="../log-monitoring/index.html">log monitoring</a></strong>. It is the process of categorizing logs and searching for abnormalities that might cause system problems.</p>
+
+
+
+<h3 class="wp-block-heading">The Steps of Logs Processing</h3>
+
+
+
+<p>In the processing logs, at least four stages can be distinguished:</p>
+
+
+
+<p>1. <strong><a href="../../integrations/index.html" target="_blank" rel="noreferrer noopener">Collecting logs</a></strong> from servers and containers using agents and sending them via network protocols to a centralized repository either directly or through aggregators with pre-processing;</p>
+
+
+
+<p>2. <strong>Log messages</strong> are parsed inside the aggregators, enriched with additional information (time stamp, source ID, location tag, etc.), converted to a single format and sent to storage ​​ready for indexing;</p>
+
+
+
+<p>3. Direct storage of logs and storage <strong>management</strong>;</p>
+
+
+
+<p>4. <strong>Analysis and visualization of data</strong> obtained from logs.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="750" height="400" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20750%20400'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/08/Log-Monitoring-Meme.jpg" alt="Logs Meme" class="wp-image-3634 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/08/Log-Monitoring-Meme.jpg 750w, https://acure.io/wp-content/uploads/2022/08/Log-Monitoring-Meme-500x267.jpg 500w, https://acure.io/wp-content/uploads/2022/08/Log-Monitoring-Meme-320x171.jpg 320w" data-sizes="(max-width: 750px) 100vw, 750px" /><figcaption class="wp-element-caption">Logs Meme</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">Log Monitoring Tools You Can Use for Free ✨</h2>
+
+
+
+<p>There are about a hundred software solutions on the market with the required propensity to collect and analyze logs. In this article, we will look at 4 popular FREE log monitoring tools and compare their functionality as aggregators, a storage system and instruments of visualization.</p>
+
+
+
+<ul>
+<li><strong>ELK Stack</strong></li>
+
+
+
+<li><strong>Graylog Open</strong></li>
+
+
+
+<li><strong>Acure</strong></li>
+
+
+
+<li><strong>Grafana Loki</strong></li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">1. ElasticSearch + Logstash + Kibana</h3>
+
+
+
+<p>ElasticSearch, Logstash and Kibana were originally developed as open source products and developed separately from each other, but in 2015 they merged under the <a href="http://elastic.co/" target="_blank" rel="noreferrer noopener nofollow">Elastic brand </a>and began to be a single product &#8211; the ELK stack.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="702" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20702'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/07/image-1024x702.png" alt="ELK Stack Monitoring Tool" class="wp-image-3474 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/07/image-1024x702.png 1024w, https://acure.io/wp-content/uploads/2022/07/image-500x343.png 500w, https://acure.io/wp-content/uploads/2022/07/image-320x219.png 320w, https://acure.io/wp-content/uploads/2022/07/image-768x527.png 768w, https://acure.io/wp-content/uploads/2022/07/image-1200x823.png 1200w, https://acure.io/wp-content/uploads/2022/07/image.png 1400w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">ELK Stack Monitoring Tool</figcaption></figure>
+
+
+
+<p>Logstash is a server-side data processing pipeline that simultaneously receives data from multiple sources, transforms it, and then sends the processed data to Elasticsearch storage. The main functionality of <strong>Logstash as a log aggregator</strong> is the following:</p>
+
+
+
+<ul>
+<li>The ability to accept data in different formats and different sizes from many sources using all sorts of input plugins;</li>
+
+
+
+<li>Processing of input data using separate plugins;</li>
+
+
+
+<li>Output plugins are used to send processed structured logs to various data storage systems (most often Elasticsearch), message brokers (kafka, redis), etc.</li>
+
+
+
+<li>Logstash has the ability to use different codecs to decode and encode input and output data: the main ones are plain for working with Plain text messages and<strong> JSON</strong> for working with events in JSON format.</li>
+
+
+
+<li>The processing pipeline configuration is set in a simple text file.</li>
+</ul>
+
+
+
+<p>The centerpiece of the ELK stack is <strong>Elasticsearch</strong>, a high-performance full-text search engine based on the<strong> Apache Lucene open-source library</strong>. It combines the functions of a database, as well as a search and analytics engine, with the following main features:</p>
+
+
+
+<ul>
+<li>Elasticsearch is non-relational document-oriented data storage (NoSQL) in JSON format without strict structure;</li>
+
+
+
+<li>All work with the database is based on JSON requests using the REST API, which allows you to add, view, modify and delete data, issue documents by index, calculate various statistics;</li>
+
+
+
+<li>The absence of a schema allows you to upload any text documents to the storage and index them automatically;</li>
+
+
+
+<li>The indexing procedure consists in processing the text of the document by the analyzer and adding the output set of tokens to the search index;</li>
+
+
+
+<li>Elasticsearch provides fast and flexible full-text search across all fields in all data warehouse documents (words from a query are searched by index);</li>
+
+
+
+<li>Support of several different fuzzy search methods,</li>
+
+
+
+<li>Work with texts of oriental languages CJK (Chinese, Japanese, Korean) is supported;</li>
+
+
+
+<li>Elasticsearch has high scale-out and replication capabilities for high-load projects with large volumes of data, as well as relatively easy management and good fault tolerance.</li>
+</ul>
+
+
+
+<p>Kibana, as part of the ELK stack, is the tool responsible for presenting search query results to Elasticsearch in a human-readable form. In essence, <strong>Kibana is a web interface for searching, viewing and interacting with documents in the data warehouse</strong>, allowing you to:</p>
+
+
+
+<ul>
+<li>send search queries to Elasticsearch (using special KQL syntax, Kibana Query Language) and carry out all kinds of filtering of the results obtained,</li>
+
+
+
+<li>analyze data and visualize the results in the form of various charts, histograms, tables, graphs, maps, etc.,</li>
+
+
+
+<li>create, modify, save and load custom dashboards that combine several visualizations on one screen, and third-party dashboards can also be loaded,</li>
+
+
+
+<li>administrate Elasticsearch data warehouse, manage indexes and processing pipelines,</li>
+
+
+
+<li>manage the rights and levels of user access to different elements of the system.</li>
+</ul>
+
+
+
+<p>It should be noted that in the latest versions (starting from 7.14) Elastic actually switched to collecting logs using their own agent programs (Elastic Agents) installed on servers and containers instead of using input plugins for Logstash. </p>
+
+
+
+<p>Elastic Agent is a single, unified way to add monitoring of logs, metrics, and other types of data per node, making it easier and faster to deploy monitoring in a large system. </p>
+
+
+
+<p>The Kibana web interface has an additional Fleet panel that can be used to add and manage agents, and you can also install ready-made integrations for popular services and platforms from it. The integrations provide a fairly simple and fast way to connect standard data sources, plus they come with customized elements such as dashboards, visualizations, and pipelines for extracting structured fields from log messages.</p>
+
+
+
+<h3 class="wp-block-heading">2. Graylog Open</h3>
+
+
+
+<p>One of the systems competing with the ELK stack for collecting and processing logs is <a href="https://www.graylog.org/products/open-source" target="_blank" rel="noreferrer noopener nofollow">Graylog Open</a>, which also uses Elasticsearch as a log storage and search engine. Graylog itself directly performs the functions of a log aggregator and visualization tool in the form of a client single-page browser application.</p>
+
+
+
+<p>In terms of log aggregation, the Graylog functionality is very similar to the Logstash functionality:</p>
+
+
+
+<ul>
+<li>the ability to receive data in different formats from various sources using various input plugins,</li>
+
+
+
+<li>processing input data using so-called extractors, in which the rules for extracting the values of the desired named fields from message strings can be specified using regular expressions and grok patterns,</li>
+
+
+
+<li>sending processed structured logs to the Elasticsearch data storage system or, using special output plugins, to other systems,</li>
+
+
+
+<li>the ability to work with both simple text messages and events in JSON format .</li>
+</ul>
+
+
+
+<p>Since Graylog uses Elasticsearch, it is similar to the ELK stack in terms of search queries and working with the data warehouse and index, and in terms of processing and visualizing data from log messages, the Graylog web interface provides functionality that is similar to Kibana.</p>
+
+
+
+<p>Despite the significant similarity in the principles of operation and user functions between the ELK stack and Graylog, the latter has a number of features:</p>
+
+
+
+<ul>
+<li>additional mongoDB database to store configurations and settings,</li>
+
+
+
+<li>ability to create and combine multiple search queries into one action and view the results on a dashboard screen.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="620" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20620'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/07/image-1-1024x620.png" alt="Graylog Log Monitoring Tool Interface" class="wp-image-3475 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/07/image-1-1024x620.png 1024w, https://acure.io/wp-content/uploads/2022/07/image-1-500x303.png 500w, https://acure.io/wp-content/uploads/2022/07/image-1-320x194.png 320w, https://acure.io/wp-content/uploads/2022/07/image-1-768x465.png 768w, https://acure.io/wp-content/uploads/2022/07/image-1-1536x930.png 1536w, https://acure.io/wp-content/uploads/2022/07/image-1.png 2048w, https://acure.io/wp-content/uploads/2022/07/image-1-1200x727.png 1200w, https://acure.io/wp-content/uploads/2022/07/image-1-1568x949.png 1568w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Graylog Log Monitoring Tool Interface</figcaption></figure>
+
+
+
+<p>But the most important difference and advantage of Graylog Open over the ELK stack is the presence of a built-in notification system (alerts) in case of any specific situations or events in the process of collecting logs (there is a notification system in ELK, but it is paid, although there are also free third-party plugins with similar functionality). </p>
+
+
+
+<p><strong>Graylog Alerts are periodically self-triggered search queries that can send notifications if certain conditions are met as a result of the query.</strong> Graylog allows you to set a variety of alert conditions based on the data it collects, the following are available by default (for others, you need to install plugins):</p>
+
+
+
+<ul>
+<li>the filter condition is triggered when at least one message arrives in the specified stream, in which a specific field contains the specified value,</li>
+
+
+
+<li>the aggregation condition is triggered when the result of the aggregation (usually a counter of the values of some fields) exceeds a certain threshold value.</li>
+</ul>
+
+
+
+<p>Notifications can be sent via email or http to any configured recipient.</p>
+
+
+
+<p>Graylog, as well as the latest versions of Elastic, provides the ability to install its agents on each controlled system (Graylog Collector Sidecars), which collect the necessary information and send it to the server. </p>
+
+
+
+<p>Using a separate Graylog panel Sidecars in the web interface, you can centrally manage and maintain a consistent configuration of various logging agents on all nodes. For this, a system of tags is used, which are created through the web console and contain configurations for collecting a certain type of logs (for example, Apache logs, DNS logs, etc.), and Sidecar agents on specific machines can “self-configure” by the specified tag and start sending data.</p>
+
+
+
+<h3 class="wp-block-heading">3. Acure</h3>
+
+
+
+<p><strong><a href="../../index.html" target="_blank" rel="noreferrer noopener">Acure platform is a freemium solution for log monitoring and AIOps</a></strong>. There are no restrictions on the number of users, events or automation rules and up to 5 GB of daily incoming data. Although Acure is still a very young product, in terms of functionality it can compete with well-established log monitoring tools like the ELK stack, since it has all the necessary elements to organize a data collection and processing system.</p>
+
+
+
+<p>As a log message aggregator, Acure can perform the following functions:</p>
+
+
+
+<ul>
+<li>receiving data in JSON format from various sources via http and many connection templates (Zabbix , Prometheus , Nagios, Ntopng , SCOM, etc.);</li>
+
+
+
+<li>its own low-code engine for processing of input data: extracting named field values from message text using regular expressions, transformation and change of field values, adding new fields and their values (enriching data with new labels);</li>
+
+
+
+<li>storage of logs in ClickHouse database;</li>
+
+
+
+<li>management of user access rights to configurations and settings of data flows.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="482" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20482'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/07/Acure-logs-1024x482.jpg" alt="Events &amp; Logs in Acure" class="wp-image-3479 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/07/Acure-logs-1024x482.jpg 1024w, https://acure.io/wp-content/uploads/2022/07/Acure-logs-500x236.jpg 500w, https://acure.io/wp-content/uploads/2022/07/Acure-logs-320x151.jpg 320w, https://acure.io/wp-content/uploads/2022/07/Acure-logs-768x362.jpg 768w, https://acure.io/wp-content/uploads/2022/07/Acure-logs.jpg 1140w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Events &amp; Logs in Acure</figcaption></figure>
+
+
+
+<p>Acure uses the ClickHouse DBMS as a data store, as well as search and analytical engines, which gives it the following functionality:</p>
+
+
+
+<ul>
+<li>sending search queries (with a syntax similar to Lucene) and all kinds of filtering of the results,</li>
+
+
+
+<li>column type of the ClickHouse database provides very fast processing of search and analytical queries (lack of indexing),</li>
+
+
+
+<li>the model for the database is generated automatically based on the JSON model of a particular stream, the necessary fields are added if it’s required.</li>
+</ul>
+
+
+
+<p>In terms of data visualization, Acure has the following functionality:</p>
+
+
+
+<ul>
+<li>displaying the total number of processed events as a time series histogram;</li>
+
+
+
+<li>representation of the values of various fields in the form of a histogram of frequency (for numeric fields, the minimum, maximum and average value are also calculated);</li>
+
+
+
+<li>support for Markdown markup in displaying the text of log messages (you can write your own handler that will add Markdown markup to the required fields);</li>
+
+
+
+<li>visual filter constructor with the ability to include and exclude specific field values in the filter by clicking on them.</li>
+</ul>
+
+
+
+<p>In addition to the standard presentation of raw log and event data, there are also more specific visual components:</p>
+
+
+
+<ul>
+<li>timeline for events and work planning (this is convenient when you need to share a schedule of important events, routine maintenance or marketing activities with colleagues, and also on the timeline you can investigate the root cause of the incident and correlate by the time of the event);</li>
+
+
+
+<li>heat map of the state of the selected set of services and monitoring objects;</li>
+
+
+
+<li>topology graph with the states of individual objects and the transfer of health statuses with the formation of the health of these objects;</li>
+
+
+
+<li>other screens for more specific tasks, such as SLA calculation and business impact analysis.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="480" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20480'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/07/Service-Mode-in-Acure-1024x480.jpg" alt="Acure Log Monitoring Tool Interface" class="wp-image-3480 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/07/Service-Mode-in-Acure-1024x480.jpg 1024w, https://acure.io/wp-content/uploads/2022/07/Service-Mode-in-Acure-500x235.jpg 500w, https://acure.io/wp-content/uploads/2022/07/Service-Mode-in-Acure-320x150.jpg 320w, https://acure.io/wp-content/uploads/2022/07/Service-Mode-in-Acure-768x360.jpg 768w, https://acure.io/wp-content/uploads/2022/07/Service-Mode-in-Acure.jpg 1170w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Acure Log Monitoring Tool Interface</figcaption></figure>
+
+
+
+<p>Acure also has a notification system that works on the same principles as Graylog or Splunk, there is a synthetic trigger mechanism for generating events, and a “Rules and Actions” mechanism for triggering the necessary actions to trigger complex rules.</p>
+
+
+
+<h3 class="wp-block-heading">4. Grafana Loki</h3>
+
+
+
+<p>Grafana Loki is a relatively recent addition to the list of log monitoring tools and analysis software solutions &#8211; the project was launched in 2018. <a href="https://grafana.com/oss/loki/" target="_blank" rel="noreferrer noopener nofollow">Grafana Loki&nbsp;</a>works in the same way as the ELK stack and Graylog, but with its own specifics.</p>
+
+
+
+<p>Loki itself is nothing more than an indexer of the structured logs it receives and indexing is not carried out according to the entire text of log messages, only according to log metadata (tags or labels), while the logs themselves are compressed side by side into separate files and stored either locally, or in cloud storage like Amazon S3 or GCS. Full-text search by index is not possible in Loki. </p>
+
+
+
+<p>The data is searched first by indexed fields and then the text of the selected logs is scanned with regular expressions. This approach avoids problems with RAM requirements (a full-text index of logs is often comparable in size to the logs themselves, and for a quick search it must be loaded into memory), but it significantly increases the search time in case of a large volume of logs. </p>
+
+
+
+<p>To speed up the search, Loki can split the request into several parts and execute them in parallel, so that the processing speed depends on the allocated resources.</p>
+
+
+
+<p>Secondly, Loki delegates all the main work (parsing, finding named fields in the text of log messages, their transformation and reduction to a common format) to collector agents. <strong>Loki &#8216;s native agent is Promtail, although it is possible to use Fluentd, Logstash and some others. </strong></p>
+
+
+
+<p>Currently, Promtail can only read log messages from local files and from the systemd service, but it borrows Prometheus &#8216;s service discovery mechanism, which allows it to automatically integrate with Kubernetes and collect logs from nodes, services, or pods, immediately putting tags on based on metadata from Kubernetes . </p>
+
+
+
+<p>The mechanism for processing log messages and bringing them to a structured form in Promtail is similar to the mechanism of extractors in Graylog (although there are some nuances everywhere), but Promtail does not have a graphical interface and the entire configuration of processing pipelines must be specified separately in a text file, which is not always convenient.</p>
+
+
+
+<p>A tool for visualizing data from logs in the Grafana system Loki performs, of course, Grafana . Search queries in Loki can be sent in a special Grafana interface Explore, queries use LogQL very similar to Prometheus PromQL . Like Kibana, Grafana provides a wide range of data visualization options:</p>
+
+
+
+<ul>
+<li>search query results can be displayed in the form of various graphs, histograms, tables, heat maps, etc.,</li>
+
+
+
+<li>it is possible to combine several visualizations on one dashboard, which can be saved, loaded and modified, as well as exported and imported from Grafana.com.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="516" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20516'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/07/image-2-1024x516.png" alt="Grafana Loki Log Monitoring Tool Interface" class="wp-image-3481 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/07/image-2-1024x516.png 1024w, https://acure.io/wp-content/uploads/2022/07/image-2-500x252.png 500w, https://acure.io/wp-content/uploads/2022/07/image-2-320x161.png 320w, https://acure.io/wp-content/uploads/2022/07/image-2-768x387.png 768w, https://acure.io/wp-content/uploads/2022/07/image-2-1536x774.png 1536w, https://acure.io/wp-content/uploads/2022/07/image-2-1200x605.png 1200w, https://acure.io/wp-content/uploads/2022/07/image-2-1568x790.png 1568w, https://acure.io/wp-content/uploads/2022/07/image-2.png 1600w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Grafana Loki Log Monitoring Tool Interface</figcaption></figure>
+
+
+
+<p>Grafana has a highly developed built-in alert system, which, similar to Graylog, are periodically self- launched search queries that generate notifications when certain conditions are met. At the same time, the options for configuring and setting up alerts provided in the Grafana graphical interface are very wide, and notifications can be sent through many channels: email, slack, telegram, discord, etc.</p>
+
+
+
+<h2 class="wp-block-heading">Instead of a conclusion&#8230;</h2>
+
+
+
+<p>For all the considered log monitoring tools in the latest versions, it should be noted a strong trend towards delegating the functionality of the primary processing of logs to their local agents, which can lead to some simplification of the functionality of log aggregators. It is also worth noting the trend of a gradual reduction in free functionality and the emergence of more and more paid ones. </p>
+
+
+
+<p>This applies to ELK and Graylog. <strong>ELK</strong> stack is one of the most complete log monitoring tools for collecting and processing data but alerting only in paid versions significantly spoils the picture. <strong>Graylog</strong> is also more of a log analysis tool. <strong>Grafana Loki</strong> is one of the simplest and lightest log monitoring tools, and it is suitable for solving narrow problems when full observability of systems and services is not needed. </p>
+
+
+
+<p><strong>Acure</strong>, despite being a young platform, is significantly superior in functionality to the presented log monitoring tools and provides full observability and powerful functionality absolutely for free.</p>
+
+
+
+<h4 class="wp-block-heading">Want more reviews? Sign up and be the first to know!</h4>
+                        </div>
+                    </div>
+                                        <div class="acure-article-recommended acure-desktop-hidden">
+                        <div class="acure-article-recommended__head">
+                            <div class="acure-article-recommended__title">You may be also interested in:</div>
+                            <div class="acure-article-recommended__arrows">
+                                <div class="acure-article-recommended__arrow acure-article-recommended__arrow--left"></div>
+                                <div class="acure-article-recommended__arrow acure-article-recommended__arrow--right acure-article-recommended__arrow--active"></div>
+                            </div>
+                        </div>
+                        <div class="acure-article-recommended__items">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../what-is-network-monitoring/index.html">
+		<img class="lazy" data-imageid="3694"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/08/12-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">What Is Network Monitoring? +8 Popular Tools in 2023 (Updated)</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../what-is-network-monitoring/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../what-is-aiops/index.html">
+		<img class="lazy" data-imageid="3755"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/08/Pics-for-Acure-Blog-18-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">What Is AIOps? +20 Best Tools in 2023 (Updated)</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../what-is-aiops/index.html">Read More</a>
+		</div>
+	</div>
+</div></div>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-container__column acure-container__column--sidebar acure-container__column--with-delimiter">
+                    <div class="acure-container__sidebar-columns">
+                        <section id="block-23" class=" widget_block">
+<div class="acure-container__sidebar-column acure-container__sidebar-column--full">
+    <div class="acure-mobile-spacing--40"></div>
+    <div class="acure-blog-more-posts">
+        <div class="acure-blog-more-posts__title">More Posts</div>
+        <div class="acure-blog-more-posts__items">
+                                                        <a class="acure-tag acure-tag--small "
+                   href="../category/academy/index.html"
+                >Academy</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/autonomous-it-talks/index.html"
+                >Autonomous IT Talks</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/glossary/index.html"
+                >Glossary</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/kubernetes/index.html"
+                >Kubernetes</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/platform/index.html"
+                >Platform</a>
+                                            <a class="acure-tag acure-tag--small acure-tag--active"
+                   href="../category/reviews/index.html"
+                >Reviews</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/trends/index.html"
+                >Trends</a>
+                    </div>
+    </div>
+</div>
+<div class="acure-container__sidebar-column acure-container__sidebar-column--full">
+    <div class="acure-blog-authors">
+        <div class="acure-blog-authors__title">Our Authors</div>
+        <div class="acure-blog-authors__items">
+                                                        <div class="acure-blog-authors__item">
+                    <a href="../author/arturkoppel/index.html" data-author="219657398" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/5e5c2c722f83da4e4e79f321349878e7?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Artur Koppel</div>
+                            <div class="acure-blog-author__position">Sr. Data Engineer, Columnist</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/kate/index.html" data-author="219657405" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium acure-circle-avatar--active">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/25e7b8ef4a1be6c36c62d3c56181c41a?s=120&amp;d=identicon&amp;r=g">
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Elena Hawk</div>
+                            <div class="acure-blog-author__position">Content Manager at Acure</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/pameladawson/index.html" data-author="219657397" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/028e7ef4fc243ab9fd739dffd8857ed9?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Pam Dawson</div>
+                            <div class="acure-blog-author__position">Tech-Journalist, Data Science Enthusiast</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/stefenshaefer/index.html" data-author="219657399" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/1e126fe81d0f76edc2fd84ddfc0260e5?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Stefen Shaefer</div>
+                            <div class="acure-blog-author__position">IT Analyst, Business Consultant</div>
+                        </div>
+                    </a>
+                </div>
+                    </div>
+    </div>
+</div></section>                    </div>
+
+                </div>
+            </div>
+            <div class="acure-article-recommended acure-mobile-hidden">
+                <div class="acure-article-recommended__head">
+                    <div class="acure-article-recommended__title">You may be also interested in:</div>
+                    <div class="acure-article-recommended__arrows">
+                        <div class="acure-article-recommended__arrow acure-article-recommended__arrow--left"></div>
+                        <div class="acure-article-recommended__arrow acure-article-recommended__arrow--right acure-article-recommended__arrow--active"></div>
+                    </div>
+                </div>
+                <div class="acure-article-recommended__items">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../what-is-network-monitoring/index.html">
+		<img class="lazy" data-imageid="3694"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/08/12-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">What Is Network Monitoring? +8 Popular Tools in 2023 (Updated)</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../what-is-network-monitoring/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../what-is-aiops/index.html">
+		<img class="lazy" data-imageid="3755"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/08/Pics-for-Acure-Blog-18-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">What Is AIOps? +20 Best Tools in 2023 (Updated)</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../what-is-aiops/index.html">Read More</a>
+		</div>
+	</div>
+</div></div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+<!-- FOOTER -->
+<footer id="acure-footer" class="acure-footer">
+        <div class="acure-footer__lead">
+        <div class="acure-container">
+            <div class="acure-footer__lead-content">
+                <div class="acure-footer__lead-text">
+                    <div class="acure-footer__lead-title">Get Started with AIOps</div>
+                    <div class="acure-footer__lead-description">How can professionals automate main IT Ops processes in Acure?</div>
+                </div>
+                <a class="acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+            </div>
+        </div>
+    </div>
+        <div class="acure-footer__container">
+        <div class="acure-container">
+            <div class="acure-footer__sitemap acure-mobile-hidden">
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">AIOps Platform</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">About Acure</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Interface Tour</a>
+                                    <a class="acure-footer__sitemap-link" href="../../platform/index.html">Platform Overview</a>
+                                    <a class="acure-footer__sitemap-link" href="../../features/index.html">Features</a>
+                                    <a class="acure-footer__sitemap-link" href="../../integrations/index.html">Integrations</a>
+                                    <a class="acure-footer__sitemap-link" href="../../price/index.html">Prices</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Acure vs. Others</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Dynatrace</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. StackState</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Splunk</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. DataDog</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Moogsoft</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Technologies</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Hybrid Cloud Observability</a>
+                                </div>
+                            </div>
+                            <a class="acure-footer__sitemap-logo" href="../../index.html">
+                                <img class="acure-footer__sitemap-logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+                            </a>
+                        </div>
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Our Solutions</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Corelation & Noise Reduction</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discoverу</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Ops</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Customer Success</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/supply-company/index.html">How Acure reconciled network and VDI engineers in the supply company</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/retail-company/index.html">How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/industrial-holding/index.html">How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/digital-bank/index.html">How Acure automation services helped reduce IT troubleshooting time in a large digital bank</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/insurance-company/index.html">How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__contact">Sales team: <a href="mailto:hello@acure.io">hello@acure.io</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-footer__sitemap-delimiter"></div>
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">Resources</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Content Hub</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Featured Content</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../landing/root-cause-analysis/index.html">Engineers spend hours trying to investigate why digital services are not working!</a>
+                                </div>
+                            </div>
+
+                            <div class="acure-footer__contact">Support team: <a href="mailto:support@acure.io">support@acure.io</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-footer__sitemap-delimiter"></div>
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">Company</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Acure Company</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../about/index.html">About Us</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Our Mission</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                        Careers
+                                        <span class="acure-footer__sitemap-tip">we are hiring</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Contacts</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../contacts/index.html">Contact Us</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.linkedin.com/company/acure-io" target="_blank">Follow Us on LinkedIn</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__contact acure-footer__contact--yellow">Documentation: <a href="https://docs.acure.io/current/en/get-started/" target="_blank">Quick Guide to Start</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="acure-footer__logo acure-desktop-hidden" href="../../index.html">
+            <img class="acure-footer__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+        </a>
+        <div class="acure-footer__bottom">
+            <div class="acure-container">
+                <div class="acure-footer__bottom-content">
+                    <div class="acure-footer__copyright">© 2023 SIA Acure</div>
+                    <div class="acure-footer__policies">
+                        <a class="acure-footer__policy" href="../../privacy-policy/index.html">Privacy policy</a>
+                        <a class="acure-footer__policy" href="../../cookies-policy/index.html">Cookie policy</a>
+                        <a class="acure-footer__policy" href="../../terms-of-use/index.html">Terms of use</a>
+                    </div>
+                    <div class="acure-footer__socials">
+                        <a class="acure-footer__socials-item acure-footer__socials-item--facebook" href="https://www.facebook.com/acure.community" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--youtube" href="https://www.youtube.com/@acure-io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--linkedin" href="https://www.linkedin.com/company/acure-io/" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--twitter" href="https://twitter.com/acure_io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--reddit" href="https://www.reddit.com/user/Acure_io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--medium" href="https://medium.com/@acure.io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--github" href="https://github.com/acure-io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--quora" href="https://www.quora.com/profile/Acure-AIOps" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end FOOTER --><script>document.body.classList.remove("no-js");</script>    <script>
+        if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/index.html' ) ) {
+            document.body.classList.add( 'is-IE' );
+        }
+    </script>
+    <link rel='stylesheet' id='block-testimonial-css' href='../../wp-content/themes/twentytwentyoneacure/new-inc/blocks/full-sidebar/full-sidebar1b46.css?ver=6.1.4' media='all' />
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/article.js' id='blog-js'></script>
+<script id='leadin-script-loader-js-js-extra'>
+var leadin_wordpress = {"userRole":"visitor","pageType":"post","leadinPluginVersion":"10.2.17"};
+</script>
+<script src='../../../js.hs-scripts.com/2165385294ad.js?integration=WordPress&amp;ver=10.2.17' async defer id='hs-script-loader'></script>
+<script src='../../wp-includes/js/comment-reply.min1b46.js?ver=6.1.4' id='comment-reply-js'></script>
+<script id='twenty-twenty-one-ie11-polyfills-js-after'>
+( Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach ) || document.write( '<script src="../../wp-content/themes/twentytwentyoneacure/assets/js/polyfills4963.js?ver=1.1"></scr' + 'ipt>' );
+</script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/responsive-embeds4963.js?ver=1.1' id='twenty-twenty-one-responsive-embeds-script-js'></script>
+<script src='../../../code.jquery.com/jquery-3.6.0.min.js' id='jquery3-js'></script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/header.js' id='header-js'></script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/layout-new.js' id='layout-new-js'></script>
+    <script>
+        /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
+    </script>
+    
+<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="../../wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></body>
+
+<!-- Mirrored from acure.io/blog/4-best-free-monitoring-tools/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 06:32:09 GMT -->
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 76/84 objects using Memcached
+Page Caching using Memcached 
+Lazy Loading
+
+Served from: acure.io @ 2023-12-26 08:30:01 by W3 Total Cache
+-->

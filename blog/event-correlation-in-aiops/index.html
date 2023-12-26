@@ -1,0 +1,1891 @@
+<!doctype html>
+<html lang="en-GB">
+
+<!-- Mirrored from acure.io/blog/event-correlation-in-aiops/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 06:28:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><style>img.lazy{min-height:1px}</style><link rel="preload" href="../../wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="facebook-domain-verification" content="vkoslorfnvrfymg37ryjl9qjssg5uj" />
+	<meta name="format-detection" content="telephone=no">
+        <meta name="theme-color" content="#203059">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Guide To Event Correlation in AIOps - Acure AIOps Platform</title>
+	<meta name="description" content="In event correlation, AIOps is the ability to process a flood of incident reports, analyze them quickly, gain insights, and detect failures as they begin to develop before they lead to crippling outages. One of the biggest challenges in AI is the so-called black box effect." />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Guide To Event Correlation in AIOps - Acure AIOps Platform" />
+	<meta property="og:description" content="In event correlation, AIOps is the ability to process a flood of incident reports, analyze them quickly, gain insights, and detect failures as they begin to develop before they lead to crippling outages. One of the biggest challenges in AI is the so-called black box effect." />
+	<meta property="og:url" content="https://acure.io/blog/event-correlation-in-aiops/" />
+	<meta property="og:site_name" content="Acure AIOps Platform" />
+	<meta property="article:published_time" content="2022-09-20T12:45:15+00:00" />
+	<meta property="article:modified_time" content="2023-04-09T13:47:27+00:00" />
+	<meta property="og:image" content="https://acure.io/wp-content/uploads/2022/09/Event-correlation-cover-1024x576.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="576" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Artur Koppel" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Artur Koppel" />
+	<meta name="twitter:label2" content="Estimated reading time" />
+	<meta name="twitter:data2" content="26 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://acure.io/blog/event-correlation-in-aiops/","url":"https://acure.io/blog/event-correlation-in-aiops/","name":"Guide To Event Correlation in AIOps - Acure AIOps Platform","isPartOf":{"@id":"https://acure.io/#website"},"primaryImageOfPage":{"@id":"https://acure.io/blog/event-correlation-in-aiops/#primaryimage"},"image":{"@id":"https://acure.io/blog/event-correlation-in-aiops/#primaryimage"},"thumbnailUrl":"https://acure.io/wp-content/uploads/2022/09/Event-correlation-cover.png","datePublished":"2022-09-20T12:45:15+00:00","dateModified":"2023-04-09T13:47:27+00:00","author":{"@id":"https://acure.io/#/schema/person/fb233ea4ac0558d83b96d54d3c56bc70"},"description":"In event correlation, AIOps is the ability to process a flood of incident reports, analyze them quickly, gain insights, and detect failures as they begin to develop before they lead to crippling outages. One of the biggest challenges in AI is the so-called black box effect.","breadcrumb":{"@id":"https://acure.io/blog/event-correlation-in-aiops/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://acure.io/blog/event-correlation-in-aiops/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://acure.io/blog/event-correlation-in-aiops/#primaryimage","url":"https://acure.io/wp-content/uploads/2022/09/Event-correlation-cover.png","contentUrl":"https://acure.io/wp-content/uploads/2022/09/Event-correlation-cover.png","width":1920,"height":1080},{"@type":"BreadcrumbList","@id":"https://acure.io/blog/event-correlation-in-aiops/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная страница","item":"https://acure.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://acure.io/blog/"},{"@type":"ListItem","position":3,"name":"Guide To Event Correlation in AIOps"}]},{"@type":"WebSite","@id":"https://acure.io/#website","url":"https://acure.io/","name":"Acure AIOps Platform","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://acure.io/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"Person","@id":"https://acure.io/#/schema/person/fb233ea4ac0558d83b96d54d3c56bc70","name":"Artur Koppel","image":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://acure.io/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/5e5c2c722f83da4e4e79f321349878e7?s=96&d=identicon&r=g","contentUrl":"https://secure.gravatar.com/avatar/5e5c2c722f83da4e4e79f321349878e7?s=96&d=identicon&r=g","caption":"Artur Koppel"},"description":"Sr. Data Engineer, Columnist","url":"https://acure.io/blog/author/arturkoppel/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='http://js.hs-scripts.com/' />
+<link rel='dns-prefetch' href='http://code.jquery.com/' />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; Guide To Event Correlation in AIOps Comments Feed" href="feed/index.html" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/acure.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.4"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<style id='safe-svg-svg-icon-style-inline-css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<link rel='stylesheet' id='classic-theme-styles-css' href='../../wp-includes/css/classic-themes.min68b3.css?ver=1' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #28303D;--wp--preset--color--gray: #39414D;--wp--preset--color--green: #D1E4DD;--wp--preset--color--blue: #D1DFE4;--wp--preset--color--purple: #D1D1E4;--wp--preset--color--red: #E4D1D1;--wp--preset--color--orange: #E4DAD1;--wp--preset--color--yellow: #EEEADD;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--purple-to-yellow: linear-gradient(160deg, #D1D1E4 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-purple: linear-gradient(160deg, #EEEADD 0%, #D1D1E4 100%);--wp--preset--gradient--green-to-yellow: linear-gradient(160deg, #D1E4DD 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-green: linear-gradient(160deg, #EEEADD 0%, #D1E4DD 100%);--wp--preset--gradient--red-to-yellow: linear-gradient(160deg, #E4D1D1 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-red: linear-gradient(160deg, #EEEADD 0%, #E4D1D1 100%);--wp--preset--gradient--purple-to-red: linear-gradient(160deg, #D1D1E4 0%, #E4D1D1 100%);--wp--preset--gradient--red-to-purple: linear-gradient(160deg, #E4D1D1 0%, #D1D1E4 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 18px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--extra-small: 16px;--wp--preset--font-size--normal: 20px;--wp--preset--font-size--extra-large: 40px;--wp--preset--font-size--huge: 96px;--wp--preset--font-size--gigantic: 144px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='twenty-twenty-one-style-css' href='../../wp-content/themes/twentytwentyoneacure/style4963.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='twenty-twenty-one-print-style-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/print4963.css?ver=1.1' media='print' />
+<link rel='stylesheet' id='header-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/header1b46.css?ver=6.1.4' media='all' />
+<link rel='stylesheet' id='article-blog-style-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/blog/article1b46.css?ver=6.1.4' media='all' />
+<link rel='stylesheet' id='layout-new-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/layout-new1b46.css?ver=6.1.4' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" type="application/json" href="../../wp-json/wp/v2/posts/3943.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.1.4" />
+<link rel='shortlink' href='../../index05f1.html?p=3943' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed9815.json?url=https%3A%2F%2Facure.io%2Fblog%2Fevent-correlation-in-aiops%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed2a00?url=https%3A%2F%2Facure.io%2Fblog%2Fevent-correlation-in-aiops%2F&amp;format=xml" />
+			<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v10.2.17-->
+			<script type="text/javascript" class="hsq-set-content-id" data-content-id="blog-post">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentType", "blog-post"]);
+			</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+			<link rel="pingback" href="../../xmlrpc.php"><link rel="icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://acure.io/wp-content/uploads/2022/07/cropped-favicon@512-1-270x270.png" />
+		<style id="wp-custom-css">
+			#hubspot-messages-iframe-container {
+	transition: visibility 300ms ease-in-out, opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+body.menu-opened #hubspot-messages-iframe-container {
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0.1);
+}		</style>
+			<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WHP5QBX');</script>
+	<!-- End Google Tag Manager -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&amp;family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+</head>
+
+<body class="post-template-default single single-post postid-3943 single-format-standard wp-embed-responsive is-light-theme no-js singular no-widgets">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHP5QBX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","../../../chimpstatic.com/mcjs-connected/js/users/1db403f4f82776842476c3fe3/09ddf2027967f7ac96b29220e.js");</script>
+<!-- Start of HubSpot Embed Code (delayed) -->
+<script>
+	var hsScript=document.createElement("script");hsScript.setAttribute("id","hs-script-loader"),hsScript.setAttribute("type","text/javascript"),hsScript.setAttribute("async",""),hsScript.setAttribute("defer",""),hsScript.setAttribute("src","../../../js.hs-scripts.com/21653852.js"),setTimeout(function(){document.head.appendChild(hsScript)},7e3);
+</script>
+<!-- End of HubSpot Embed Code -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><!-- Start of HubSpot code snippet -->
+<button type="button" id="hs_show_banner_button"
+		style="background-color: #1D1AA7; border: 1px solid #1D1AA7;
+         border-radius: 3px; padding: 10px 16px; text-decoration: none; color: #fff;
+         font-family: inherit; font-size: 16px; font-weight: normal; line-height: inherit;
+         text-align: left; text-shadow: none; position: fixed; bottom: 0; right: 0; z-index: 10;"
+		onClick="(function(){
+    var _hsp = window._hsp = window._hsp || [];
+    _hsp.push(['showBanner']);
+  })()"
+>
+	Cookie Settings
+</button>
+
+<!-- End of HubSpot code snippet -->
+<!-- -------------- HEADER & NAVIGATION -------------- -->
+    <div id="header">
+        <div class="acure-header-desktop acure-mobile-hidden">
+            <div class="acure-header-desktop__container">
+                <a class="acure-header-desktop__logo" href="../../index.html">
+                    <img class="acure-header-desktop__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+                </a>
+                <nav class="acure-header-desktop__navigation">
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">AIOps Platform</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">About Acure</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Interface Tour</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../platform/index.html">Platform Overview</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../features/index.html">Features</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../integrations/index.html">Integrations</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../price/index.html">Prices</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Our Solutions</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Corelation & Noise Reduction</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discoverу</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Ops</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Acure vs. Others</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Dynatrace</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. StackState</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Splunk</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. DataDog</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Moogsoft</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Technologies</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Hybrid Cloud Observability</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Customer Success</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--truck" href="../../customer-stories/supply-company/index.html">
+                                            <span>How Acure reconciled network and VDI engineers in the supply company</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--store" href="../../customer-stories/retail-company/index.html">
+                                            <span>How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--factory" href="../../customer-stories/industrial-holding/index.html">
+                                            <span>How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--credit-card" href="../../customer-stories/digital-bank/index.html">
+                                            <span>How Acure automation services helped reduce IT troubleshooting time in a large digital bank</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--briefcase" href="../../customer-stories/insurance-company/index.html">
+                                            <span>How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Resources</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Content Hub</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Featured Content</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--monitor" href="../../landing/root-cause-analysis/index.html">
+                                            <span>Engineers spend hours trying to investigate why digital services are not working!</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Company</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Acure Company</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../about/index.html">About Us</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Our Mission</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                                Careers
+                                                <span class="acure-header-desktop__navigation-submenu-item-tip">we are hiring</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Contacts</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../contacts/index.html">Contact Us</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.linkedin.com/company/acure-io" target="_blank">Follow Us on LinkedIn</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right"></div>
+                        </div>
+                    </div>
+                                        <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Documentation</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">User Guide</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/data-collect/" target="_blank">Data Collection</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/signals/" target="_blank">Signals</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/service-model-cmdb/" target="_blank">CMDB & Service Model</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/automation/" target="_blank">Actions & Automation</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Solutions</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/plugins/" target="_blank">Notifications (plugins)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/" target="_blank">Integrations (data streams)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/signals-processor/" target="_blank">Signals (event scenarios)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/rsm-autobuild/" target="_blank">Service model (auto-building scenarios)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/scripts/" target="_blank">Scripts</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">References</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/structure/" target="_blank">Structure & Components</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/api/" target="_blank">Public API</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/agent-plugins/" target="_blank">Acure Agent Plugins</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/user-roles/" target="_blank">User Roles</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/data-streams-templates/" target="_blank">Configuration Templates</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/availability/" target="_blank">Availability Calculation</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Releases</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.3/" target="_blank">Acure 2.3.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.2/" target="_blank">Acure 2.2.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.1/" target="_blank">Acure 2.1.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.0/" target="_blank">Acure 2.0.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Integrations</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-standard-integration-with-zabbix" target="_blank">Zabbix</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-scom" target="_blank">SCOM</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-prometheus" target="_blank">Prometheus</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-integration-with-ntopng" target="_blank">Ntopng</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-nagiosxi" target="_blank">NagiosXI</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-nagios-core" target="_blank">Nagios Core</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-fluentd" target="_blank">Fluentd</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-fluent-bit" target="_blank">Fluent Bit</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-logstash" target="_blank">Logstash</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-vmware-vcenter" target="_blank">VMware Center</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="acure-header-desktop__buttons">
+                    <a class="acure-header-desktop__button acure-header-desktop__button--text" href="https://id.acure.io/account/login" target="_blank">Log In</a>
+                    <a class="acure-header-desktop__button acure-button acure-button--yellow-secondary" href="https://id.acure.io/account/sign-up" target="_blank">Sign Up</a>
+                    <a class="acure-header-desktop__button acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+                </div>
+            </div>
+        </div>
+        <div class="acure-header-mobile acure-desktop-hidden">
+            <a class="acure-header-mobile__logo" href="../../index.html">
+                <img class="acure-header-mobile__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+            </a>
+            <div class="acure-header-mobile__menu-button">
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--top"></div>
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--middle"></div>
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--bottom"></div>
+            </div>
+            <div class="acure-header-mobile__menu">
+                <div class="acure-header-mobile__menu-items">
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>AIOps Platform</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>About Acure</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Interface Tour</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../platform/index.html">Platform Overview</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../features/index.html">Features</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../integrations/index.html">Integrations</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../price/index.html">Prices</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Our Solutions</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Correlation & Noise Reduction</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discovery</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Operations</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Acure vs. Others</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Dynatrace</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. StackState</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Splunk</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. DataDog</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Moogsoft</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Technologies</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Hybrid Cloud Observability</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Customer Success</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/supply-company/index.html">How Acure reconciled network and VDI engineers in the supply company</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/retail-company/index.html">How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/industrial-holding/index.html">How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/digital-bank/index.html">How Acure automation services helped reduce IT troubleshooting time in a large digital bank</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/insurance-company/index.html">How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>Resources</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Content Hub</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Featured Content</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../landing/root-cause-analysis/index.html">Engineers spend hours trying to investigate why  digital services are not working!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>Company</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Acure Company</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../about/index.html">About Us</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Our Mission</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                        Careers
+                                        <span class="acure-header-mobile__menu-link-tip">we are hiring</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Contacts</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../contacts/index.html">Contact Us</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.linkedin.com/company/acure-io/" target="_blank">Follow Us on LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-header-mobile__menu-bottom">
+                    <a class="acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+                    <div class="acure-header-mobile__menu-help">Switch to the desktop version to take full advantage of the Acure AIOps platform!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end HEADER -->
+<!-- -------------- end HEADER & NAVIGATION -------------- --><div id="homepage" class="site">
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">    <div class="acure-page article-page background-color-ultra-light-gray">
+        <div class="acure-container acure-container--full">
+            <div class="acure-article-head">
+                <div class="acure-container">
+                    <div class="acure-article-head__content">
+                        <div class="acure-article-head__tags">
+                                                            <div class="acure-tag acure-tag--small acure-tag--active">Academy</div>
+                                                    </div>
+                        <div class="acure-spacing--10"></div>
+                        <h1 class="acure-article-head__title">Guide To Event Correlation in AIOps</h1>
+                        <div class="acure-mobile-spacing--20 acure-desktop-spacing--10"></div>
+                        <div class="acure-blog-date-time">
+                            <div class="acure-blog-date-time__item">35  minutes read</div>
+                            <div class="acure-blog-date-time__item">20 Sep 2022</div>
+                        </div>
+                        <div class="acure-spacing--30"></div>
+                        <div class="acure-article-head__quote">
+                            <div class="acure-article-quote">
+                                <p><span style="font-weight: 400;">Despite the advancements in IT, our customers still call us when they discover things first. Then comes the finger-pointing. Over the past ten years, we have worked to integrate our applications in an effort to improve business operations. However, when anything breaks, we&#8217;re left trying to fix it by using multiple tools — and then we&#8217;re trapped in a room debating over whose tool is correct.</span></p>
+<p><span style="font-weight: 400;">AIOps tools guarantee that business service desk teams will experience less downtime and operate more effectively. Is event correlation the element you&#8217;ve been missing to automate remediation and turn your mounds of warnings into useful operational data? Let&#8217;s examine this important component of the AIOps function set in detail to see what it promises, what it accomplishes, and what comes next.</span></p>
+                            </div>
+                        </div>
+                        <div class="acure-spacing--30"></div>
+                        <div class="acure-article-head__bottom">
+                            <div class="acure-blog-author acure-blog-author--small">
+                                <div class="acure-blog-author__photo acure-circle-avatar acure-circle-avatar--small acure-circle-avatar--with-shadow">
+                                                                            <img class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/5e5c2c722f83da4e4e79f321349878e7?s=96&amp;d=identicon&amp;r=g">
+                                                                    </div>
+                                <div class="acure-blog-author__info">
+                                    <div class="acure-blog-author__name">
+                                        Artur Koppel                                    </div>
+
+                                    <div class="acure-blog-author__position">
+                                        Sr. Data Engineer, Columnist                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-mobile-spacing--30"></div>
+                            <div class="acure-share">
+                                <div class="acure-share__title">
+                                    Share:
+                                </div>
+                                <div class="acure-share__items">
+                                    <a class="acure-share__item acure-share__item--facebook" href="javascript:void(0)" onclick="window.open( 'http://www.facebook.com/sharer.php?u=https://acure.io/blog/event-correlation-in-aiops/', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Facebook"></a>
+                                    <a class="acure-share__item acure-share__item--linkedin" href="javascript:void(0)" onclick="window.open( 'https://www.linkedin.com/shareArticle?mini=true&amp;url=https://acure.io/blog/event-correlation-in-aiops/&amp;title=Guide%20To%20Event%20Correlation%20in%20AIOps&amp;summary=Some%20Summary&amp;source=acure.io', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Linkedin"></a>
+                                    <a class="acure-share__item acure-share__item--twitter" href="javascript:void(0)" onclick="window.open( 'http://www.twitter.com/share?url=https://acure.io/blog/event-correlation-in-aiops/', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Twitter" target="_blank"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="acure-container">
+            <div class="acure-container__columns">
+                <div class="acure-container__column acure-container__column--content">
+                    <div class="acure-breadcrumbs">
+                        <a class="acure-breadcrumbs__item" href="../../blog.html">Blog</a>
+                        <div class="acure-breadcrumbs__delimiter"></div>
+                                                                                    <a class="acure-breadcrumbs__item" href="../category/academy/index.html">Academy</a>
+                                                        
+
+                        <div class="acure-breadcrumbs__delimiter"></div>
+                        <span class="acure-breadcrumbs__item acure-breadcrumbs__item--active">Guide To Event Correlation in AIOps</span>
+                    </div>
+                    <div class="article-page__share acure-desktop-hidden">
+                        <div class="acure-share">
+                            <div class="acure-share__title">
+                                Share:
+                            </div>
+                            <div class="acure-share__items">
+                                <a class="acure-share__item acure-share__item--facebook" href="https://www.facebook.com/sharer/sharer.php?u=%3CURL%3E" target="_blank"></a>
+                                <a class="acure-share__item acure-share__item--linkedin" href="https://www.linkedin.com/shareArticle?url=%3CURL%3E&amp;title=%3CTITLE%3E&amp;summary=%3CSUMMARY%3E&amp;source=%3CSOURCE_URL%3E" target="_blank"></a>
+                                <a class="acure-share__item acure-share__item--twitter" href="https://twitter.com/share?url=%3CURL%3E&amp;text=%3CTEXT%3E" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-article-content">
+                        <div class="acure-text">
+                            
+<h2 class="wp-block-heading" id="what-is-event-correlation">What is Event Correlation?</h2>
+
+
+
+<p>For those who are unfamiliar, event correlation is the practice of interpreting and evaluating the thousands of events that can be generated by various monitoring tools if infrastructure or an application fails. Instead of missing or disregarding information because they are overwhelmed by &#8220;alert storms,&#8221; IT Operations teams may use these tools and the insights they offer to understand and handle issues quickly.</p>
+
+
+
+<p>Understanding the connections between events that take place in the IT environment is done through the process of event correlation. It enables IT operations management to understand the numerous events that occur and to pinpoint those that call for immediate ITOps team action or further inquiry.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="580" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20580'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/11/Event-Correlation_Meme-1024x580.jpg" alt="Event correlation meme" class="wp-image-4614 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/11/Event-Correlation_Meme-1024x580.jpg 1024w, https://acure.io/wp-content/uploads/2022/11/Event-Correlation_Meme-500x283.jpg 500w, https://acure.io/wp-content/uploads/2022/11/Event-Correlation_Meme-320x181.jpg 320w, https://acure.io/wp-content/uploads/2022/11/Event-Correlation_Meme-768x435.jpg 768w, https://acure.io/wp-content/uploads/2022/11/Event-Correlation_Meme.jpg 1147w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Event Correlation Meme</figcaption></figure>
+
+
+
+<p>An infrastructure monitoring tool would undoubtedly overlook higher-level connections that an AIOps tool can find by analyzing unstructured data. Some go even further than IT Ops and absorb data from streams like social media, allowing businesses to comprehend when their consumers or brand are harmed fully.</p>
+
+
+
+<p>Events are just the occurrences that take place throughout everyday routines. Most incidents are normal. A virtual machine turning on in response to an increase in workload; a parent device talking with devices or apps downstream; a user logging into a workstation. Events in IT operations can be divided into three groups:</p>
+
+
+
+<ul>
+<li><strong>Informational </strong>or regular events are normal and only demonstrate that your network&#8217;s infrastructure is operating as intended;</li>
+
+
+
+<li><strong>Exceptions</strong> happen when a device, service, or application operates outside of its intended parameters, suggesting serious performance deterioration or failure.&nbsp;</li>
+
+
+
+<li><strong>Warnings</strong> are events produced when a service or device exhibits warning indications or unusual behavior.</li>
+</ul>
+
+
+
+<p>Every event has additional information to it that can be used to assess the condition of a network, and event correlation is the method used to assess that condition. A big company&#8217;s IT estate can produce thousands of events at any given time thanks to today&#8217;s broad, sophisticated networks.&nbsp; This presents a challenge for IT operations teams if they lack the tools with the pace and intelligence to keep up.</p>
+
+
+
+<p>The ability to differentiate between occurrences that are actually related and those that are just concurrent or coincidental is required for event correlation to be truly successful. AIOps capabilities are needed for that kind of data analysis to handle the task&#8217;s complexity and quantity.</p>
+
+
+
+<p>Learn more about the event correlation in this guide:</p>
+
+
+
+<ul>
+<li><a class="wp-block-table-of-contents__entry" href="index.html#event-correlation-in-integrated-service-management">Event Correlation in Integrated Service Management</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#the-process-of-event-correlation">The Process of Event Correlation</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#types-of-events-in-event-correlation">Types of Events in Event Correlation</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#event-correlation-kpi">Event Correlation KPI</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#event-correlation-use-cases">Event Correlation Use Cases</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#event-correlation-approaches-and-techniques">Event Correlation Approaches and Techniques</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#importance-of-event-correlation">Importance of Event Correlation ☝️</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#benefits-of-event-correlation">Benefits of Event Correlation</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#ai-driven-event-correlation">AI-Driven Event Correlation</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#event-correlation-in-aiops">Event Correlation in AIOps</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#analyst-recommendations-on-aiops">Analyst Recommendations on AIOps</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#misconceptions-about-event-correlation">Misconceptions about Event Correlation</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#how-to-choose-the-ideal-event-correlation-tool-for-your-business">How to Choose the Ideal Event Correlation Tool for Your Business</a></li>
+
+
+
+<li><a class="wp-block-table-of-contents__entry" href="index.html#why-companies-choose-acure-io-for-event-correlation">Why Companies Choose Acure For Event Correlation</a></li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="event-correlation-in-integrated-service-management">Event Correlation in Integrated Service Management</h2>
+
+
+
+<p>Event correlation is growing to become an important part of integrated service management. An integral part of integrated service management is event correlation. It&#8217;s a well-known way to use a collection of standardized techniques to manage IT operations as a service.</p>
+
+
+
+<p>In the early 1980s, several approaches developed by the artificial intelligence and database industries were deployed to network element management to analyze alarms when event correlation was first utilized in integrated management. Today, it is used for various purposes, including identifying wireless network faults, monitoring the performance of non-self-aware devices in network systems, identifying firewall intrusions, etc.</p>
+
+
+
+<p>The six main processes that make up integrated service management include change management, service level management, operations management, configuration management,&nbsp; incident management, and quality management. Event correlation is a part of incident management but affects all six processes somehow.</p>
+
+
+
+<p>A system&#8217;s monitoring generates data regarding events that occur. The volume of event data increases along with the complexity of an enterprise&#8217;s IT systems, making it tougher to make sense of this information stream. Problems arise because of:</p>
+
+
+
+<ul>
+<li>Changes in the arrangement of networks, devices, and connections, their relationships with each other;</li>
+
+
+
+<li>Combining software, computer resources, and cloud services;</li>
+
+
+
+<li>Practicing concepts like virtualized computing, decentralization, and processing of growing data volumes;</li>
+
+
+
+<li>Application addition, removal, updating, and integration with legacy systems.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="683" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20683'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/7-1024x683.png" alt="Event correlation in Intergrated Service Management" class="wp-image-3956 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/7-1024x683.png 1024w, https://acure.io/wp-content/uploads/2022/09/7-500x333.png 500w, https://acure.io/wp-content/uploads/2022/09/7-320x213.png 320w, https://acure.io/wp-content/uploads/2022/09/7-768x512.png 768w, https://acure.io/wp-content/uploads/2022/09/7.png 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>The number of notifications is too high for IT operations employees, DevOps teams, and network operations center (NOC) administrators to keep up with, making it impossible to identify issues and outages before they impact important back-end systems or revenue-generating apps and services. These elements increase the chance that mishaps and outages will negatively affect the company&#8217;s bottom line.</p>
+
+
+
+<p>The event correlation software will solve this problem for them. Automation and software tools are called event correlators. Event correlators accept a stream of event management data automatically created from all over the controlled environment, are key components of IT event correlation.&nbsp;</p>
+
+
+
+<p>The correlator examines these monitoring alerts using AI algorithms to arrange events into groups that may be compared to information about system modifications and network architecture to determine the root of the issue and the best course of action.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading" id="the-process-of-event-correlation">The Process of Event Correlation</h2>
+
+
+
+<p>In addition to monitoring events, you should implement <a href="https://www.sciencedirect.com/topics/computer-science/automated-process" target="_blank" rel="noreferrer noopener nofollow">automated procedures</a> to identify connections between various complex occurrences. The steps that make up the full event correlation process are usually as follows:</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="640" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20640'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/8-1024x640.png" alt="Steps of event correlation" class="wp-image-3957 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/8-1024x640.png 1024w, https://acure.io/wp-content/uploads/2022/09/8-500x313.png 500w, https://acure.io/wp-content/uploads/2022/09/8-320x200.png 320w, https://acure.io/wp-content/uploads/2022/09/8-768x480.png 768w, https://acure.io/wp-content/uploads/2022/09/8.png 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p><strong>1. Aggregation:</strong> Infrastructure monitoring data is gathered and delivered to the correlator through various devices, programs, instruments for monitoring, and trouble-ticketing systems.</p>
+
+
+
+<p><strong>2. Filtering: </strong>User-defined parameters, such as source, timeframe, or event level, are used to filter events. Alternatively, this step could be carried out before aggregation.</p>
+
+
+
+<p><strong>3. Deduplication: </strong>The technology locates repeated events brought by a single problem. Duplication can occur for various reasons (e.g., 1000 individuals get the same error message, generating 1000 different alerts). Despite numerous notifications, there is usually just one problem that needs to be solved.</p>
+
+
+
+<p><strong>4. Normalization:</strong> Normalization uniformizes the data&#8217;s format so that the event correlation software&#8217;s AI algorithm can understand all the data&#8217;s sources similarly.</p>
+
+
+
+<p><strong>5. Root cause analysis:</strong> Event connections are finally examined to identify the root cause of the event in the most complicated step of the process, the root cause analysis. (For instance, events on one device are investigated to identify their effect on all other devices in the network.)</p>
+
+
+
+<p>The number of events that originally needed to be correlated will now only be a small subset of those that do. This will result in a response from some event correlation tools, such as a suggestion for additional investigation, escalation, or automatic remediation, enabling IT managers to perform troubleshooting duties more effectively.</p>
+
+
+
+<h2 class="wp-block-heading" id="types-of-events-in-event-correlation">Types of Events in Event Correlation</h2>
+
+
+
+<p>There are a few basic types of event correlations, even though many organizations correlate various types of events depending on their unique IT environments and business requirements:</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20576'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21-1024x576.png" alt="Event correlation types" class="wp-image-3963 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21-1024x576.png 1024w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21-500x281.png 500w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21-320x180.png 320w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21-768x432.png 768w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21-1536x864.png 1536w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21-1200x675.png 1200w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21-1568x882.png 1568w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-21.png 1920w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p><strong>System events:</strong> These events reflect unusual shifts in the condition of the system&#8217;s resources. System events include things like a full disk or a heavy CPU load.</p>
+
+
+
+<p><strong>Network events:</strong> Network events show the functionality and health of switches, routers, terminals, and other network elements. They also show network traffic when it exceeds certain thresholds.</p>
+
+
+
+<p><strong>Operating system events: </strong>These events, which represent changes in the interaction between hardware and software, are produced by operating systems like Windows, Linux, Android, and iOS.</p>
+
+
+
+<p><strong>Database events: </strong>These events explain to analysts and administrators how data is read, saved, and changed in databases.</p>
+
+
+
+<p><strong>Application events:</strong> Events produced by software applications can shed light on how well an application is doing.</p>
+
+
+
+<p><strong>Web server events:</strong> Events related to the hardware and software that provide web page content are referred to as web server events.</p>
+
+
+
+<p><strong>User events:</strong> These are produced by synthetic tracking or real-user monitoring systems and show infrastructure performance as seen by the user.</p>
+
+
+
+<p><strong>Other Events: </strong>Synthetic checks, also known as probes, that examine functioning from the outside, are another type of event. Client telemetry and real-user monitoring produce particular events as users engage with the service.</p>
+
+
+
+<h2 class="wp-block-heading" id="event-correlation-kpi">Event Correlation KPI</h2>
+
+
+
+<p>Compression is the main <a href="https://www.qlik.com/us/kpi" target="_blank" rel="noreferrer noopener nofollow">key performance indicator (KPI)</a> in event correlation. The KPI measures the proportion of events linked to fewer incidents and is expressed as a percentage.</p>
+
+
+
+<p>Finding all events connected to a specific issue is the main objective of event correlation. Events that result from the primary issue will occur, with symptoms as the primary failure has an effect on secondary components. When operators completely comprehend the relationship, they can handle both the cause and the symptoms.</p>
+
+
+
+<p>A compression percentage that is close to 100 percent is ideal. However, in practice, this is unachievable because as incidents approach that threshold, accuracy is sacrificed by the compression rates. This implies they misinterpret events as coming from the same problem or fail to see how one issue is connected to another. On the other hand, putting accuracy first causes the compression rate to drop.</p>
+
+
+
+<p>Software for event correlation does not compute the accuracy. For instance, firm A might have events that are extremely different from firm B&#8217;s, and each organization may value various things more than the other. Therefore, it is practically difficult to determine the accuracy of the link between the two. Instead, customers evaluate accuracy as a soft, qualitative KPI using spot checks and business value analysis.</p>
+
+
+
+<p>Event correlation professionals advise that businesses making this decision should aim for the highest compression rate possible without compromising accuracy and business value. This often results in a compression rate of between 70 and 85 percent. However, in other circumstances, higher correlation values of 85% or even 95% are not uncommon.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="555" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20555'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/9-1024x555.png" alt="Event correlation KPIs" class="wp-image-3959 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/9-1024x555.png 1024w, https://acure.io/wp-content/uploads/2022/09/9-500x271.png 500w, https://acure.io/wp-content/uploads/2022/09/9-320x173.png 320w, https://acure.io/wp-content/uploads/2022/09/9-768x416.png 768w, https://acure.io/wp-content/uploads/2022/09/9.png 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>You may improve the efficiency of your company&#8217;s event management efforts by using analytics to gain insights from event correlation software into other event-driven metrics. You must consider raw event quantities and improvements brought on by deduplication and filtering in order to do this. Analyze false-positive rates, signal-to-noise ratios, and enhancement statistics. To be more proactive in avoiding problems, you can also consider event frequency in terms of the most prevalent cause of hardware and software failures.</p>
+
+
+
+<p>Good event correlation can lead to other metrics. These metrics, often found in IT service management, are designed to assess how engineers, DevOps workers, service teams, and automated repairs manage these situations. One of them is a set of KPIs known as MTTx since they all begin with the acronym MTT, which stands for &#8220;mean time to.&#8221; These consist of:</p>
+
+
+
+<ul>
+<li><strong>MTTR:</strong> Mean Time to Recovery, Mean Time to Respond, Mean Time to Restore, Mean Time to Repair, and Mean Time to Resolve. The average length of time it takes from the time an incident report is first filed until the event is resolved and marked closed is known as MTTR. The measurement considers both the time spent testing and fixing the problem.</li>
+
+
+
+<li><strong>MTTA</strong> (Mean Time To Acknowledge): MTTA is the period of time between the activation of an alarm and the start of problem-solving. This indicator is helpful for monitoring the response of your staff and the performance of your alert system.</li>
+
+
+
+<li><strong>MTTF</strong> (Mean Time To Failure): It is the average time between a technology product&#8217;s irreparable breakdowns. The computation is used to evaluate how long a system will normally last, whether the latest version of a system is functioning better than the previous version, and to advise clients about predicted lifetimes and the best times to arrange system check-ups.</li>
+
+
+
+<li><strong>MTTD</strong> (Mean Time To Detect): The mean time to detect metric measures the time an IT deployment has a problem before the relevant stakeholders are aware of it. Users experience IT disruptions for a shorter period of time when the MTTD is shorter.</li>
+
+
+
+<li><strong>MTBF</strong> (Mean Time Before Failure): The average time between system failures is the mean time between failures. MTBF is an essential maintenance parameter to assess equipment design, performance, and security, particularly for important assets.&nbsp;</li>
+
+
+
+<li><strong>MTTK</strong> (Mean Time To Know): The mean time to fix an issue is the interval between issue detection and cause identification. In other words, MTTK is the amount of time required to determine the cause of a problem.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="469" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20469'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/10-1024x469.png" alt="Example of MTBF report" class="wp-image-3960 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/10-1024x469.png 1024w, https://acure.io/wp-content/uploads/2022/09/10-500x229.png 500w, https://acure.io/wp-content/uploads/2022/09/10-320x147.png 320w, https://acure.io/wp-content/uploads/2022/09/10-768x352.png 768w, https://acure.io/wp-content/uploads/2022/09/10.png 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Example of MTBF report</figcaption></figure>
+
+
+
+<p>Examine the raw event volume for event management metrics, then take note of the reductions brought about by deduplication and filtering. Use the percentage of alerts that were enhanced and the level of enhancement, <a href="https://en.wikipedia.org/wiki/Signal-to-noise_ratio" target="_blank" rel="noreferrer noopener nofollow">signal-to-noise ratio</a>, or false-positive percentage for event enrichment data. For locating noise and enhancing actionability, accurate event frequency is helpful. It is also beneficial to consider the overall monitoring coverage in terms of the proportion of events started by monitoring.</p>
+
+
+
+<h2 class="wp-block-heading" id="event-correlation-use-cases">Event Correlation Use Cases</h2>
+
+
+
+<p>Event correlation is essentially a method that links different events to recognizable patterns. If certain patterns pose a <a href="https://hakin9.org/dsiem-security-event-correlation-engine-for-elk-stack/" target="_blank" rel="noreferrer noopener nofollow">security risk</a>, a response can be ordered. Once the data is indexed, event correlation can also be done. Among the most significant use cases of event correlation are:</p>
+
+
+
+<h3 class="wp-block-heading" id="leading-airline">Leading Airline ✈️</h3>
+
+
+
+<p>A major American airline was aware that even a small service interruption may result in millions of dollars in fuel wastage and lost revenue. The business employed numerous monitoring systems in an effort to maintain high uptime. However, they were fragmented, and the processes for incident detection and resolution were manual. The carrier introduced an AI-driven event correlation solution after first rationalizing and modernizing its monitoring technologies. Centralized monitoring, fewer incident escalations, and a 40% reduction in MTTR were all advantages of using event correlation.</p>
+
+
+
+<h3 class="wp-block-heading" id="intruder-detection">Intruder Detection 🕵️</h3>
+
+
+
+<p>Let&#8217;s imagine an employee account hasn&#8217;t been used in years. The logs suddenly show a large number of login attempts. In a short while, the account might start executing unusual commands. The security team might declare that an attack is ongoing using event correlation.</p>
+
+
+
+<p>Let&#8217;s assume that after numerous failed attempts to log in, one did succeed. The system classifies this incident as &#8220;curious&#8221; in the correlation. Then we discovered that a system port had been checked fifteen minutes earlier. Now we see that both the port scan IP address and the login attempts share the same IP address. Here, the relationship between the occurrences alerts us by designating the significance of the stated event as being of significant concern.</p>
+
+
+
+<p>We would need to rely on luck than on expertise if we tried to locate these occurrences using merely a manual correlation. But with event correlation, you can identify and resolve the issue in no time.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading" id="financial-saas-provider-for-businesses">Financial SaaS Provider For Businesses 🏦</h3>
+
+
+
+<p>Only 5% of events could be successfully resolved by this enterprise software as a service provider&#8217;s level one service team. The company particularly suffered as alert volume increased 100-fold while processing payroll on Friday. The level one team improved its resolution rate by 400%, cut MTTA by 95%, and cut MTTR by 58% in the first 30 days by applying AI-based event correlation.</p>
+
+
+
+<h3 class="wp-block-heading" id="retail-chain">Retail Chain 🛍️</h3>
+
+
+
+<p>A national home improvement retailer had prolonged outages at its stores because point-of-sale activities were not being correlated. With event correlation, both the overall and average outage durations decreased by a combined 65 percent. The organization found that a high frequency of alerts, some of which were meaningless, made it difficult for the network operations center to identify important problems and caused resolution to be delayed. Major incidents decreased by 27% with a better event correlation solution, while root cause analysis improved by 226% and MTTR decreased by 75%.</p>
+
+
+
+<h3 class="wp-block-heading" id="sporting-goods-manufacturer">Sporting Goods Manufacturer 👟</h3>
+
+
+
+<p>Even after adopting some event correlation techniques, this large athletic shoe and clothing manufacturer was still overrun with alert information from its IT monitoring. The organization significantly increased its capacity to recognize major situations, take swift action, and do precise correlations by switching to a machine learning-based system. Its MTTA decreased from 30 minutes to 1 minute in less than 30 days as a result.</p>
+
+
+
+<h2 class="wp-block-heading" id="event-correlation-approaches-and-techniques">Event Correlation Approaches and Techniques</h2>
+
+
+
+<p>Event correlation techniques concentrate on establishing links between event data and determining causality by examining event features including the time, place, procedures, and data type. Today, AI-enhanced algorithms play a significant role in identifying these connections and trends as well as the root cause of issues. Here is a summary:</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20576'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24-1024x576.png" alt="" class="wp-image-3985 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24-1024x576.png 1024w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24-500x281.png 500w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24-320x180.png 320w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24-768x432.png 768w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24-1536x864.png 1536w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24-1200x675.png 1200w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24-1568x882.png 1568w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-24.png 1920w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<ul>
+<li><strong>Time-Based Event Correlation:</strong> This method looks for connections between the timing and order of events by analyzing what took place just before or concurrently with an event. For correlation, you can specify a time window or latency requirement.</li>
+
+
+
+<li><strong>Rule-Based Event Correlation:</strong> Using specified values for variables like transaction type or user city, this method compares events to a rule. This method can be time-consuming and ultimately unsustainable because a new rule must be written for each variable.</li>
+
+
+
+<li><strong>Pattern-Based Event Correlation:</strong> The time-based and rule-based strategies are combined in pattern-based event correlation, which looks for events that match a predetermined pattern without requiring the values of individual variables to be specified. Pattern-based event uses machine learning to improve the event correlation tool but is significantly less laborious than rule-based. The correlation program continuously increases its understanding of novel patterns with the use of machine learning.</li>
+
+
+
+<li><strong>Rule-Based Approach:</strong> According to a predetermined set of rules, the rule-based method correlates events. The rule-processing engine examines the data until it reaches the desired state, taking into account the outcomes of each test and the interactions of the system events.</li>
+
+
+
+<li><strong>Codebook-Based Approach: </strong>The codebook-based strategy is comparable to the rule-based strategy, which aggregates all events. It stores a series of events in a codebook and correlates them. Compared to a rule-based system, this approach executes more quickly since there are less comparisons made for each event.</li>
+
+
+
+<li><strong>Topology-Based Event Correlation:</strong> This method is based on network topology, which is the physical and logical configuration of equipment, such as servers and hubs, as well as the nodes that make up a network, as well as knowledge of how those nodes are connected to one another. Users can more easily visualize incidents in relation to their topology using this technique because it maps events to the topology of impacted nodes or applications.</li>
+
+
+
+<li><strong>Domain-Based Event Correlation: </strong>This method connects events using event data gathered from monitoring systems that concentrate on a particular area of IT operations. Some event correlation tools perform cross-domain or domain-agnostic event correlation by gathering data from all monitoring tools.</li>
+
+
+
+<li><strong>History-Based Event Correlation: </strong>This technique looks for similarities between recent events and past occurrences. A history-based correlation is comparable to a pattern-based correlation in this regard. History-based correlation is &#8220;dumb&#8221; in that it can only link occurrences by contrasting them with similar events in the past. Pattern-based systems are adaptable and dynamic.</li>
+
+
+
+<li><strong>Codebook-Based Approach: </strong>The codebook-based strategy is comparable to the rule-based strategy, which aggregates all events. It stores a series of events in a codebook and correlates them. Compared to a rule-based system, this approach executes more quickly since there are fewer comparisons made for each event.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="importance-of-event-correlation">Importance of Event Correlation ☝️</h2>
+
+
+
+<p>Some events among the network&#8217;s thousands of daily events are more significant than others. A server may have had a brief increase in demand, a disk drive may be beginning to fail, or a business service you depend on may be responding slowly. Without event correlation, it might be difficult to identify the problem. Perhaps you won&#8217;t even realize it until it&#8217;s too late.</p>
+
+
+
+<p>Like that tenaciously determined investigator, event correlation software can sort through the signals and draw the connections required to correlate incidents to events quickly and to understand better what constitutes an issue and what constitutes a sign of a problem. Prioritizing and resolving incidents is a crucial step.&nbsp;</p>
+
+
+
+<p>Event correlation software completes this work more quickly and accurately than humans. Even so, certain legacy products from the past struggle to function in today&#8217;s cutting-edge IT environments. Because of this, more businesses are using AIOps for IT operations.</p>
+
+
+
+<h2 class="wp-block-heading" id="benefits-of-event-correlation">Benefits of Event Correlation</h2>
+
+
+
+<p>With the help of a series of related events, event correlation provides comprehensive context and logical analysis. Security analysts can then carefully decide how to respond and investigate in the future.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20576'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22-1024x576.png" alt="Benefits of Event Correlation" class="wp-image-3981 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22-1024x576.png 1024w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22-500x281.png 500w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22-320x180.png 320w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22-768x432.png 768w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22-1536x864.png 1536w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22-1200x675.png 1200w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22-1568x882.png 1568w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-22.png 1920w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>This entails using user-defined rules to transform unprocessed data into actionable alerts, alarms, and reports. The necessary course of action can then be taken. The following are some advantages of applying event correlation techniques:</p>
+
+
+
+<ul>
+<li><strong>Real-time threat visibility: </strong>IT departments can benefit from active event correlation and analysis to quickly identify dangers. Business is impacted by errors, security breaches, and operational problems. These can be effectively avoided instead.</li>
+
+
+
+<li><strong>Lowers the cost of operation:</strong> Tools for event correlation automate tasks like the analysis of extensive workflows to lower the number of pertinent warnings. So, the IT department can focus more on fixing immediate threats and spend less time attempting to make sense of it all.</li>
+
+
+
+<li><strong>Monitoring for network security: </strong>The network could always be looked over. Impact failures, like those that impact business services, can also be found and fixed.</li>
+
+
+
+<li><strong>Better time management:</strong> Modern event correlation tools are user-friendly and effective, thus fewer resources are required. Additionally, using <a href="https://www.microsoft.com/en-us/security/business/security-101/what-is-siem#:~:text=A%20SIEM%20solution%20is%20security,threats%20with%20real%2Dtime%20analysis." target="_blank" rel="noreferrer noopener nofollow">SIEM technologies</a> for event correlation and analysis can save a significant amount of time.</li>
+
+
+
+<li><strong>Continuous compliance reports: </strong>There may be different levels of security and networked system compliance required by federal, state, and municipal authorities. Techniques for event correlation can be utilized to guarantee continuous monitoring of all IT infrastructures. The actions required to mitigate such risks can then be detailed in reports that describe security-related threats and incidents.</li>
+</ul>
+
+
+
+<p>Event correlation approaches are designed for event detection, interpretation, and control action assignment. The value of correlation intelligence will keep growing as data complexity rises.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-driven-event-correlation">AI-Driven Event Correlation</h2>
+
+
+
+<p>Assembling and analyzing log data from many network applications, processes, and devices is made possible by the event correlation in SIEM solutions. This feature ensures that security risks and hostile activity patterns in business networks will be found that would otherwise go undetected.</p>
+
+
+
+<p>Many firms are using a blend of artificial intelligence and human intelligence to increase the accuracy of event correlation. They have come to the conclusion that no strategy can be successful on its own. The employment of SIEM solutions that contain correlation engines, algorithms for machine learning, and artificial intelligence consequently serves as a before and after example of cybersecurity advancements.</p>
+
+
+
+<h2 class="wp-block-heading" id="event-correlation-in-aiops">Event Correlation in AIOps&nbsp;</h2>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="764" height="435" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20764%20435'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/AI-event-correlation-meme.png" alt="Correlation by AI meme" class="wp-image-3987 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/AI-event-correlation-meme.png 764w, https://acure.io/wp-content/uploads/2022/09/AI-event-correlation-meme-500x285.png 500w, https://acure.io/wp-content/uploads/2022/09/AI-event-correlation-meme-320x182.png 320w" data-sizes="(max-width: 764px) 100vw, 764px" /><figcaption class="wp-element-caption">Correlation by AI meme</figcaption></figure>
+
+
+
+<p>Initially, a procedure that required human engineers and developers, things started to change around 2010. The first significant development in event correlation was the introduction of statistical analysis and visualization.</p>
+
+
+
+<p>Event correlation systems can now automatically create new correlation patterns by learning from event data thanks to machine learning and deep learning. This was the first time artificial intelligence had been used to correlate events.</p>
+
+
+
+<p>The term &#8220;AIOps&#8221; was first used by <a href="https://www.gartner.com/en/information-technology/glossary/aiops-artificial-intelligence-operations" target="_blank" rel="noreferrer noopener nofollow">Gartner analysts</a> in 2016. Big data management and anomaly detection are two additional use cases for AIOps that go beyond event correlation. In 2018, Gartner listed the following as the primary duties of an AIOps platform:</p>
+
+
+
+<ul>
+<li>Incorporating data from several sources, irrespective of type or vendor</li>
+
+
+
+<li>Real-time analysis being carried out at the site of intake</li>
+
+
+
+<li>Analyzing historical data from stored sources</li>
+
+
+
+<li>Utilizing machine learning</li>
+
+
+
+<li>Action or next move being taken based on analytics</li>
+</ul>
+
+
+
+<p>AIOps is the power to process a plethora of alerts for events, evaluate them quickly, derive insights, and identify incidents as they emerge before they develop into severe outages.</p>
+
+
+
+<p>The &#8220;black box effect&#8221; is one of the main problems in AI. This has the effect of fostering user mistrust and slowing adoption because machine learning algorithms and their instructions are not transparent. This problem can be solved by using AIOps event correlation tools since they offer transparency, testability, and control. Users of the software may be able to build or alter correlation patterns, as well as view them and test them before implementing them in real-world settings.</p>
+
+
+
+<p>Event correlation will provide pattern-based predictions and the identification of root causes that individuals miss as AIOps develops. Artificial intelligence-driven event correlation solutions will just plug in and instruct incident managers on how to proceed.</p>
+
+
+
+<h2 class="wp-block-heading" id="analyst-recommendations-on-aiops">Analyst Recommendations on AIOps</h2>
+
+
+
+<p>The AIOps platform market was pegged by <a href="https://www.gartner.com/en/documents/3971186" target="_blank" rel="noreferrer noopener nofollow">Gartner Research</a> at $300 to $500 million annually in a market analysis from November 2019. 40% of DevOps teams would reportedly add AIOps technologies to their toolkits by 2023, according to their prediction.</p>
+
+
+
+<p>The analysts at Gartner advised businesses to implement AIOps gradually. Events classification, correlation, and anomaly detection should be the first important applications that are implemented. They can employ technologies over time to shorten outage times, improve IT service management, become proactive in reducing impact, assess the value of patterns, and eliminate false alarms.</p>
+
+
+
+<p>In its review of the AIOps market for 2020, GigaOm discovered that products on the market cover a range of AI adoption and forecasted a consolidation of vendors. According to GigaOm, many event correlation solutions have tacked on AI as an afterthought. Therefore, businesses must thoroughly examine the offers and comprehend all of their features, including compatibility, which has been a challenge for some tools. The decision between an on-premises or cloud-native, on-demand model is another factor.</p>
+
+
+
+<h2 class="wp-block-heading" id="misconceptions-about-event-correlation">Misconceptions about Event Correlation</h2>
+
+
+
+<p>There are various differences among the instruments that come under the event correlation category, as GigaOm pointed out. However, some misunderstandings are widespread.&nbsp;</p>
+
+
+
+<p><strong>Real-Time Processing:</strong> According to many users, machine learning enables event correlation software to process and correlate new events in real time. Since it requires significant increases in computer power and breakthroughs in AI, no vendor currently offers this capacity.</p>
+
+
+
+<p><strong>Anomaly Detection:</strong> Users frequently misunderstand how anomaly detection and event correlation are related. Tracking and observability tools that glance at a single, isolated metric over time and can identify when this measure enters an anomalous state perform anomaly detection. Tracking and observability tools create events indicating the discovery of abnormalities when they do so. One of the data streams fed into the event correlation machine is this output. Anomaly detection is not currently a function of any event correlation solutions.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-to-choose-the-ideal-event-correlation-tool-for-your-business">How to Choose the Ideal Event Correlation Tool for Your Business</h2>
+
+
+
+<p>Your IT Ops efforts can be made to produce higher business value with the help of the appropriate event correlation tool. But it might be challenging to determine whether the product is the greatest fit for your needs due to competing claims and complex technology.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20576'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25-1024x576.png" alt="How to choose event correlation tool?" class="wp-image-3989 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25-1024x576.png 1024w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25-500x281.png 500w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25-320x180.png 320w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25-768x432.png 768w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25-1536x864.png 1536w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25-1200x675.png 1200w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25-1568x882.png 1568w, https://acure.io/wp-content/uploads/2022/09/Pics-for-Acure-Blog-25.png 1920w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>A list of important characteristics and capabilities is provided below. You can compare providers based on many criteria that are weighted according to their significance to your business.</p>
+
+
+
+<h3 class="wp-block-heading" id="1-user-experience">1. User Experience 👨‍💻</h3>
+
+
+
+<ul>
+<li>Convenience and safety of access: The ideal event correlation tool will enhance the user experience with ease of use to safely access business data.</li>
+
+
+
+<li>Intuitive navigation: Active event correlation tools should make the user experience better with an intuitive interface that helps navigate through the issues and come up with solutions smoothly.&nbsp;</li>
+
+
+
+<li>A cutting-edge, clear user experience: The ultimate goal of any tool should be to improve user’s experience and an intuitive interface will help with that.&nbsp;</li>
+
+
+
+<li>Integrated console: A single pane of glass to prevent incidents</li>
+
+
+
+<li>Native analytics: Simple to install and comprehend</li>
+
+
+
+<li>Easy integration of third-party analytics with best-in-class BI solutions</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="2-functionality">2. Functionality ⚙️</h3>
+
+
+
+<ul>
+<li>Sources of data ingested: It should be easy and quick to navigate the sources of the data collected to understand the issue and offer a solution immediately.&nbsp;</li>
+
+
+
+<li>Platform for hosting data streams: Helps gather multiple data streams to detect a pattern in all of them.</li>
+
+
+
+<li>Correlated event types: Since all the event types will be different, the tool should be able to recognize multiple events with a single functionality.</li>
+
+
+
+<li>Interpretation and improvement of data to provide the best experience to the end users without any bugs or issues.</li>
+
+
+
+<li>Correlation methods used should be varied to identify different patterns and root causes of the event failures.&nbsp;</li>
+
+
+
+<li>Root cause analysis that is fully automated to avoid wasting time on manual operations.&nbsp;</li>
+
+
+
+<li>Ability to drill down and adjust root causes.</li>
+
+
+
+<li>Ability to view incidents in relation to topology and surroundings to determine the best solutions for that region.&nbsp;</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="3-machine-learning-and-artificial-intelligence">3. Machine Learning And Artificial Intelligence 🦾</h3>
+
+
+
+<ul>
+<li>Automation at level 0 turns manual activities into automated workflows to accelerate incident response.</li>
+
+
+
+<li>Scalability: The tool should be able to scale the run-time correlation engine to monitor the cloud computing environment.&nbsp;</li>
+
+
+
+<li>Performance that is agile-friendly to help teams offer value to their customers without consuming a lot of their time.&nbsp;</li>
+
+
+
+<li>The ability to combine all event feeds using existing tools and integration technology.</li>
+
+
+
+<li>Integration technology and the capacity to include all event feeds without the cost of consultants.</li>
+
+
+
+<li>The ability to quickly connect all event feeds and integration technology.</li>
+
+
+
+<li>Extensibility to ingest monitoring alerts, alarms, and other event indications.</li>
+
+
+
+<li>Security to keep the data and data sources safe from fraudulent incidents.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="4-strategic-aspects">4. Strategic Aspects 📈</h3>
+
+
+
+<ul>
+<li>Business Model Harmony: For identifying patterns that have common go-to-market, vulnerability, value-sharing, and commercial features</li>
+
+
+
+<li>Vision Alignment to help achieve a win-win situation for both concerned parties.</li>
+
+
+
+<li>Roadmap Alignment will help in achieving the goals of the company by ensuring that all the efforts are directed towards achieving that goal.</li>
+
+
+
+<li>Organizational Behavior: Helps the management make sense of the events and understand what changes should be made at the organizational level.</li>
+
+
+
+<li>Monetary security: The tool should be able to recognize which resource is a money-pit and which solution will help save money.&nbsp;</li>
+
+
+
+<li>Customer satisfaction: The end goal of any company is to achieve customer satisfaction and the event correlation tool should be able to solve any issues that customers face.&nbsp;</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="5-partners">5. Partners 🤝</h3>
+
+
+
+<ul>
+<li>Observability and monitoring tools integration vendors.</li>
+
+
+
+<li>Tools for the integration of topology and change vendors.</li>
+
+
+
+<li>Tools for collaboration and integration vendors.</li>
+
+
+
+<li>System integrators that link all the applications that could be used in solving the issues.</li>
+
+
+
+<li>Cloud service provider</li>
+
+
+
+<li>Resellers</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="6-service">6. Service 🧰</h3>
+
+
+
+<ul>
+<li>Proof of Value: Proving value in the eyes of your customer by dealing with problems they face in a quick and efficient manner.&nbsp;</li>
+
+
+
+<li>Training/education: The learning curve of the tool should be minimum with tutorials and training that help understand the features and its advantages.&nbsp;</li>
+
+
+
+<li>Advisory for more effective intrusion detection</li>
+
+
+
+<li>Customer support SLA</li>
+
+
+
+<li>Customer success program</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading" id="download-scorecard-for-event-correlation-solution"><strong>Download scorecard for event correlation solution!</strong></h4>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="386" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20386'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/score_card-1024x386.png" alt="Scorecard for event correlation solution" class="wp-image-4033 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/score_card-1024x386.png 1024w, https://acure.io/wp-content/uploads/2022/09/score_card-500x189.png 500w, https://acure.io/wp-content/uploads/2022/09/score_card-320x121.png 320w, https://acure.io/wp-content/uploads/2022/09/score_card-768x290.png 768w, https://acure.io/wp-content/uploads/2022/09/score_card-1536x580.png 1536w, https://acure.io/wp-content/uploads/2022/09/score_card-1200x453.png 1200w, https://acure.io/wp-content/uploads/2022/09/score_card-1568x592.png 1568w, https://acure.io/wp-content/uploads/2022/09/score_card.png 1802w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Scorecard for event correlation solution</figcaption></figure>
+
+
+
+    <div class="acure-use-case-page__buttons  aligncenter">
+        <a 
+            class="acure-button acure-button--orange-primary  "
+                       target="_blank"
+                      href="../../wp-content/uploads/2022/09/Scorecard-For-Event-Correlation-Solution.xlsx">
+                            <div class="acure-button__icon acure-button__icon--download"></div>
+                        Download        </a>
+    </div>
+
+
+
+
+
+
+<h2 class="wp-block-heading" id="why-companies-choose-acure-io-for-event-correlation">Why Companies Choose Acure For Event Correlation</h2>
+
+
+
+<p>Acure is a simple yet powerful AIOps platform for event correlation and deduplication. It helps reduce the noise level of events coming from different monitoring systems by 70% and increases the productivity of IT Ops. Deduplication and correlation tools prevent incidents from reoccurring and allow you to prioritize alerts, which allows the IT Ops team to focus only on important tasks.</p>
+
+
+
+<p>Acure developers are constantly listening to customers and upgrading the platform according to their wishes. So far, synthetic triggers are used for event correlation. Acure triggers process events received via the monitoring system. It is possible to create a trigger from a template or write it from scratch using scripts written in the Lua language. However, a platform update is planned soon: synthetic triggers will be replaced by signals driven by scripts on a low-code engine that is already used for automation scenarios. This is crucial for systems with a dynamic environment.</p>
+
+
+
+<p>Event correlation in Acure is also topology-based. The topology graph displays the whole IT environment like a tree with links between each configuration item. You can see the health and state of the IT complex and each item individually.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="503" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20503'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/09/Service-model-graph-1024x503.jpg" alt="Topology correlation in Acure" class="wp-image-3968 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/09/Service-model-graph-1024x503.jpg 1024w, https://acure.io/wp-content/uploads/2022/09/Service-model-graph-500x246.jpg 500w, https://acure.io/wp-content/uploads/2022/09/Service-model-graph-320x157.jpg 320w, https://acure.io/wp-content/uploads/2022/09/Service-model-graph-768x377.jpg 768w, https://acure.io/wp-content/uploads/2022/09/Service-model-graph.jpg 1170w" data-sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Topology correlation in Acure</figcaption></figure>
+
+
+
+<p>And last but not least, Acure is absolutely free with 5 GB daily data, unlimited scenarios, configuration items and users.</p>
+
+
+
+<p><strong>Want to see how event correlation works in Acure in practice?</strong> Here is our <a href="../../use-cases/event-correlation-noise-reduction/index.html" target="_blank" rel="noreferrer noopener">event correlation &amp; noise reduction use case</a> for your IT department. </p>
+                        </div>
+                    </div>
+                                        <div class="acure-article-recommended acure-desktop-hidden">
+                        <div class="acure-article-recommended__head">
+                            <div class="acure-article-recommended__title">You may be also interested in:</div>
+                            <div class="acure-article-recommended__arrows">
+                                <div class="acure-article-recommended__arrow acure-article-recommended__arrow--left"></div>
+                                <div class="acure-article-recommended__arrow acure-article-recommended__arrow--right acure-article-recommended__arrow--active"></div>
+                            </div>
+                        </div>
+                        <div class="acure-article-recommended__items">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../site-reliability-engineer/index.html">
+		<img class="lazy" data-imageid="5554"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2023/02/128-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">How to Become a Site Reliability Engineer?</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../site-reliability-engineer/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../business-impact-analysis-for-it/index.html">
+		<img class="lazy" data-imageid="5441"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2023/02/Pics-for-Acure-Blog-43-1-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">Examples of Business Impact Analysis for IT Infrastructure</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../business-impact-analysis-for-it/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../it-operations-manager/index.html">
+		<img class="lazy" data-imageid="5363"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2023/02/109-1-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">How to Build Your Career As an IT Operations Manager?</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../it-operations-manager/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../autonomous-it-talks-savinder-puri/index.html">
+		<img class="lazy" data-imageid="4495"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/10/Savinder-Puri-AIT-cover-2-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">How DevOps and Other IT Pros Survive Transformational Shift</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../autonomous-it-talks-savinder-puri/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../ping-test-cmd/index.html">
+		<img class="lazy" data-imageid="4306"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/10/46-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">How To Test a Network Connectivity by Using CMD Ping</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../ping-test-cmd/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../aiops-in-itops/index.html">
+		<img class="lazy" data-imageid="4244"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/10/Pics-for-Acure-Blog-29-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">5 Ways Why AIOps is the Future of ITOps (Gartner)</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../aiops-in-itops/index.html">Read More</a>
+		</div>
+	</div>
+</div></div>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-container__column acure-container__column--sidebar acure-container__column--with-delimiter">
+                    <div class="acure-container__sidebar-columns">
+                        <section id="block-23" class=" widget_block">
+<div class="acure-container__sidebar-column acure-container__sidebar-column--full">
+    <div class="acure-mobile-spacing--40"></div>
+    <div class="acure-blog-more-posts">
+        <div class="acure-blog-more-posts__title">More Posts</div>
+        <div class="acure-blog-more-posts__items">
+                                                        <a class="acure-tag acure-tag--small acure-tag--active"
+                   href="../category/academy/index.html"
+                >Academy</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/autonomous-it-talks/index.html"
+                >Autonomous IT Talks</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/glossary/index.html"
+                >Glossary</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/kubernetes/index.html"
+                >Kubernetes</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/platform/index.html"
+                >Platform</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/reviews/index.html"
+                >Reviews</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/trends/index.html"
+                >Trends</a>
+                    </div>
+    </div>
+</div>
+<div class="acure-container__sidebar-column acure-container__sidebar-column--full">
+    <div class="acure-blog-authors">
+        <div class="acure-blog-authors__title">Our Authors</div>
+        <div class="acure-blog-authors__items">
+                                                        <div class="acure-blog-authors__item">
+                    <a href="../author/arturkoppel/index.html" data-author="219657398" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium acure-circle-avatar--active">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/5e5c2c722f83da4e4e79f321349878e7?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Artur Koppel</div>
+                            <div class="acure-blog-author__position">Sr. Data Engineer, Columnist</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/kate/index.html" data-author="219657405" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/25e7b8ef4a1be6c36c62d3c56181c41a?s=120&amp;d=identicon&amp;r=g">
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Elena Hawk</div>
+                            <div class="acure-blog-author__position">Content Manager at Acure</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/pameladawson/index.html" data-author="219657397" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/028e7ef4fc243ab9fd739dffd8857ed9?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Pam Dawson</div>
+                            <div class="acure-blog-author__position">Tech-Journalist, Data Science Enthusiast</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/stefenshaefer/index.html" data-author="219657399" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/1e126fe81d0f76edc2fd84ddfc0260e5?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Stefen Shaefer</div>
+                            <div class="acure-blog-author__position">IT Analyst, Business Consultant</div>
+                        </div>
+                    </a>
+                </div>
+                    </div>
+    </div>
+</div></section>                    </div>
+
+                </div>
+            </div>
+            <div class="acure-article-recommended acure-mobile-hidden">
+                <div class="acure-article-recommended__head">
+                    <div class="acure-article-recommended__title">You may be also interested in:</div>
+                    <div class="acure-article-recommended__arrows">
+                        <div class="acure-article-recommended__arrow acure-article-recommended__arrow--left"></div>
+                        <div class="acure-article-recommended__arrow acure-article-recommended__arrow--right acure-article-recommended__arrow--active"></div>
+                    </div>
+                </div>
+                <div class="acure-article-recommended__items">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../site-reliability-engineer/index.html">
+		<img class="lazy" data-imageid="5554"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2023/02/128-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">How to Become a Site Reliability Engineer?</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../site-reliability-engineer/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../business-impact-analysis-for-it/index.html">
+		<img class="lazy" data-imageid="5441"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2023/02/Pics-for-Acure-Blog-43-1-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">Examples of Business Impact Analysis for IT Infrastructure</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../business-impact-analysis-for-it/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../it-operations-manager/index.html">
+		<img class="lazy" data-imageid="5363"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2023/02/109-1-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">How to Build Your Career As an IT Operations Manager?</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../it-operations-manager/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../autonomous-it-talks-savinder-puri/index.html">
+		<img class="lazy" data-imageid="4495"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/10/Savinder-Puri-AIT-cover-2-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">How DevOps and Other IT Pros Survive Transformational Shift</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../autonomous-it-talks-savinder-puri/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../ping-test-cmd/index.html">
+		<img class="lazy" data-imageid="4306"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/10/46-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">How To Test a Network Connectivity by Using CMD Ping</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../ping-test-cmd/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../aiops-in-itops/index.html">
+		<img class="lazy" data-imageid="4244"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20281'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/10/Pics-for-Acure-Blog-29-500x281.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">5 Ways Why AIOps is the Future of ITOps (Gartner)</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../aiops-in-itops/index.html">Read More</a>
+		</div>
+	</div>
+</div></div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+<!-- FOOTER -->
+<footer id="acure-footer" class="acure-footer">
+        <div class="acure-footer__lead">
+        <div class="acure-container">
+            <div class="acure-footer__lead-content">
+                <div class="acure-footer__lead-text">
+                    <div class="acure-footer__lead-title">Get Started with AIOps</div>
+                    <div class="acure-footer__lead-description">How can professionals automate main IT Ops processes in Acure?</div>
+                </div>
+                <a class="acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+            </div>
+        </div>
+    </div>
+        <div class="acure-footer__container">
+        <div class="acure-container">
+            <div class="acure-footer__sitemap acure-mobile-hidden">
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">AIOps Platform</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">About Acure</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Interface Tour</a>
+                                    <a class="acure-footer__sitemap-link" href="../../platform/index.html">Platform Overview</a>
+                                    <a class="acure-footer__sitemap-link" href="../../features/index.html">Features</a>
+                                    <a class="acure-footer__sitemap-link" href="../../integrations/index.html">Integrations</a>
+                                    <a class="acure-footer__sitemap-link" href="../../price/index.html">Prices</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Acure vs. Others</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Dynatrace</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. StackState</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Splunk</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. DataDog</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Moogsoft</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Technologies</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Hybrid Cloud Observability</a>
+                                </div>
+                            </div>
+                            <a class="acure-footer__sitemap-logo" href="../../index.html">
+                                <img class="acure-footer__sitemap-logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+                            </a>
+                        </div>
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Our Solutions</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Corelation & Noise Reduction</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discoverу</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Ops</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Customer Success</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/supply-company/index.html">How Acure reconciled network and VDI engineers in the supply company</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/retail-company/index.html">How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/industrial-holding/index.html">How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/digital-bank/index.html">How Acure automation services helped reduce IT troubleshooting time in a large digital bank</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/insurance-company/index.html">How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__contact">Sales team: <a href="mailto:hello@acure.io">hello@acure.io</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-footer__sitemap-delimiter"></div>
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">Resources</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Content Hub</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Featured Content</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../landing/root-cause-analysis/index.html">Engineers spend hours trying to investigate why digital services are not working!</a>
+                                </div>
+                            </div>
+
+                            <div class="acure-footer__contact">Support team: <a href="mailto:support@acure.io">support@acure.io</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-footer__sitemap-delimiter"></div>
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">Company</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Acure Company</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../about/index.html">About Us</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Our Mission</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                        Careers
+                                        <span class="acure-footer__sitemap-tip">we are hiring</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Contacts</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../contacts/index.html">Contact Us</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.linkedin.com/company/acure-io" target="_blank">Follow Us on LinkedIn</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__contact acure-footer__contact--yellow">Documentation: <a href="https://docs.acure.io/current/en/get-started/" target="_blank">Quick Guide to Start</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="acure-footer__logo acure-desktop-hidden" href="../../index.html">
+            <img class="acure-footer__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+        </a>
+        <div class="acure-footer__bottom">
+            <div class="acure-container">
+                <div class="acure-footer__bottom-content">
+                    <div class="acure-footer__copyright">© 2023 SIA Acure</div>
+                    <div class="acure-footer__policies">
+                        <a class="acure-footer__policy" href="../../privacy-policy/index.html">Privacy policy</a>
+                        <a class="acure-footer__policy" href="../../cookies-policy/index.html">Cookie policy</a>
+                        <a class="acure-footer__policy" href="../../terms-of-use/index.html">Terms of use</a>
+                    </div>
+                    <div class="acure-footer__socials">
+                        <a class="acure-footer__socials-item acure-footer__socials-item--facebook" href="https://www.facebook.com/acure.community" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--youtube" href="https://www.youtube.com/@acure-io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--linkedin" href="https://www.linkedin.com/company/acure-io/" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--twitter" href="https://twitter.com/acure_io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--reddit" href="https://www.reddit.com/user/Acure_io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--medium" href="https://medium.com/@acure.io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--github" href="https://github.com/acure-io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--quora" href="https://www.quora.com/profile/Acure-AIOps" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end FOOTER --><script>document.body.classList.remove("no-js");</script>    <script>
+        if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/index.html' ) ) {
+            document.body.classList.add( 'is-IE' );
+        }
+    </script>
+    <link rel='stylesheet' id='block-testimonial-css' href='../../wp-content/themes/twentytwentyoneacure/new-inc/blocks/full-sidebar/full-sidebar1b46.css?ver=6.1.4' media='all' />
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/article.js' id='blog-js'></script>
+<script id='leadin-script-loader-js-js-extra'>
+var leadin_wordpress = {"userRole":"visitor","pageType":"post","leadinPluginVersion":"10.2.17"};
+</script>
+<script src='../../../js.hs-scripts.com/2165385294ad.js?integration=WordPress&amp;ver=10.2.17' async defer id='hs-script-loader'></script>
+<script src='../../wp-includes/js/comment-reply.min1b46.js?ver=6.1.4' id='comment-reply-js'></script>
+<script id='twenty-twenty-one-ie11-polyfills-js-after'>
+( Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach ) || document.write( '<script src="../../wp-content/themes/twentytwentyoneacure/assets/js/polyfills4963.js?ver=1.1"></scr' + 'ipt>' );
+</script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/responsive-embeds4963.js?ver=1.1' id='twenty-twenty-one-responsive-embeds-script-js'></script>
+<script src='../../../code.jquery.com/jquery-3.6.0.min.js' id='jquery3-js'></script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/header.js' id='header-js'></script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/layout-new.js' id='layout-new-js'></script>
+    <script>
+        /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
+    </script>
+    
+<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="../../wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></body>
+
+<!-- Mirrored from acure.io/blog/event-correlation-in-aiops/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 06:29:03 GMT -->
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 69/174 objects using Memcached
+Page Caching using Memcached 
+Lazy Loading
+
+Served from: acure.io @ 2023-12-26 08:27:41 by W3 Total Cache
+-->

@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en-GB">
+
+<!-- Mirrored from acure.io/blog/low-code-in-acure/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 06:31:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><style>img.lazy{min-height:1px}</style><link rel="preload" href="../../wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="facebook-domain-verification" content="vkoslorfnvrfymg37ryjl9qjssg5uj" />
+	<meta name="format-detection" content="telephone=no">
+        <meta name="theme-color" content="#203059">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Low-code as a Future of Development and Its Realization in Acure - Acure AIOps Platform</title>
+	<meta name="description" content="In Acure, the low-code engine is used for automation services like dependencies map auto-building and event correlation. In this article, we will discuss the benefits of low-coding and figure out how to build a simple automation scenario in Acure." />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Low-code as a Future of Development and Its Realization in Acure - Acure AIOps Platform" />
+	<meta property="og:description" content="In Acure, the low-code engine is used for automation services like dependencies map auto-building and event correlation. In this article, we will discuss the benefits of low-coding and figure out how to build a simple automation scenario in Acure." />
+	<meta property="og:url" content="https://acure.io/blog/low-code-in-acure/" />
+	<meta property="og:site_name" content="Acure AIOps Platform" />
+	<meta property="article:published_time" content="2022-11-17T12:51:38+00:00" />
+	<meta property="article:modified_time" content="2023-02-22T15:20:48+00:00" />
+	<meta property="og:image" content="https://acure.io/wp-content/uploads/2022/11/Pics-for-Acure-Blog-34-1024x576.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="576" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Elena Hawk" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Elena Hawk" />
+	<meta name="twitter:label2" content="Estimated reading time" />
+	<meta name="twitter:data2" content="8 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://acure.io/blog/low-code-in-acure/","url":"https://acure.io/blog/low-code-in-acure/","name":"Low-code as a Future of Development and Its Realization in Acure - Acure AIOps Platform","isPartOf":{"@id":"https://acure.io/#website"},"primaryImageOfPage":{"@id":"https://acure.io/blog/low-code-in-acure/#primaryimage"},"image":{"@id":"https://acure.io/blog/low-code-in-acure/#primaryimage"},"thumbnailUrl":"https://acure.io/wp-content/uploads/2022/11/Pics-for-Acure-Blog-34.png","datePublished":"2022-11-17T12:51:38+00:00","dateModified":"2023-02-22T15:20:48+00:00","author":{"@id":"https://acure.io/#/schema/person/43b400e67986290b8c20e271be8c1ac6"},"description":"In Acure, the low-code engine is used for automation services like dependencies map auto-building and event correlation. In this article, we will discuss the benefits of low-coding and figure out how to build a simple automation scenario in Acure.","breadcrumb":{"@id":"https://acure.io/blog/low-code-in-acure/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://acure.io/blog/low-code-in-acure/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://acure.io/blog/low-code-in-acure/#primaryimage","url":"https://acure.io/wp-content/uploads/2022/11/Pics-for-Acure-Blog-34.png","contentUrl":"https://acure.io/wp-content/uploads/2022/11/Pics-for-Acure-Blog-34.png","width":1920,"height":1080,"caption":"Low-code cover"},{"@type":"BreadcrumbList","@id":"https://acure.io/blog/low-code-in-acure/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная страница","item":"https://acure.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://acure.io/blog/"},{"@type":"ListItem","position":3,"name":"Low-code as a Future of Development and Its Realization in Acure"}]},{"@type":"WebSite","@id":"https://acure.io/#website","url":"https://acure.io/","name":"Acure AIOps Platform","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://acure.io/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"Person","@id":"https://acure.io/#/schema/person/43b400e67986290b8c20e271be8c1ac6","name":"Elena Hawk","image":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://acure.io/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/b57eb78de6afb80a2fce19085efdc040?s=96&d=identicon&r=g","contentUrl":"https://secure.gravatar.com/avatar/b57eb78de6afb80a2fce19085efdc040?s=96&d=identicon&r=g","caption":"Elena Hawk"},"description":"Content Manager at Acure","url":"https://acure.io/blog/author/kate/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='http://js.hs-scripts.com/' />
+<link rel='dns-prefetch' href='http://code.jquery.com/' />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Acure AIOps Platform &raquo; Low-code as a Future of Development and Its Realization in Acure Comments Feed" href="feed/index.html" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/acure.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.4"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<style id='safe-svg-svg-icon-style-inline-css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<link rel='stylesheet' id='classic-theme-styles-css' href='../../wp-includes/css/classic-themes.min68b3.css?ver=1' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #28303D;--wp--preset--color--gray: #39414D;--wp--preset--color--green: #D1E4DD;--wp--preset--color--blue: #D1DFE4;--wp--preset--color--purple: #D1D1E4;--wp--preset--color--red: #E4D1D1;--wp--preset--color--orange: #E4DAD1;--wp--preset--color--yellow: #EEEADD;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--purple-to-yellow: linear-gradient(160deg, #D1D1E4 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-purple: linear-gradient(160deg, #EEEADD 0%, #D1D1E4 100%);--wp--preset--gradient--green-to-yellow: linear-gradient(160deg, #D1E4DD 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-green: linear-gradient(160deg, #EEEADD 0%, #D1E4DD 100%);--wp--preset--gradient--red-to-yellow: linear-gradient(160deg, #E4D1D1 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-red: linear-gradient(160deg, #EEEADD 0%, #E4D1D1 100%);--wp--preset--gradient--purple-to-red: linear-gradient(160deg, #D1D1E4 0%, #E4D1D1 100%);--wp--preset--gradient--red-to-purple: linear-gradient(160deg, #E4D1D1 0%, #D1D1E4 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 18px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--extra-small: 16px;--wp--preset--font-size--normal: 20px;--wp--preset--font-size--extra-large: 40px;--wp--preset--font-size--huge: 96px;--wp--preset--font-size--gigantic: 144px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='twenty-twenty-one-style-css' href='../../wp-content/themes/twentytwentyoneacure/style4963.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='twenty-twenty-one-print-style-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/print4963.css?ver=1.1' media='print' />
+<link rel='stylesheet' id='header-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/header1b46.css?ver=6.1.4' media='all' />
+<link rel='stylesheet' id='article-blog-style-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/blog/article1b46.css?ver=6.1.4' media='all' />
+<link rel='stylesheet' id='layout-new-css' href='../../wp-content/themes/twentytwentyoneacure/assets/css/layout-new1b46.css?ver=6.1.4' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" type="application/json" href="../../wp-json/wp/v2/posts/4685.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.1.4" />
+<link rel='shortlink' href='../../indexfd89.html?p=4685' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed61f2.json?url=https%3A%2F%2Facure.io%2Fblog%2Flow-code-in-acure%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedd9b7?url=https%3A%2F%2Facure.io%2Fblog%2Flow-code-in-acure%2F&amp;format=xml" />
+			<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v10.2.17-->
+			<script type="text/javascript" class="hsq-set-content-id" data-content-id="blog-post">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentType", "blog-post"]);
+			</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+			<link rel="pingback" href="../../xmlrpc.php"><link rel="icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2022/07/cropped-favicon%40512-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://acure.io/wp-content/uploads/2022/07/cropped-favicon@512-1-270x270.png" />
+		<style id="wp-custom-css">
+			#hubspot-messages-iframe-container {
+	transition: visibility 300ms ease-in-out, opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+body.menu-opened #hubspot-messages-iframe-container {
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0.1);
+}		</style>
+			<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WHP5QBX');</script>
+	<!-- End Google Tag Manager -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&amp;family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+</head>
+
+<body class="post-template-default single single-post postid-4685 single-format-standard wp-embed-responsive is-light-theme no-js singular no-widgets">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHP5QBX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","../../../chimpstatic.com/mcjs-connected/js/users/1db403f4f82776842476c3fe3/09ddf2027967f7ac96b29220e.js");</script>
+<!-- Start of HubSpot Embed Code (delayed) -->
+<script>
+	var hsScript=document.createElement("script");hsScript.setAttribute("id","hs-script-loader"),hsScript.setAttribute("type","text/javascript"),hsScript.setAttribute("async",""),hsScript.setAttribute("defer",""),hsScript.setAttribute("src","../../../js.hs-scripts.com/21653852.js"),setTimeout(function(){document.head.appendChild(hsScript)},7e3);
+</script>
+<!-- End of HubSpot Embed Code -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><!-- Start of HubSpot code snippet -->
+<button type="button" id="hs_show_banner_button"
+		style="background-color: #1D1AA7; border: 1px solid #1D1AA7;
+         border-radius: 3px; padding: 10px 16px; text-decoration: none; color: #fff;
+         font-family: inherit; font-size: 16px; font-weight: normal; line-height: inherit;
+         text-align: left; text-shadow: none; position: fixed; bottom: 0; right: 0; z-index: 10;"
+		onClick="(function(){
+    var _hsp = window._hsp = window._hsp || [];
+    _hsp.push(['showBanner']);
+  })()"
+>
+	Cookie Settings
+</button>
+
+<!-- End of HubSpot code snippet -->
+<!-- -------------- HEADER & NAVIGATION -------------- -->
+    <div id="header">
+        <div class="acure-header-desktop acure-mobile-hidden">
+            <div class="acure-header-desktop__container">
+                <a class="acure-header-desktop__logo" href="../../index.html">
+                    <img class="acure-header-desktop__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+                </a>
+                <nav class="acure-header-desktop__navigation">
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">AIOps Platform</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">About Acure</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Interface Tour</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../platform/index.html">Platform Overview</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../features/index.html">Features</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../integrations/index.html">Integrations</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../price/index.html">Prices</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Our Solutions</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Corelation & Noise Reduction</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discoverу</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Ops</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Acure vs. Others</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Dynatrace</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. StackState</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Splunk</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. DataDog</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Acure vs. Moogsoft</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Technologies</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Hybrid Cloud Observability</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Customer Success</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--truck" href="../../customer-stories/supply-company/index.html">
+                                            <span>How Acure reconciled network and VDI engineers in the supply company</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--store" href="../../customer-stories/retail-company/index.html">
+                                            <span>How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--factory" href="../../customer-stories/industrial-holding/index.html">
+                                            <span>How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--credit-card" href="../../customer-stories/digital-bank/index.html">
+                                            <span>How Acure automation services helped reduce IT troubleshooting time in a large digital bank</span>
+                                        </a>
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--briefcase" href="../../customer-stories/insurance-company/index.html">
+                                            <span>How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Resources</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Content Hub</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Featured Content</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-icon-item acure-font-icon--monitor" href="../../landing/root-cause-analysis/index.html">
+                                            <span>Engineers spend hours trying to investigate why digital services are not working!</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Company</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Acure Company</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../about/index.html">About Us</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item acure-header-desktop__navigation-submenu-item--inactive">Our Mission</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                                Careers
+                                                <span class="acure-header-desktop__navigation-submenu-item-tip">we are hiring</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Contacts</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="../../contacts/index.html">Contact Us</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://www.linkedin.com/company/acure-io" target="_blank">Follow Us on LinkedIn</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right"></div>
+                        </div>
+                    </div>
+                                        <div class="acure-header-desktop__navigation-item">
+                        <a class="acure-header-desktop__navigation-link">Documentation</a>
+                        <div class="acure-header-desktop__navigation-submenu">
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--left">
+                                <div class="acure-header-desktop__navigation-submenu-sections">
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">User Guide</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/data-collect/" target="_blank">Data Collection</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/signals/" target="_blank">Signals</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/service-model-cmdb/" target="_blank">CMDB & Service Model</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/guide/automation/" target="_blank">Actions & Automation</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Solutions</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/plugins/" target="_blank">Notifications (plugins)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/" target="_blank">Integrations (data streams)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/signals-processor/" target="_blank">Signals (event scenarios)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/rsm-autobuild/" target="_blank">Service model (auto-building scenarios)</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/scripts/" target="_blank">Scripts</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">References</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/structure/" target="_blank">Structure & Components</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/api/" target="_blank">Public API</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/agent-plugins/" target="_blank">Acure Agent Plugins</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/user-roles/" target="_blank">User Roles</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/data-streams-templates/" target="_blank">Configuration Templates</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/reference/availability/" target="_blank">Availability Calculation</a>
+                                        </div>
+                                    </div>
+                                    <div class="acure-header-desktop__navigation-submenu-section">
+                                        <div class="acure-header-desktop__navigation-submenu-section-name">Releases</div>
+                                        <div class="acure-header-desktop__navigation-submenu-items">
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.3/" target="_blank">Acure 2.3.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.2/" target="_blank">Acure 2.2.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.1/" target="_blank">Acure 2.1.</a>
+                                            <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/about/changelog/v2.0/" target="_blank">Acure 2.0.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-header-desktop__navigation-submenu-part acure-header-desktop__navigation-submenu-part--right">
+                                <div class="acure-header-desktop__navigation-submenu-section">
+                                    <div class="acure-header-desktop__navigation-submenu-section-name">Integrations</div>
+                                    <div class="acure-header-desktop__navigation-submenu-items">
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-standard-integration-with-zabbix" target="_blank">Zabbix</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-scom" target="_blank">SCOM</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-prometheus" target="_blank">Prometheus</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-integration-with-ntopng" target="_blank">Ntopng</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-nagiosxi" target="_blank">NagiosXI</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-nagios-core" target="_blank">Nagios Core</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-fluentd" target="_blank">Fluentd</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-fluent-bit" target="_blank">Fluent Bit</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-logstash" target="_blank">Logstash</a>
+                                        <a class="acure-header-desktop__navigation-submenu-item" href="https://docs.acure.io/current/en/solutions/integrations/#example-of-integration-with-vmware-vcenter" target="_blank">VMware Center</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="acure-header-desktop__buttons">
+                    <a class="acure-header-desktop__button acure-header-desktop__button--text" href="https://id.acure.io/account/login" target="_blank">Log In</a>
+                    <a class="acure-header-desktop__button acure-button acure-button--yellow-secondary" href="https://id.acure.io/account/sign-up" target="_blank">Sign Up</a>
+                    <a class="acure-header-desktop__button acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+                </div>
+            </div>
+        </div>
+        <div class="acure-header-mobile acure-desktop-hidden">
+            <a class="acure-header-mobile__logo" href="../../index.html">
+                <img class="acure-header-mobile__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+            </a>
+            <div class="acure-header-mobile__menu-button">
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--top"></div>
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--middle"></div>
+                <div class="acure-header-mobile__menu-button-line acure-header-mobile__menu-button-line--bottom"></div>
+            </div>
+            <div class="acure-header-mobile__menu">
+                <div class="acure-header-mobile__menu-items">
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>AIOps Platform</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>About Acure</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Interface Tour</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../platform/index.html">Platform Overview</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../features/index.html">Features</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../integrations/index.html">Integrations</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../price/index.html">Prices</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Our Solutions</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Correlation & Noise Reduction</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discovery</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Operations</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Acure vs. Others</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Dynatrace</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. StackState</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Splunk</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. DataDog</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Acure vs. Moogsoft</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Technologies</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Hybrid Cloud Observability</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Customer Success</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/supply-company/index.html">How Acure reconciled network and VDI engineers in the supply company</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/retail-company/index.html">How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/industrial-holding/index.html">How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/digital-bank/index.html">How Acure automation services helped reduce IT troubleshooting time in a large digital bank</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../customer-stories/insurance-company/index.html">How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>Resources</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Content Hub</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Featured Content</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../landing/root-cause-analysis/index.html">Engineers spend hours trying to investigate why  digital services are not working!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-header-mobile__menu-item">
+                        <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-1">
+                            <span>Company</span>
+                        </div>
+                        <div class="acure-header-mobile__submenu">
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Acure Company</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../about/index.html">About Us</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--inactive acure-header-mobile__menu-link--level-3">Our Mission</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                        Careers
+                                        <span class="acure-header-mobile__menu-link-tip">we are hiring</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="acure-header-mobile__menu-item">
+                                <div class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-2">
+                                    <span>Contacts</span>
+                                </div>
+                                <div class="acure-header-mobile__submenu">
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="../../contacts/index.html">Contact Us</a>
+                                    <a class="acure-header-mobile__menu-link acure-header-mobile__menu-link--level-3" href="https://www.linkedin.com/company/acure-io/" target="_blank">Follow Us on LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-header-mobile__menu-bottom">
+                    <a class="acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+                    <div class="acure-header-mobile__menu-help">Switch to the desktop version to take full advantage of the Acure AIOps platform!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end HEADER -->
+<!-- -------------- end HEADER & NAVIGATION -------------- --><div id="homepage" class="site">
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">    <div class="acure-page article-page background-color-ultra-light-gray">
+        <div class="acure-container acure-container--full">
+            <div class="acure-article-head">
+                <div class="acure-container">
+                    <div class="acure-article-head__content">
+                        <div class="acure-article-head__tags">
+                                                            <div class="acure-tag acure-tag--small acure-tag--active">Platform</div>
+                                                            <div class="acure-tag acure-tag--small acure-tag--active">Trends</div>
+                                                    </div>
+                        <div class="acure-spacing--10"></div>
+                        <h1 class="acure-article-head__title">Low-code as a Future of Development and Its Realization in Acure</h1>
+                        <div class="acure-mobile-spacing--20 acure-desktop-spacing--10"></div>
+                        <div class="acure-blog-date-time">
+                            <div class="acure-blog-date-time__item">11  minutes read</div>
+                            <div class="acure-blog-date-time__item">17 Nov 2022</div>
+                        </div>
+                        <div class="acure-spacing--30"></div>
+                        <div class="acure-article-head__quote">
+                            <div class="acure-article-quote">
+                                <p>The larger the company, the more often deeper adaptation is required. There are more repetitive specific operations, given their features, you can save labor costs on routine processes. The creation of applications with minimal programming comes to the rescue.</p>
+<p>In Acure, the low-code engine is used for automation services. Without any hardcoding, you can perform dependencies map auto-building and event correlation. In this article, we will discuss the benefits of low-coding and figure out how to build a simple automation scenario in Acure.</p>
+                            </div>
+                        </div>
+                        <div class="acure-spacing--30"></div>
+                        <div class="acure-article-head__bottom">
+                            <div class="acure-blog-author acure-blog-author--small">
+                                <div class="acure-blog-author__photo acure-circle-avatar acure-circle-avatar--small acure-circle-avatar--with-shadow">
+                                                                            <img class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/25e7b8ef4a1be6c36c62d3c56181c41a?s=250&amp;d=identicon&amp;r=g">
+                                                                    </div>
+                                <div class="acure-blog-author__info">
+                                    <div class="acure-blog-author__name">
+                                        Elena Hawk                                    </div>
+
+                                    <div class="acure-blog-author__position">
+                                        Content Manager at Acure                                    </div>
+                                </div>
+                            </div>
+                            <div class="acure-mobile-spacing--30"></div>
+                            <div class="acure-share">
+                                <div class="acure-share__title">
+                                    Share:
+                                </div>
+                                <div class="acure-share__items">
+                                    <a class="acure-share__item acure-share__item--facebook" href="javascript:void(0)" onclick="window.open( 'http://www.facebook.com/sharer.php?u=https://acure.io/blog/low-code-in-acure/', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Facebook"></a>
+                                    <a class="acure-share__item acure-share__item--linkedin" href="javascript:void(0)" onclick="window.open( 'https://www.linkedin.com/shareArticle?mini=true&amp;url=https://acure.io/blog/low-code-in-acure/&amp;title=Low-code%20as%20a%20Future%20of%20Development%20and%20Its%20Realization%20in%20Acure&amp;summary=Some%20Summary&amp;source=acure.io', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Linkedin"></a>
+                                    <a class="acure-share__item acure-share__item--twitter" href="javascript:void(0)" onclick="window.open( 'http://www.twitter.com/share?url=https://acure.io/blog/low-code-in-acure/', 'sharer', 'toolbar=0, status=0, width=626, height=436');return false;" title="Share on Twitter" target="_blank"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="acure-container">
+            <div class="acure-container__columns">
+                <div class="acure-container__column acure-container__column--content">
+                    <div class="acure-breadcrumbs">
+                        <a class="acure-breadcrumbs__item" href="../../blog.html">Blog</a>
+                        <div class="acure-breadcrumbs__delimiter"></div>
+                        <a class="acure-breadcrumbs__item" href="../category/platform/index.html">Platform</a>
+
+                        <div class="acure-breadcrumbs__delimiter"></div>
+                        <span class="acure-breadcrumbs__item acure-breadcrumbs__item--active">Low-code as a Future of Development and Its Realization in Acure</span>
+                    </div>
+                    <div class="article-page__share acure-desktop-hidden">
+                        <div class="acure-share">
+                            <div class="acure-share__title">
+                                Share:
+                            </div>
+                            <div class="acure-share__items">
+                                <a class="acure-share__item acure-share__item--facebook" href="https://www.facebook.com/sharer/sharer.php?u=%3CURL%3E" target="_blank"></a>
+                                <a class="acure-share__item acure-share__item--linkedin" href="https://www.linkedin.com/shareArticle?url=%3CURL%3E&amp;title=%3CTITLE%3E&amp;summary=%3CSUMMARY%3E&amp;source=%3CSOURCE_URL%3E" target="_blank"></a>
+                                <a class="acure-share__item acure-share__item--twitter" href="https://twitter.com/share?url=%3CURL%3E&amp;text=%3CTEXT%3E" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acure-article-content">
+                        <div class="acure-text">
+                            
+<h2 class="wp-block-heading">What is Low-code?</h2>
+
+
+
+<p>Low-code is a development method that minimizes manual programming. Instead of hard coding, visual constructors are used for application modeling and ready-made scripts are used to solve typical tasks. For low-code development, the process involves moving blocks with ready-made code using the drag-and-drop principle and getting a product with the desired functionality. Ready-made modules in low-code speed up work with typical tasks and eliminate repetitive actions but code can be used for individual solutions, settings and personalization. Development in the platform takes place according to ready-made templates or freely. Integrations and built-in services are also supported.</p>
+
+
+
+<p>The main value of low-coding is the ability to do without programmers when you need to create or change some kind of application, module or even product. To carry out the necessary work, the competencies of the platform administrator will be more than enough.</p>
+
+
+
+<h2 class="wp-block-heading">Benefits of Low-coding 👍</h2>
+
+
+
+<p>Low-code platforms require less development time and give more flexibility in setting up processes. There is no need to plan the architecture, create prototypes, analyze and develop the UI since it is assumed that this is all implemented in the low-code platform itself.</p>
+
+
+
+<figure class="wp-block-image"><img class="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://lh3.googleusercontent.com/KEH4T3bT6nmcabEsx6r--C39GcDyEOeG8-yQVu7vAJFV9wtdZYR3BV2fSELEDMX8ysMHBlI7KW_FDFjazK1HxWP9vLwSJHQ3jMFy3UmE-lfyIMtizgDCqeg1Rf99UTgSa01L-0D1Sj_AdE10VBGtMR5XfV0QD-7fxpvOJYuIgk3wcJ0ouJVfZPtqI14qb89GBV60O0JkhQ" alt="Low-code meme"/></figure>
+
+
+
+<p>Such platforms integrate with a wide range of systems and allow you to add new features to any application. In addition, manufacturers of low-code platforms talk about their greater security for other applications and stability compared to self-written elements.</p>
+
+
+
+<h4 class="wp-block-heading">The main elements of low-code platforms are:</h4>
+
+
+
+<p><strong>1. </strong>Visual modeling</p>
+
+
+
+<p><strong>2.</strong> Ready-made components, built-in services</p>
+
+
+
+<p><strong>3. </strong>Rapid deployment of applications, focus on DevOps</p>
+
+
+
+<p><strong>4. </strong>Pattern development or abstract development</p>
+
+
+
+<p>Since the company&#8217;s IT specialists in this case no longer have to write a lot of code, the need for these competencies is reduced and, in turn, the ability of staff to build solutions from ready-made components is prioritized.</p>
+
+
+
+<h2 class="wp-block-heading">Low-code Automation in Acure</h2>
+
+
+
+<p>Acure Automation Service is a high-performance environment for launching and executing custom scripts. Scenarios can be both custom and supplied by the developers themselves as full-fledged services. </p>
+
+
+
+<p>Automation scripts allow you to <strong>automatically discover new configuration items, the relationships between them and update the service map in real-time without any manual manipulation</strong>.</p>
+
+
+
+<p>With the help of low-code scenarios, you can also <strong>create signals &#8211; special dynamic objects that allow you to correlate and deduplicate incoming events and alerts</strong>. Read more about this functionality in<strong> <a href="../acure-2-0/index.html">the article discussing Acure 2.0</a>.</strong></p>
+
+
+
+<p>The low-code engine is used to create automatic scripts. Automation scripts in Acure help significantly expand the functionality of the system and create arbitrary event processing scenarios using visual blocks and establishing links between them.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="555" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20555'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/11/Frame-9719-1024x555.png" alt="Acure Automation pipeline " class="wp-image-4698 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/11/Frame-9719-1024x555.png 1024w, https://acure.io/wp-content/uploads/2022/11/Frame-9719-500x271.png 500w, https://acure.io/wp-content/uploads/2022/11/Frame-9719-320x173.png 320w, https://acure.io/wp-content/uploads/2022/11/Frame-9719-768x416.png 768w, https://acure.io/wp-content/uploads/2022/11/Frame-9719.png 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Of course, low-code, as described above, means a significant reduction in the use of complex hard coding but does not at all relieve you of the need to learn the logic of building scripts and memorizing functions and variables. And if you are now holding your breath in anticipation of a ton of complex information, calmly exhale. Acure &#8216;s low-сode instruments are no more complicated than the cheat code in your favorite games, and also as a result make life just as easy. Further, you will be convinced of it.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">Low-code Instruments in Acure</h2>
+
+
+
+<h3 class="wp-block-heading">Start events </h3>
+
+
+
+<p>Any script must start with a “startup”. Startup events are responsible for this &#8211; blocks that initiate the launch of the script and contain the event model. If a script contains multiple start blocks, it can run on any of them. The composition of the starting blocks is determined by the route map settings.</p>
+
+
+
+<p>When the script is running, it is time for <strong>variables</strong> and <strong>functions</strong>.</p>
+
+
+
+<h3 class="wp-block-heading">Functions</h3>
+
+
+
+<p>There are two types of functions in Acure.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="555" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20555'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/11/Frame-9720-1024x555.png" alt="Functions" class="wp-image-4701 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/11/Frame-9720-1024x555.png 1024w, https://acure.io/wp-content/uploads/2022/11/Frame-9720-500x271.png 500w, https://acure.io/wp-content/uploads/2022/11/Frame-9720-320x173.png 320w, https://acure.io/wp-content/uploads/2022/11/Frame-9720-768x416.png 768w, https://acure.io/wp-content/uploads/2022/11/Frame-9720.png 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h4 class="wp-block-heading">Impure functions</h4>
+
+
+
+<ul>
+<li>The function is executed every time the input is called from the previous block</li>
+
+
+
+<li><em>The ArrayAddElement</em> function requests all the data passed to it as input</li>
+
+
+
+<li>This function only works once. To use the result of a function, it is not necessary to call it again</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Pure functions</h4>
+
+
+
+<ul>
+<li>The function is executed each time its result is requested. Accordingly, to use the result, it will need to be called every time, like Batman.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Variables</h3>
+
+
+
+<p>Variables are divided into two types.</p>
+
+
+
+<h4 class="wp-block-heading">Local</h4>
+
+
+
+<ul>
+<li>Initialized within the current scenario or manually by the user, or using the SET block</li>
+
+
+
+<li>Can be called or initialized anywhere in the current script</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">System</h4>
+
+
+
+<ul>
+<li>Are providers of information about the script, owner, or current space</li>
+
+
+
+<li>Not initialized by the user. They act only as a source</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="555" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20555'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/11/Frame-9722-1024x555.png" alt="Variables" class="wp-image-4702 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/11/Frame-9722-1024x555.png 1024w, https://acure.io/wp-content/uploads/2022/11/Frame-9722-500x271.png 500w, https://acure.io/wp-content/uploads/2022/11/Frame-9722-320x173.png 320w, https://acure.io/wp-content/uploads/2022/11/Frame-9722-768x416.png 768w, https://acure.io/wp-content/uploads/2022/11/Frame-9722.png 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Now you will ask: what about data types supported in Acure? Acure <strong>supports multiple types of data but you can only link to pins of the same type.</strong></p>
+
+
+
+<ul>
+<li>The following values are possible for types:</li>
+</ul>
+
+
+
+<ul>
+<li>Boolean: True / False ;</li>
+
+
+
+<li>Byte: Integers from 1 to 255;</li>
+
+
+
+<li>Char: A single Unicode character ;</li>
+
+
+
+<li>Double: ±5.0 × 10 <sup>−324 </sup>to ±1.7 × <sup>10308</sup></li>
+
+
+
+<li>Dynamic: any object;</li>
+
+
+
+<li>GUID: Format value 00000000-0000-0000-0000-000000000000;</li>
+
+
+
+<li>Integer: -2 147 483 648 to 2 147 483 647;</li>
+
+
+
+<li>Integer64: -9 223 372 036 854 775 808 to 9 223 372 036 854 775 807;</li>
+
+
+
+<li>String: Unicode character string</li>
+</ul>
+
+
+
+<ul>
+<li>The type can be either Single or Array.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Wildcard Pins And Connections</h3>
+
+
+
+<p>It is also worth noting that <strong>some functions can work with different data types</strong>. For convenience, in such cases, Wildcard pins are used. For Wildcard pins the type of connection is set either manually or when establishing a connection. </p>
+
+
+
+<p>For WC pins, there are also requirements in the context of each function. More about this is written in the documentation when describing each type of function.</p>
+
+
+
+<p>There are also certain requirements for establishing links. For example, when pinning a function call, one-to-many communications are prohibited, but many-to-one are allowed. With a data transfer pin, the opposite is true.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="555" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20555'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/11/Frame-9724-1024x555.png" alt="Wildcard Pins And Connections
+" class="wp-image-4700 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/11/Frame-9724-1024x555.png 1024w, https://acure.io/wp-content/uploads/2022/11/Frame-9724-500x271.png 500w, https://acure.io/wp-content/uploads/2022/11/Frame-9724-320x173.png 320w, https://acure.io/wp-content/uploads/2022/11/Frame-9724-768x416.png 768w, https://acure.io/wp-content/uploads/2022/11/Frame-9724.png 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h3 class="wp-block-heading">Function Categories</h3>
+
+
+
+<p>The main low functions are presented in the table below and divided into several categories.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="739" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20739'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2022/11/Frame-9726-1-1024x739.png" alt="Function categories" class="wp-image-4721 lazy" data-srcset="https://acure.io/wp-content/uploads/2022/11/Frame-9726-1-1024x739.png 1024w, https://acure.io/wp-content/uploads/2022/11/Frame-9726-1-500x361.png 500w, https://acure.io/wp-content/uploads/2022/11/Frame-9726-1-320x231.png 320w, https://acure.io/wp-content/uploads/2022/11/Frame-9726-1-768x555.png 768w, https://acure.io/wp-content/uploads/2022/11/Frame-9726-1-1536x1109.png 1536w, https://acure.io/wp-content/uploads/2022/11/Frame-9726-1.png 2048w, https://acure.io/wp-content/uploads/2022/11/Frame-9726-1-1200x866.png 1200w, https://acure.io/wp-content/uploads/2022/11/Frame-9726-1-1568x1132.png 1568w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>ℹ️ <strong>You can find more information about every function in the corresponding section of the <a href="https://docs.acure.io/current/en/automation/" target="_blank" rel="noreferrer noopener">Acure documentation</a>. </strong></p>
+
+
+
+<p>In this article, let&#8217;s walk through building a simple Autodiscovery scenario.</p>
+
+
+
+<h2 class="wp-block-heading">Creating A Simple Autodiscovery Scenario</h2>
+
+
+
+<p>As mentioned above, automation scripts in Acure allow you to minimize manual actions, which is especially important when monitoring dynamic environments. After writing several scripts on the low-code engine, you no longer need to think about making changes to the service model yourself. A dynamic map of IT infrastructure links with all configuration items and links will be built and updated automatically.</p>
+
+
+
+<p>✨ No shaman tambourines &#8211; all the magic happens <strong>on the scenario builder page</strong>.</p>
+
+
+
+<p>By default, there is a start block that runs the script every time the corresponding event arrives.</p>
+
+
+
+<figure class="wp-block-image"><img class="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://lh4.googleusercontent.com/hyGlTKOGDiV2Y54oY8x9fp1dRpX7Ieu9Knr5n1Y87hdKWJS3-VyvlQb41tqScWG8WOhcAsD4WVlhIsl9F4usiVmCdENVG3S540jABNHF3FMe9rIEh3HpwLpo5rNHzwjuSeMREuhLzd5yCAnupthr54nOFAr1XbicI3SX4Cn2sShmRRa2cvgiVaKylSMyxIwluKL3O5HHCg" alt="OnLogEvent"/></figure>
+
+
+
+<p>First, you need to create a rule so that the sequence is executed on specific events. To do this, you need some functions in the form of blocks. You can add them from the context menu by right-clicking on an empty space.</p>
+
+
+
+<figure class="wp-block-image"><img class="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://lh6.googleusercontent.com/zEjr4vqpa1sJpmKoS0fe0f2ag3DAy6U2kepuhHI6b8Xcw9DjrifzRydAd8DrA65LvY8XaRbTTLsF1NPqs0ztkRY19OQfP9gvbijHIh2KNs1szFJ_TbixiZjJ_iyto8knGDTaUUjS-xtNL3ROXJ2TI1m-bdutD3PqNlkJ_l1BrsVVPjnAaIoQ4Z95bXjqXuAbHJ4FDY2XPA" alt="Low-code part"/></figure>
+
+
+
+<p>Let’s build a simple rule that will receive only those events that came from a specific stream.</p>
+
+
+
+<p>For that, add the&nbsp;<em>FiltredByStreamId</em>&nbsp;function and connect the sequence in such a way that when an event arrives in the system, the script checks the ID of the stream from which it came and, if the filtering is successful, the script will continue to run.</p>
+
+
+
+<figure class="wp-block-image"><img class="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://lh4.googleusercontent.com/PzCbe_WePJwPtg0bOkHGZszyd2eDRJVi_zXHscp85wUHN03U4NbQ3zNr5D8rO3v-RGqzofzjAslUQK_IiC0QPSMD8CRGRFWp2OcR1HpJ0QlcatXoaaEGrGlLjVE1eIZImgLd93ldn6Wf-1PmZAQxp4g2CPq761SvAWJ-8Get38n0vB5iH7zIwB8A5AQdgxUlotAu49Hd1A" alt="Low-code part"/></figure>
+
+
+
+<p>The sequence of execution of script functions is indicated by blue arrows — exact pins.</p>
+
+
+
+<figure class="wp-block-image"><img class="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://lh4.googleusercontent.com/dYREA4brPxFWVbCz7yxLurBqmz0sKiw_ZSqyEyKsRRn9JgSL8hPqak1tb_uf6PEvEluAOd0EtZQr5H5AE4vHbiukVNd-2-t4M3DJWB0Y4jZgQhq4eBzT6ddujJ2LyXeDco_TGCr0f9j_nrVw3-3DeJWKNNOQ6ffFJaut3fIFORGNDn3v8aH0ohetfdgcCakh2y9ihaYyrg" alt="Low-code part"/></figure>
+
+
+
+<p>Note that in addition to exact pins, there are data pins. If the former is responsible for the sequence, then the latter is responsible for transmitting and receiving data.</p>
+
+
+
+<p>Now let’s analyze our function. For it to be executed, it must be provided with input data. In our case, the function requests an incoming stream model and filtering parameters (stream id).</p>
+
+
+
+<p>We must get the initial data from the primary event, i.e., take away the stream model. To do this, we decompose the original structure using the base function and establish a connection with our filter.</p>
+
+
+
+<p>Now we need to specify the required parameter (we take it from the previously created stream) and copy-paste it into the&nbsp;<em>FiltredByStreamId</em>&nbsp;block.</p>
+
+
+
+<figure class="wp-block-image"><img class="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://lh6.googleusercontent.com/TDp2F_ac4qd_7Ut6I6Z7h-1lqdhuPd_-S6UqpR7o_J1UoNeil_M8wkGwBezYXHDbIR7iVJUINw2yxTvRhgik8WWL9KPgA52l2RVC1Imjey9pZBeXHJt7YDvuOg4bZ47W3ccTquw26OfgBHAbuu3-LNqNChghXmDZeR5M4O9EAjlEzFegwzx7GCj7aaPIpNvjdELqjhKi2w" alt="FilterByStreamId"/></figure>
+
+
+
+<p>Done! The simple rule is ready. Now, further actions will be executed only if the event came from the stream we specified.</p>
+
+
+
+<p>Let’s look at the other tools that are available in the editor as well.</p>
+
+
+
+<p>The left panel contains the objects of the current scenario. Here you can create and manage local variables, structures and entire functions. From here, they can be added to the screen for use in a script or selected for further customization.</p>
+
+
+
+<p>The settings are available in the right panel where we fill in all the required fields and, in the case of a local function, write the executable code.</p>
+
+
+
+<figure class="wp-block-image"><img class="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://lh3.googleusercontent.com/Ly0qolZANqFTZjT1mAzd-1HIWX8K18PfxhjtYV4nvGHqV23-8ITf-ZdG8IeTOzJj3jLFJkPLnpdrpBTvtHvTsOenhyv6ppCnu6L9stxPsRB3iqMBRcZjTo-fouTuZbaEw8RCec9jRJbgovnXVnERxmHOaYHH-Nmvwhy6qOIorPr9iYxNu9Y5xha-vI7DAnrJORyfKxjn2g" alt="Executable code"/></figure>
+
+
+
+<p>To show off your awesome script or make it easier for your team, you can export the script and share it with others. The recipient, using the import tool, creates an exact copy of this script.</p>
+
+
+
+<h2 class="wp-block-heading">Is Low-code the Future?&nbsp;</h2>
+
+
+
+<p>The numbers say yes. <a href="https://www.mendix.com/press/low-code-software-development-from-crisis-technology-to-core-technology-says-new-mendix-sponsored-survey/" target="_blank" rel="noreferrer noopener nofollow">The 2022 Mendix State of Low-Code study </a>showed a rise in low-code adoption from 77% in 2021 to 94% IN 2022, with four out of 10 companies now using low-code for mission-critical decisions. The study argues that the spread of low-code may soon lead to the overthrow of more &#8220;traditional&#8221; forms of operations. This report cites Gartner&#8217;s forecast that by 2025, low-code solutions will account for 70% of apps, up from 25% in 2020.</p>
+
+
+
+<p>At the same time, the scope of low-code products will also be constantly expanding. This technology has already become a trend and subsequently, the entire market will be rebuilt under it.</p>
+
+
+
+<p>All this suggests that the market will increasingly be oriented toward simple solutions when any mass user will be able to automate the solution of routine tasks and satisfy needs without deep programming knowledge. At the same time, the growing needs of users stimulate low-code technology to develop faster and improve functions. Thus, low-code systems will be able to solve more and more complex problems as they develop.</p>
+
+
+
+<h4 class="wp-block-heading">👨‍💻 Want to experience the benefits of low-code? <a href="https://id.acure.io/userspaces" target="_blank" rel="noreferrer noopener">Register in Acure</a> and write your own automation scenarios.</h4>
+                        </div>
+                    </div>
+                                        <div class="acure-article-recommended acure-desktop-hidden">
+                        <div class="acure-article-recommended__head">
+                            <div class="acure-article-recommended__title">You may be also interested in:</div>
+                            <div class="acure-article-recommended__arrows">
+                                <div class="acure-article-recommended__arrow acure-article-recommended__arrow--left"></div>
+                                <div class="acure-article-recommended__arrow acure-article-recommended__arrow--right acure-article-recommended__arrow--active"></div>
+                            </div>
+                        </div>
+                        <div class="acure-article-recommended__items">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../metrics-acure-2-2/index.html">
+		<img class="lazy" data-imageid="5210"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20300'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2023/01/Frame-10429-500x300.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">Monitoring of Metrics and Other Features of Acure 2.2</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../metrics-acure-2-2/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../event-name-conversion-function/index.html">
+		<img class="lazy" data-imageid="4958"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20300'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/12/Group-85146047-500x300.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">Acure Life Hacks: Local Function for Event Name Conversion</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../event-name-conversion-function/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../acure-2-1/index.html">
+		<img class="lazy" data-imageid="4920"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20300'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/12/Group-85146046-1-500x300.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">Acure 2.1: Manual Signals, Table CMDB and Many More</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../acure-2-1/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../acure-2-0/index.html">
+		<img class="lazy" data-imageid="4103"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20300'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/10/Acure-2.0-banner-500x300.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">ACURE 2.0 Is Officially Released</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../acure-2-0/index.html">Read More</a>
+		</div>
+	</div>
+</div></div>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-container__column acure-container__column--sidebar acure-container__column--with-delimiter">
+                    <div class="acure-container__sidebar-columns">
+                        <section id="block-23" class=" widget_block">
+<div class="acure-container__sidebar-column acure-container__sidebar-column--full">
+    <div class="acure-mobile-spacing--40"></div>
+    <div class="acure-blog-more-posts">
+        <div class="acure-blog-more-posts__title">More Posts</div>
+        <div class="acure-blog-more-posts__items">
+                                                        <a class="acure-tag acure-tag--small "
+                   href="../category/academy/index.html"
+                >Academy</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/autonomous-it-talks/index.html"
+                >Autonomous IT Talks</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/glossary/index.html"
+                >Glossary</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/kubernetes/index.html"
+                >Kubernetes</a>
+                                            <a class="acure-tag acure-tag--small acure-tag--active"
+                   href="../category/platform/index.html"
+                >Platform</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/reviews/index.html"
+                >Reviews</a>
+                                            <a class="acure-tag acure-tag--small "
+                   href="../category/trends/index.html"
+                >Trends</a>
+                    </div>
+    </div>
+</div>
+<div class="acure-container__sidebar-column acure-container__sidebar-column--full">
+    <div class="acure-blog-authors">
+        <div class="acure-blog-authors__title">Our Authors</div>
+        <div class="acure-blog-authors__items">
+                                                        <div class="acure-blog-authors__item">
+                    <a href="../author/arturkoppel/index.html" data-author="219657398" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/5e5c2c722f83da4e4e79f321349878e7?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Artur Koppel</div>
+                            <div class="acure-blog-author__position">Sr. Data Engineer, Columnist</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/kate/index.html" data-author="219657405" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium acure-circle-avatar--active">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/25e7b8ef4a1be6c36c62d3c56181c41a?s=120&amp;d=identicon&amp;r=g">
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Elena Hawk</div>
+                            <div class="acure-blog-author__position">Content Manager at Acure</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/pameladawson/index.html" data-author="219657397" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/028e7ef4fc243ab9fd739dffd8857ed9?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Pam Dawson</div>
+                            <div class="acure-blog-author__position">Tech-Journalist, Data Science Enthusiast</div>
+                        </div>
+                    </a>
+                </div>
+                                            <div class="acure-blog-authors__item">
+                    <a href="../author/stefenshaefer/index.html" data-author="219657399" class="acure-blog-author acure-blog-author--medium">
+                        <div class="acure-blog-author__photo">
+                            <div class="acure-circle-avatar acure-circle-avatar--medium ">
+                                                                    <img decoding="async" class="acure-circle-avatar__image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/1e126fe81d0f76edc2fd84ddfc0260e5?s=120&amp;d=identicon&amp;r=g" />
+                                                            </div>
+                        </div>
+                        <div class="acure-blog-author__info">
+                            <div class="acure-blog-author__name">Stefen Shaefer</div>
+                            <div class="acure-blog-author__position">IT Analyst, Business Consultant</div>
+                        </div>
+                    </a>
+                </div>
+                    </div>
+    </div>
+</div></section>                    </div>
+
+                </div>
+            </div>
+            <div class="acure-article-recommended acure-mobile-hidden">
+                <div class="acure-article-recommended__head">
+                    <div class="acure-article-recommended__title">You may be also interested in:</div>
+                    <div class="acure-article-recommended__arrows">
+                        <div class="acure-article-recommended__arrow acure-article-recommended__arrow--left"></div>
+                        <div class="acure-article-recommended__arrow acure-article-recommended__arrow--right acure-article-recommended__arrow--active"></div>
+                    </div>
+                </div>
+                <div class="acure-article-recommended__items">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../metrics-acure-2-2/index.html">
+		<img class="lazy" data-imageid="5210"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20300'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2023/01/Frame-10429-500x300.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">Monitoring of Metrics and Other Features of Acure 2.2</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../metrics-acure-2-2/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../event-name-conversion-function/index.html">
+		<img class="lazy" data-imageid="4958"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20300'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/12/Group-85146047-500x300.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">Acure Life Hacks: Local Function for Event Name Conversion</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../event-name-conversion-function/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../acure-2-1/index.html">
+		<img class="lazy" data-imageid="4920"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20300'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/12/Group-85146046-1-500x300.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">Acure 2.1: Manual Signals, Table CMDB and Many More</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../acure-2-1/index.html">Read More</a>
+		</div>
+	</div>
+</div></div><div class="swiper-slide"><div class="acure-article-recommended__item">
+	<a class="acure-article-recommended__item-head" href="../acure-2-0/index.html">
+		<img class="lazy" data-imageid="4103"
+			 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20300'%3E%3C/svg%3E" data-src="../../wp-content/uploads/2022/10/Acure-2.0-banner-500x300.png"
+		/>
+	</a>
+	<div class="acure-article-recommended__item-body">
+		<div class="acure-article-recommended__item-content">
+			<div class="acure-article-recommended__item-title">ACURE 2.0 Is Officially Released</div>
+		</div>
+		<div class="acure-article-recommended__item-bottom">
+			<a class="acure-button acure-button--blue-primary" href="../acure-2-0/index.html">Read More</a>
+		</div>
+	</div>
+</div></div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+<!-- FOOTER -->
+<footer id="acure-footer" class="acure-footer">
+        <div class="acure-footer__lead">
+        <div class="acure-container">
+            <div class="acure-footer__lead-content">
+                <div class="acure-footer__lead-text">
+                    <div class="acure-footer__lead-title">Get Started with AIOps</div>
+                    <div class="acure-footer__lead-description">How can professionals automate main IT Ops processes in Acure?</div>
+                </div>
+                <a class="acure-button acure-button--yellow-primary" href="https://calendly.com/luispinto-acureio" target="_blank">Start Live Demo</a>
+            </div>
+        </div>
+    </div>
+        <div class="acure-footer__container">
+        <div class="acure-container">
+            <div class="acure-footer__sitemap acure-mobile-hidden">
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">AIOps Platform</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">About Acure</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Interface Tour</a>
+                                    <a class="acure-footer__sitemap-link" href="../../platform/index.html">Platform Overview</a>
+                                    <a class="acure-footer__sitemap-link" href="../../features/index.html">Features</a>
+                                    <a class="acure-footer__sitemap-link" href="../../integrations/index.html">Integrations</a>
+                                    <a class="acure-footer__sitemap-link" href="../../price/index.html">Prices</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Acure vs. Others</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Dynatrace</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. StackState</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Splunk</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. DataDog</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive" href="#">Acure vs. Moogsoft</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Technologies</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../solutions/kubernetes-observability/index.html">Kubernetes Observability</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Hybrid Cloud Observability</a>
+                                </div>
+                            </div>
+                            <a class="acure-footer__sitemap-logo" href="../../index.html">
+                                <img class="acure-footer__sitemap-logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+                            </a>
+                        </div>
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Our Solutions</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/root-cause-impact-analysis/index.html">Root Cause Analysis</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/event-correlation-noise-reduction/index.html">Alert Corelation & Noise Reduction</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/unified-cmdb-automated-discovery/index.html">Unified CMDB & Automated Discoverу</a>
+                                    <a class="acure-footer__sitemap-link" href="../../use-cases/single-system-for-automated-it-ops/index.html">A Single System for Automated IT Ops</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Customer Success</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/supply-company/index.html">How Acure reconciled network and VDI engineers in the supply company</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/retail-company/index.html">How Acure Increased IT Labor Productivity by 250% for a Retail Company with 1000+ Shops</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/industrial-holding/index.html">How Acure Enhanced IT Service Availability and Speed of Response for an Industrial Holding</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/digital-bank/index.html">How Acure automation services helped reduce IT troubleshooting time in a large digital bank</a>
+                                    <a class="acure-footer__sitemap-link" href="../../customer-stories/insurance-company/index.html">How Acure Reduced Agent Downtime and Support Costs while Monitoring Call Center Services for an Insurance Company</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__contact">Sales team: <a href="mailto:hello@acure.io">hello@acure.io</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-footer__sitemap-delimiter"></div>
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">Resources</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Content Hub</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../index.html">Blog: Trends, Memes & Tons of DevOps Inspiration</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.youtube.com/@acure-io" target="_blank">Join Our YouTube Channel</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Featured Content</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../landing/root-cause-analysis/index.html">Engineers spend hours trying to investigate why digital services are not working!</a>
+                                </div>
+                            </div>
+
+                            <div class="acure-footer__contact">Support team: <a href="mailto:support@acure.io">support@acure.io</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acure-footer__sitemap-delimiter"></div>
+                <div class="acure-footer__sitemap-item">
+                    <div class="acure-footer__sitemap-item-head">
+                        <span class="acure-footer__sitemap-item-title">Company</span>
+                    </div>
+                    <div class="acure-footer__sitemap-item-columns">
+                        <div class="acure-footer__sitemap-item-column">
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Acure Company</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../about/index.html">About Us</a>
+                                    <a class="acure-footer__sitemap-link acure-footer__sitemap-link--inactive">Our Mission</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.linkedin.com/company/acure-io/jobs/" target="_blank">
+                                        Careers
+                                        <span class="acure-footer__sitemap-tip">we are hiring</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__sitemap-item-section">
+                                <div class="acure-footer__sitemap-item-section-title">Contacts</div>
+                                <div class="acure-footer__sitemap-item-section-links">
+                                    <a class="acure-footer__sitemap-link" href="../../contacts/index.html">Contact Us</a>
+                                    <a class="acure-footer__sitemap-link" href="https://www.linkedin.com/company/acure-io" target="_blank">Follow Us on LinkedIn</a>
+                                </div>
+                            </div>
+                            <div class="acure-footer__contact acure-footer__contact--yellow">Documentation: <a href="https://docs.acure.io/current/en/get-started/" target="_blank">Quick Guide to Start</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="acure-footer__logo acure-desktop-hidden" href="../../index.html">
+            <img class="acure-footer__logo-image lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-src="https://acure.io/wp-content/uploads/2023/03/acure-white.svg" alt="Acure logo" />
+        </a>
+        <div class="acure-footer__bottom">
+            <div class="acure-container">
+                <div class="acure-footer__bottom-content">
+                    <div class="acure-footer__copyright">© 2023 SIA Acure</div>
+                    <div class="acure-footer__policies">
+                        <a class="acure-footer__policy" href="../../privacy-policy/index.html">Privacy policy</a>
+                        <a class="acure-footer__policy" href="../../cookies-policy/index.html">Cookie policy</a>
+                        <a class="acure-footer__policy" href="../../terms-of-use/index.html">Terms of use</a>
+                    </div>
+                    <div class="acure-footer__socials">
+                        <a class="acure-footer__socials-item acure-footer__socials-item--facebook" href="https://www.facebook.com/acure.community" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--youtube" href="https://www.youtube.com/@acure-io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--linkedin" href="https://www.linkedin.com/company/acure-io/" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--twitter" href="https://twitter.com/acure_io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--reddit" href="https://www.reddit.com/user/Acure_io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--medium" href="https://medium.com/@acure.io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--github" href="https://github.com/acure-io" target="_blank"></a>
+                        <a class="acure-footer__socials-item acure-footer__socials-item--quora" href="https://www.quora.com/profile/Acure-AIOps" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end FOOTER --><script>document.body.classList.remove("no-js");</script>    <script>
+        if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/index.html' ) ) {
+            document.body.classList.add( 'is-IE' );
+        }
+    </script>
+    <link rel='stylesheet' id='block-testimonial-css' href='../../wp-content/themes/twentytwentyoneacure/new-inc/blocks/full-sidebar/full-sidebar1b46.css?ver=6.1.4' media='all' />
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/article.js' id='blog-js'></script>
+<script id='leadin-script-loader-js-js-extra'>
+var leadin_wordpress = {"userRole":"visitor","pageType":"post","leadinPluginVersion":"10.2.17"};
+</script>
+<script src='../../../js.hs-scripts.com/2165385294ad.js?integration=WordPress&amp;ver=10.2.17' async defer id='hs-script-loader'></script>
+<script src='../../wp-includes/js/comment-reply.min1b46.js?ver=6.1.4' id='comment-reply-js'></script>
+<script id='twenty-twenty-one-ie11-polyfills-js-after'>
+( Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach ) || document.write( '<script src="../../wp-content/themes/twentytwentyoneacure/assets/js/polyfills4963.js?ver=1.1"></scr' + 'ipt>' );
+</script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/responsive-embeds4963.js?ver=1.1' id='twenty-twenty-one-responsive-embeds-script-js'></script>
+<script src='../../../code.jquery.com/jquery-3.6.0.min.js' id='jquery3-js'></script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/header.js' id='header-js'></script>
+<script src='../../wp-content/themes/twentytwentyoneacure/assets/js/layout-new.js' id='layout-new-js'></script>
+    <script>
+        /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
+    </script>
+    
+<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="../../wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></body>
+
+<!-- Mirrored from acure.io/blog/low-code-in-acure/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 06:31:06 GMT -->
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 78/106 objects using Memcached
+Page Caching using Memcached 
+Lazy Loading
+
+Served from: acure.io @ 2023-12-26 08:28:57 by W3 Total Cache
+-->
